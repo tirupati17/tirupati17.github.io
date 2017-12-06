@@ -8,13 +8,13 @@ title: Projects
 - [RailEazy](http://www.celerstudio.com/raileazy.html#features)
 
   <p class="message">RailEazy lets you find trains by entering source and destination stations.</p>
-<a style="display:inline-block;" href='https://itunes.apple.com/in/app/raileazy-indian-railway-rail-timetable/id647693665?mt=8'><img height="30px" src="{{ site.appstore_icon }}"></a>
+<!-- <a style="display:inline-block;" href='https://itunes.apple.com/in/app/raileazy-indian-railway-rail-timetable/id647693665?mt=8'><img height="30px" src="{{ site.appstore_icon }}"></a>
 <a style="display:inline-block; margin-left:5px;" href='https://play.google.com/store/apps/details?id=com.celerstudio.raileazy&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img height="30" src="{{ site.playstore_icon }}"></a>
-<a style="display:inline-block; margin-left:0px;" href='http://raileazy.com'><img height="30" src="{{ site.website_icon }}"></a>
+<a style="display:inline-block; margin-left:0px;" href='http://raileazy.com'><img height="30" src="{{ site.website_icon }}"></a> -->
 
 - [Office In-Out](http://www.celerstudio.com/officeinout.html#features)
   <p class="message">Office In-Out manage and track check in and check out time of users in his office hours.</p>
-<a style="display:inline-block;" href='https://itunes.apple.com/in/app/office-in-out/id545914108?mt=8'><img height="30" src="{{ site.appstore_icon }}"></a>
+<!-- <a style="display:inline-block;" href='https://itunes.apple.com/in/app/office-in-out/id545914108?mt=8'><img height="30" src="{{ site.appstore_icon }}"></a> -->
 
 <h4>Open Source </h4>
 

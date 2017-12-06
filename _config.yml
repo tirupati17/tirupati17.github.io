@@ -1,40 +1,53 @@
 # Dependencies
-markdown:         kramdown
-highlighter:      rouge
+markdown:          kramdown
+highlighter:       rouge
 
 # Setup
-title:          Tirupati Balan
-tagline:        'Personal Blog'
-description:    'An iOS Developer and Internet Entrepreneur. Founder at <a href="http://celerstudio.com" target="_blank">Celerstudio</a>.'
-url:            https://tirupati17.github.io
-baseurl:          # the optional subpath of your site, e.g. "/blog"
+title:             Tirupati Balan
+tagline:           'Personal Blog'
+description:       'An iOS Developer and Internet Entrepreneur. Founder at <a href="http://celerstudio.com" target="_blank">Celerstudio</a>.'
+url:               https://tirupati17.github.io
+baseurl:           # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
                   # other pages at root, see the paginate_path and
                   # sidebar_blog_link below.
 
 author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
+  name:            'Andrew Fong'
+  url:             https://twitter.com/fongandrewc
 
-paginate:         5
-# paginate_path:    '/page:num'
+paginate:          5
+# paginate_path:   '/page:num'
                     # Or '/blog/page:num' if you want to move your index pages
 
 plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-watch
 
 # Custom vars
-appstore_icon:    https://png.icons8.com/apple-app-store/dusk/50/000000
-playstore_icon:   https://png.icons8.com/google-play/dusk/40/000000
-website_icon:     https://png.icons8.com/website/dusk/40/000000
-version:            3.4.1
-sidebar_home_link:  true
-# sidebar_blog_link:  '/blog'   # By default, your home page is your blog
+appstore_icon:     https://png.icons8.com/apple-app-store/dusk/50/000000
+playstore_icon:    https://png.icons8.com/google-play/dusk/40/000000
+website_icon:      https://png.icons8.com/website/dusk/40/000000
+version:           3.4.1
+sidebar_home_link: true
+# sidebar_blog_link: '/blog'   # By default, your home page is your blog
                                 # page. If you change your paginate_path,
                                 # set this to the root of the paginate_path
                                 # to enable a separate blog link.
 github:
-  repo:             https://github.com/tirupati17
+  repo:            https://github.com/tirupati17
+
+atom:
+  buildCommand:
+    - jekyll
+    - build
+    - --option
+    - --this
+  buildEnv:
+    JEKYLL_ENV: development
+  postDirs:
+    - _newsletters
+  defaultPostDir: _drafts
