@@ -3,18 +3,29 @@ layout: category
 title: Projects
 ---
 
-<h4>Products </h4>
+<h4>Under CelerStudio </h4>
+`iOS` (via me)
+- <a href="http://wreely.com" target="_blank">Wreely</a> `Actively working`
+- <a href="https://angel.co/projects/375458-raileazy-indian-railway-rail-timetable?src=startup_profile" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a> `objective-c`
+- <a href="https://angel.co/projects/375467-office-in-out?src=startup_profile" target="_blank">Office In-Out</a> `objective-c`
+- <a href="https://angel.co/projects/401144-currency-converter-free-and-quick-converter?src=more_projects" target="_blank">Currency Converter - Free and Quick Converter</a> `swift`
+- <a href="https://angel.co/projects/374606-sip-calculator?src=more_projects" target="_blank">SIP - Calculator</a>
+- <a href="https://angel.co/projects/374602-emi-calculator-for-home-personal-car-loan?src=more_projects" target="_blank">EMI Calculator for Home, Personal & Car Loan</a> `swift`
+- <a href="https://angel.co/projects/374608-tip-calculator-calculate-tip-and-split-the-bill?src=more_projects" target="_blank">Tip Calculator</a> `swift`
+- <a href="https://angel.co/projects/374610-personal-media-vault?src=more_projects" target="_blank">Personal Media Vault</a> `objective-c`
 
-- [RailEazy](http://www.celerstudio.com/raileazy.html#features)
+`Web` (via me)
+- <a href="http://wreely.com" target="_blank">Wreely</a> `Actively working`
+- <a href="https://angel.co/projects/375475-raileazy-indian-railway-rail-timetable?src=more_projects" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a>
 
-  <p class="message">RailEazy lets you find trains by entering source and destination stations.</p>
-<!-- <a style="display:inline-block;" href='https://itunes.apple.com/in/app/raileazy-indian-railway-rail-timetable/id647693665?mt=8'><img height="30px" src="{{ site.appstore_icon }}"></a>
-<a style="display:inline-block; margin-left:5px;" href='https://play.google.com/store/apps/details?id=com.celerstudio.raileazy&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img height="30" src="{{ site.playstore_icon }}"></a>
-<a style="display:inline-block; margin-left:0px;" href='http://raileazy.com'><img height="30" src="{{ site.website_icon }}"></a> -->
+`Android` (via my android colleagues)
+- <a href="http://wreely.com" target="_blank">Wreely</a> `Actively working`
+- <a href="https://angel.co/projects/375474-raileazy-indian-railway-android-apps-on-google-play?src=more_projects" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a>
+- <a href="https://angel.co/projects/375472-banklog-android-apps-on-google-play?src=more_projects" target="_blank">Banklog</a>
+- <a href="https://angel.co/projects/375473-cricket-live-android-apps-on-google-play?src=more_projects" target="_blank">Cricket Live</a>
 
-- [Office In-Out](http://www.celerstudio.com/officeinout.html#features)
-  <p class="message">Office In-Out manage and track check in and check out time of users in his office hours.</p>
-<!-- <a style="display:inline-block;" href='https://itunes.apple.com/in/app/office-in-out/id545914108?mt=8'><img height="30" src="{{ site.appstore_icon }}"></a> -->
+<h4>Client work </h4>
+
 
 <h4>Open Source </h4>
 

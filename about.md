@@ -13,4 +13,4 @@ I'm Tirupati Balan, An iOS Developer and Internet Entrepreneur.
 </p>
 > As an iOS Developer, I've built around 40+ apps for clients via freelancing, direct clients and my agencies tenure.
 
-> As an Internet Entrepreneur, have executed dozens of apps for end users [Projects](/projects).
+> As an Internet Entrepreneur, have executed dozens of apps for end users [Projects](/category/projects).
