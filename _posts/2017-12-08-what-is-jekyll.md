@@ -4,6 +4,12 @@ title: What is GitHub Pages, Jekyll, Poole, Hyde and Hydeout?
 excerpt_separator:  <!--more-->
 ---
 
+Hello, Hope all good!
+
+<p>This is the first post on my personal blog and I want everyone to know how I setup this site using Jekyll and GitHub Pages. </p>
+
+Please read below things step by step as per their reference source and get to know about this. Good Luck!!
+
 <h4>What is GitHub Pages?</h4>
 
 GitHub Pages is a static site hosting service.
@@ -44,7 +50,7 @@ Few useful article's related to Jekyll and GitHub Pages:<br>
 
 [Hyde](https://github.com/poole/hyde) is a brazen two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content. It's based on Poole, the Jekyll butler.
 
-> Hyde is a theme built on top of Poole, which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See the Poole usage guidelines for how to install and use Jekyll.
+> Hyde is a theme built on top of Poole, which provides a fully furnished Jekyll setup—just download and start the Jekyll server.
 
 <a href="https://github.com/poole/hyde">Reference</a>
 
@@ -54,8 +60,15 @@ Few useful article's related to Jekyll and GitHub Pages:<br>
 
 [Hydeout](https://github.com/fongandrew/hydeout) updates the original Hyde theme for Jekyll 3.x and adds new functionality.
 
-> Hydeout is available as the `jekyll-theme-hydeout` Ruby Gem. Add `gem "jekyll-theme-hydeout", "~> 3.4"` to your Gemfile and run `bundle install`
+Hydeout is available as the `jekyll-theme-hydeout` Ruby Gem.<br> Add `gem "jekyll-theme-hydeout", "~> 3.4"` to your Gemfile and run `bundle install`
 
 Hydeout uses pagination, so if you have an `index.md`, you'll need to swap it with an `index.html` that uses the index layout:
+
+{% highlight liquid %}
+---
+layout: index
+title: Home
+---
+{% endhighlight %}
 
 Find out more by [visiting the project on GitHub](https://github.com/fongandrew/hydeout).
