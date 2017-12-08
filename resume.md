@@ -12,7 +12,9 @@ Well, Working independently at Celerstudio has realize me that ideas, products, 
 I'm really enjoying working for Citysocializer as part-time developer (yep working only 2 days in a week). Because of this, on remaining days, I'm easily focusing on my own product work under Celerstudio.
 
 `Under Citysocializer I'm responsible for below app`
-- <a href="https://itunes.apple.com/in/app/citysocializer/id581315807?mt=8" target="_blank">Citysocializer</a> `iPhone` 
+- <a href="https://itunes.apple.com/in/app/citysocializer/id581315807?mt=8" target="_blank">Citysocializer</a> `iPhone`
+
+---
 
 <h4>CelerStudio - Founder</h4>
 > 1 Jan 2015 - Present (Almost 3 years)
@@ -34,14 +36,14 @@ I'm really enjoying working for Citysocializer as part-time developer (yep worki
 
 `iOS` (via me)
 - <a href="http://wreely.com" target="_blank">Wreely</a> `Actively working`
-- <a href="https://angel.co/projects/375458-raileazy-indian-railway-rail-timetable?src=startup_profile" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a> `objective-c`
-- <a href="https://angel.co/projects/375467-office-in-out?src=startup_profile" target="_blank">Office In-Out</a> `objective-c`
+- <a href="https://angel.co/projects/375458-raileazy-indian-railway-rail-timetable?src=startup_profile" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a> `Objective-C`
+- <a href="https://angel.co/projects/375467-office-in-out?src=startup_profile" target="_blank">Office In-Out</a> `Objective-C`
 - <a href="https://angel.co/projects/401144-currency-converter-free-and-quick-converter?src=more_projects" target="_blank">Currency Converter - Free and Quick Converter</a> `swift`
 - <a href="https://angel.co/projects/374606-sip-calculator?src=more_projects" target="_blank">SIP - Calculator</a>
 - <a href="https://angel.co/projects/374602-emi-calculator-for-home-personal-car-loan?src=more_projects" target="_blank">EMI Calculator for Home, Personal & Car Loan</a> `swift`
 - <a href="https://angel.co/projects/374608-tip-calculator-calculate-tip-and-split-the-bill?src=more_projects" target="_blank">Tip Calculator</a> `swift`
-- <a href="https://angel.co/projects/374610-personal-media-vault?src=more_projects" target="_blank">Personal Media Vault</a> `objective-c`
-- <a href="https://www.dropbox.com/sh/ulqptfv8znowheq/AABCCeJMJHITb5ToJT_1d_pTa?dl=0" target="_blank">Cricket Live</a> `objective-c`
+- <a href="https://angel.co/projects/374610-personal-media-vault?src=more_projects" target="_blank">Personal Media Vault</a> `Objective-C`
+- <a href="https://www.dropbox.com/sh/ulqptfv8znowheq/AABCCeJMJHITb5ToJT_1d_pTa?dl=0" target="_blank">Cricket Live</a> `Objective-C`
 
 `Web` (via me)
 - <a href="http://wreely.com" target="_blank">Wreely</a> `Actively working`
@@ -53,7 +55,9 @@ I'm really enjoying working for Citysocializer as part-time developer (yep worki
 - <a href="https://angel.co/projects/375472-banklog-android-apps-on-google-play?src=more_projects" target="_blank">Banklog</a>
 - <a href="https://angel.co/projects/375473-cricket-live-android-apps-on-google-play?src=more_projects" target="_blank">Cricket Live</a>
 
-`Under CelerStudio I've executed few clients work as below` `(From 1st Jan 2015 to July 2015)`
+`Under CelerStudio I've executed few clients work as below`
+> (From 1st Jan 2015 till July 2015)
+
 - <a href="https://www.dropbox.com/sh/9xkljq05m6059li/AAAisZOs0EBkKDyxYjcTCtHFa?dl=0" target="_blank">Tond</a> `iOS - iPad`, `In-House` `Via Agencies`
 - <a href="https://itunes.apple.com/us/app/flickquick-photosharing/id1178623004?mt=8" target="_blank">Flickquick</a> `iOS - iPhone`, `Via Agencies`
 - <a href="https://itunes.apple.com/us/app/traxonapp/id433599272?mt=8" target="_blank">Traxon</a> `iOS - iPad`, `Via Agencies`
@@ -64,6 +68,8 @@ I'm really enjoying working for Citysocializer as part-time developer (yep worki
     Let’s see whether my decision will become right or wrong but whatever its all about experience and someone said
     <span style="font-weight:bold;">"If you always make the right decision, the safe decision, the one most people make, you will be the same as everyone else."</span>
 </p>
+
+---
 
 <h4>CelerApps (Under Redpanda) - Partner (Lead iOS Developer)`</h4>
 > 11 Mar 2014 - 31 Dec 2014 (10 month)
@@ -77,18 +83,20 @@ I'm really enjoying working for Citysocializer as part-time developer (yep worki
 <p>What next for product.. yep we again trying our luck with one awesome idea and will always try our luck with dedicated hard work remember <span style="font-weight:bold;">"Each mistake teaches you something new about yourself. There is no failure, remember, except in no longer trying. It is the courage to continue that counts."</span></p>
 
 `Under CelerApps I've executed below few apps for our clients`
-- <a href="https://www.dropbox.com/sh/xwjuzii7jiiut6d/AABhNUzWzgIcucVmlZzhNRKFa?dl=0" target="_blank">ShopSweetie (Later Stylio)</a> `Objective-c`
-- <a href="https://www.dropbox.com/sh/pg3wr1zpp8ocffi/AAD5akJlrcG9Zvg80qzrFkERa?dl=0" target="_blank">WeddingPlanner</a> `Objective-c`
-- <a href="https://itunes.apple.com/in/app/mahanews/id871107735?mt=8" target="_blank">MahaNews</a> `Objective-c`
-- <a href="https://www.dropbox.com/sh/yq8rk16y39go926/AADclGXp9sdLqStYPO4dJRtAa?dl=0" target="_blank">WhatsScore</a> `Objective-c`, `Independent Product`
-- <a href="https://www.dropbox.com/sh/0bnbt6k9g8dxvz2/AACXUByyAt6VRenQOENEvFFga?dl=0" target="_blank">AirPool</a> `Objective-c`, `Independent Product`
-- <a href="https://www.dropbox.com/sh/4prz0sahsi27zct/AADh6kKhnVC7_D0varGKmoHOa?dl=0" target="_blank">Racold</a> `Objective-c`
-- <a href="https://www.dropbox.com/sh/d8c7pqvw7qmb3ez/AADm44YyOOLst39o16bddswEa?dl=0" target="_blank">QBuzz for QNet</a> `Objective-c`
-- <a href="https://www.dropbox.com/sh/wqbd0oskrmb82je/AACDmraF2ncR-sSKMBNs8n2wa?dl=0" target="_blank">Qster</a> `Objective-c`
-- <a href="https://www.dropbox.com/sh/cxd5338k3jt71kr/AABTGAiBBV05IZ3vx3JHZvJYa?dl=0" target="_blank">Sab Play</a> `Objective-c`
-- <a href="https://www.dropbox.com/sh/uupj6xxec8acur4/AACJ6X3cjqxuLns5uIQSjPPXa?dl=0" target="_blank">Macro E</a> `Objective-c`
+- <a href="https://www.dropbox.com/sh/xwjuzii7jiiut6d/AABhNUzWzgIcucVmlZzhNRKFa?dl=0" target="_blank">ShopSweetie (Later Stylio)</a> `Objective-C`
+- <a href="https://www.dropbox.com/sh/pg3wr1zpp8ocffi/AAD5akJlrcG9Zvg80qzrFkERa?dl=0" target="_blank">WeddingPlanner</a> `Objective-C`
+- <a href="https://itunes.apple.com/in/app/mahanews/id871107735?mt=8" target="_blank">MahaNews</a> `Objective-C`
+- <a href="https://www.dropbox.com/sh/yq8rk16y39go926/AADclGXp9sdLqStYPO4dJRtAa?dl=0" target="_blank">WhatsScore</a> `Objective-C`, `Independent Product`
+- <a href="https://www.dropbox.com/sh/0bnbt6k9g8dxvz2/AACXUByyAt6VRenQOENEvFFga?dl=0" target="_blank">AirPool</a> `Objective-C`, `Independent Product`
+- <a href="https://www.dropbox.com/sh/4prz0sahsi27zct/AADh6kKhnVC7_D0varGKmoHOa?dl=0" target="_blank">Racold</a> `Objective-C`
+- <a href="https://www.dropbox.com/sh/d8c7pqvw7qmb3ez/AADm44YyOOLst39o16bddswEa?dl=0" target="_blank">QBuzz for QNet</a> `Objective-C`
+- <a href="https://www.dropbox.com/sh/wqbd0oskrmb82je/AACDmraF2ncR-sSKMBNs8n2wa?dl=0" target="_blank">Qster</a> `Objective-C`
+- <a href="https://www.dropbox.com/sh/cxd5338k3jt71kr/AABTGAiBBV05IZ3vx3JHZvJYa?dl=0" target="_blank">Sab Play</a> `Objective-C`
+- <a href="https://www.dropbox.com/sh/uupj6xxec8acur4/AACJ6X3cjqxuLns5uIQSjPPXa?dl=0" target="_blank">Macro E</a> `Objective-C`
 
 <p>P.S: I mentioned 11 March which was the start date of CelerApps because at that day http://celerapps.com site becomes live.</p>
+
+---
 
 <h4>RedPanda Innovation Lab - Lead iOS Developer</h4>
 > Dec 2013 - Mar 2014 (4 month)
@@ -99,9 +107,10 @@ I'm really enjoying working for Citysocializer as part-time developer (yep worki
 <p>So we finally found CelerApps here at Redpanda as RedPanda Venture.</p>
 
 `Under Redpanda Innovation Lab`
-- <a href="https://itunes.apple.com/in/app/gabbar-the-legend/id785219111?mt=8" target="_blank">Gabbar - The Legend</a> `Objective-c`, `Independent Product`
+- <a href="https://itunes.apple.com/in/app/gabbar-the-legend/id785219111?mt=8" target="_blank">Gabbar - The Legend</a> `Objective-C`, `Independent Product`
 - <a href="https://www.dropbox.com/sh/l3u5myh8pudxr8b/AACT8DOCPEXNMNVkjhVPwJiea?dl=0" target="_blank">Bond Calculator</a> `Independent Product`
 
+---
 
 <h4>Indigo Consulting, A Leo Burnett Company - Sr. iOS Developer</h4>
 > Nov 2011 - Dec 2013 (Almost 2 year)
@@ -111,10 +120,12 @@ I'm really enjoying working for Citysocializer as part-time developer (yep worki
 <p>Here we created Office In-Out, Cricket Live, Indian Railway, Media vault and BankLog like apps and remember this are all our own app and later officially labeled under CelerApps.</p>
 
 `Under Indigo Consulting`
-- <a href="https://www.dropbox.com/sh/tu82va8ovad4fj6/AAC-_WYR_8PkMlvsSe84TH3va?dl=0" target="_blank">NMJ (Nirav Modi)</a> `iPad`,`In-House`,`Objective-c`
-- <a href="https://www.dropbox.com/sh/4nz5u9oc3dd47hr/AAASFLdJWHwIfe4N2v9DrRA2a?dl=0" target="_blank">Halal Traveller (HSBC Amanah)</a> `iPhone`,`Objective-c`
-- <a href="https://www.dropbox.com/sh/jqnjx9qdpedcmyq/AABBX3-3DQfc5SNnh2XxJZKga?dl=0" target="_blank">Culinary Treats (ICICI Bank)</a> `iPhone`,`Objective-c`
-- <a href="https://www.dropbox.com/sh/2a5m2q3maq7jcfj/AAAUAIDBK-Lpzs5HkT8iclDMa?dl=0" target="_blank">My Color Project (Asian Paints)</a> `iPhone`,`Objective-c`
+- <a href="https://www.dropbox.com/sh/tu82va8ovad4fj6/AAC-_WYR_8PkMlvsSe84TH3va?dl=0" target="_blank">NMJ (Nirav Modi)</a> `iPad`,`In-House`,`Objective-C`
+- <a href="https://www.dropbox.com/sh/4nz5u9oc3dd47hr/AAASFLdJWHwIfe4N2v9DrRA2a?dl=0" target="_blank">Halal Traveller (HSBC Amanah)</a> `iPhone`,`Objective-C`
+- <a href="https://www.dropbox.com/sh/jqnjx9qdpedcmyq/AABBX3-3DQfc5SNnh2XxJZKga?dl=0" target="_blank">Culinary Treats (ICICI Bank)</a> `iPhone`,`Objective-C`
+- <a href="https://www.dropbox.com/sh/2a5m2q3maq7jcfj/AAAUAIDBK-Lpzs5HkT8iclDMa?dl=0" target="_blank">My Color Project (Asian Paints)</a> `iPhone`,`Objective-C`
+
+---
 
 <h4>CloudGanga - iOS Developer</h4>
 > Apr 2011 - Nov 2011 (6 month)
@@ -134,6 +145,8 @@ I'm really enjoying working for Citysocializer as part-time developer (yep worki
 - <a href="https://www.dropbox.com/sh/a93l9dftxtz8xty/AACTLFMp1Qt797anXDBx3qnba?dl=0" target="_blank">Pradaxa</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/zogh35quspqseno/AAC-2-BP0od4C6L31kETITbda?dl=0" target="_blank">Device Management System</a> `PHP`
 
+---
+
 <h4>Magnanimous Software - iOS Developer</h4>
 > Nov 2010 - Apr 2011 (6 month)
 
@@ -143,6 +156,8 @@ I'm really enjoying working for Citysocializer as part-time developer (yep worki
 - <a href="https://www.dropbox.com/sh/muqyokx0njmo6dy/AACgqCmWDNXL5e7i04tJSVR8a?dl=0" target="_blank">eBillity</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/rrwqt5o4je5tvut/AABh-hWPw8wLSA65SppELrG3a?dl=0" target="_blank">Pocket Agent</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/svnpj8sdq6rog3o/AABv2w3JrcFtltSvkmzo9AM_a?dl=0" target="_blank">Event Locator</a> `iPhone`
+
+---
 
 <h4>Fortune Infocomm - QT C++ GUI Programmer</h4>
 > May 17 Nov 2010 - Nov 2010 (6 month)
