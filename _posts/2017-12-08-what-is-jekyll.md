@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: What is GitHub Pages, Jekyll, Poole, Hyde and Hydeout?
 excerpt_separator:  <!--more-->
 ---
