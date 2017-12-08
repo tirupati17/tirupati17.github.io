@@ -6,13 +6,14 @@ highlighter:       rouge
 title:             Tirupati Balan
 tagline:           'Personal Blog'
 description:       'An iOS Developer and Internet Entrepreneur. Founder at <a href="http://celerstudio.com" target="_blank">Celerstudio</a>.'
-url:               https://tirupati17.github.io
+url:               http://www.tirupatibalan.com
 baseurl:           # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
                   # other pages at root, see the paginate_path and
                   # sidebar_blog_link below.
 
+google_analytics: UA-31207525-1
 author:
   name:            'Andrew Fong'
   url:             https://twitter.com/fongandrewc
@@ -20,6 +21,8 @@ author:
 paginate:          5
 # paginate_path:   '/page:num'
                     # Or '/blog/page:num' if you want to move your index pages
+disqus:
+  shortname:       tirupatibalan
 
 plugins:
   - jekyll-feed
@@ -39,9 +42,6 @@ sidebar_home_link: true
                                 # to enable a separate blog link.
 github:
   repo:            https://github.com/tirupati17
-
-disqus:
-  shortname:       tirupatibalan
 
 atom:
   buildCommand:
