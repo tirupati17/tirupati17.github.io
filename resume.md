@@ -1,15 +1,15 @@
 ---
 layout: page
 title: Professional Timeline
-sidebar_link: false
+sidebar_link: true
 ---
 
 <h4>Citysocializer - Lead iOS Developer</h4>
-> 1 Aug 2015 - Present (Almost 2.3 years)
+> 1 Aug 2015 - Present (Almost 2.4 years)
 
-Well, Working independently at Celerstudio has made me realize that ideas, products, startups etc etc are good things but for monthly expenses parallelly you really need something `which is profitable` (product) `or` you are working for someone `who is profitable`(employer) and Yep luckily for that I've `Citysocializer`(my employer) subscription-based social networking website & app based in London  where I'm working as Lead iOS Developer since Aug 2015 remotely from India.
+Well, Working independently at Celerstudio has made me realize that ideas, products, startups etc etc are good things but for monthly expenses parallelly you really need something `which is profitable` (product) `or` you are working for someone `who is profitable`(employer) and Yep for that I've `Citysocializer`(my employer) subscription-based social networking website & app based in London  where I'm working as Lead iOS Developer since Aug 2015 remotely from India.
 
-I'm really enjoying working for Citysocializer as part-time developer (yep working only 2 days in a week). Because of this, on remaining days, I'm easily focusing on my own product work under Celerstudio.
+<!-- I'm really enjoying working for Citysocializer as part-time developer (yep working only 2 days in a week). Because of this, on remaining days, I'm easily focusing on my own product work under Celerstudio. -->
 
 `Under Citysocializer I'm responsible for below app`
 - <a href="https://itunes.apple.com/in/app/citysocializer/id581315807?mt=8" target="_blank">Citysocializer</a> `iPhone`
