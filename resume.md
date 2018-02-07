@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Professional Timeline
-sidebar_link: true
+sidebar_link: false
 ---
 
 <h4>Citysocializer - Lead iOS Developer</h4>
