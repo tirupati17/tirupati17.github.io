@@ -5,7 +5,7 @@ title: Projects
 
 <h4>Under CelerStudio </h4>
 `iOS` (via me)
-- <a href="http://wreely.com" target="_blank">Wreely</a> `Actively working`
+- <a href="http://www.wreely.com" target="_blank">Wreely</a> `Actively working`
 - <a href="https://angel.co/projects/375458-raileazy-indian-railway-rail-timetable?src=startup_profile" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a> `objective-c`
 - <a href="https://angel.co/projects/375467-office-in-out?src=startup_profile" target="_blank">Office In-Out</a> `objective-c`
 - <a href="https://angel.co/projects/401144-currency-converter-free-and-quick-converter?src=more_projects" target="_blank">Currency Converter - Free and Quick Converter</a> `swift`
