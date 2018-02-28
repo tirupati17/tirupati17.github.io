@@ -14,6 +14,9 @@ baseurl:           # the optional subpath of your site, e.g. "/blog"
                   # sidebar_blog_link below.
 
 google_analytics: UA-31207525-1
+owner:
+  name:           Tirupati Balan
+  
 author:
   name:            'Andrew Fong'
   url:             https://twitter.com/fongandrewc
@@ -36,6 +39,8 @@ playstore_icon:    https://png.icons8.com/google-play/dusk/40/000000
 website_icon:      https://png.icons8.com/website/dusk/40/000000
 version:           3.4.1
 sidebar_home_link: true
+sidebar_photography_link: true
+
 # sidebar_blog_link: '/blog'   # By default, your home page is your blog
                                 # page. If you change your paginate_path,
                                 # set this to the root of the paginate_path
@@ -43,6 +48,23 @@ sidebar_home_link: true
 github:
   repo:            https://github.com/tirupati17
 
+#Jekyll-Photo-Gallery Settings
+exiftag:
+ sources:
+   - images/photography #Set to location of photos
+
+#MiniMagick
+#https://github.com/zroger/jekyll-minimagick
+mini_magick:
+    photography:
+        source: images/photography
+        destination: images/photography/thumbnails
+        resize: "1280x720"
+    headers:
+        source: images/headers
+        destination: images/headers/thumbnails
+        resize: "400x250"
+        
 atom:
   buildCommand:
     - jekyll
