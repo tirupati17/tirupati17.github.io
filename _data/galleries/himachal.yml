@@ -1,0 +1,17 @@
+picture_path: himachal/2017
+preview:
+  filename: VS-2012-5900
+  original: VS-2012-5900-6000x4000.jpg
+  sizes:
+  - VS-2012-5900-4242x2828.jpg
+  - VS-2012-5900-2121x1414.jpg
+  - VS-2012-5900-2999x1999.jpg
+  thumbnail: VS-2012-5900-thumbnail.jpg
+pictures:
+- filename: VS-2012-5900
+  original: VS-2012-5900-6000x4000.jpg
+  sizes:
+  - VS-2012-5900-4242x2828.jpg
+  - VS-2012-5900-2121x1414.jpg
+  - VS-2012-5900-2999x1999.jpg
+  thumbnail: VS-2012-5900-thumbnail.jpg

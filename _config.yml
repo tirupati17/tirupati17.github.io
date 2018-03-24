@@ -76,3 +76,10 @@ atom:
   postDirs:
     - _newsletters
   defaultPostDir: _drafts
+
+defaults:
+  -
+    scope:
+      path: "travels"
+    values:
+      permalink: /:path/:basename:output_ext

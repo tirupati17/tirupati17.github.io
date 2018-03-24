@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://www.tirupatibalan.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tirupatibalan.com/" rel="alternate" type="text/html" /><updated>2018-03-01T02:16:20+05:30</updated><id>http://www.tirupatibalan.com/</id><title type="html">Tirupati Balan</title><subtitle>An iOS Developer and Internet Entrepreneur. Founder at &lt;a href=&quot;http://celerstudio.com&quot; target=&quot;_blank&quot;&gt;Celerstudio&lt;/a&gt;.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">What is GitHub Pages, Jekyll, Poole, Hyde and Hydeout?</title><link href="http://www.tirupatibalan.com/2017/12/08/what-is-jekyll.html" rel="alternate" type="text/html" title="What is GitHub Pages, Jekyll, Poole, Hyde and Hydeout?" /><published>2017-12-08T00:00:00+05:30</published><updated>2017-12-08T00:00:00+05:30</updated><id>http://www.tirupatibalan.com/2017/12/08/what-is-jekyll</id><content type="html" xml:base="http://www.tirupatibalan.com/2017/12/08/what-is-jekyll.html">&lt;p&gt;Hello, Hope all good!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-24T21:17:22+05:30</updated><id>http://localhost:4000/</id><title type="html">Tirupati Balan</title><subtitle>An iOS Developer and Internet Entrepreneur. Founder at &lt;a href=&quot;http://celerstudio.com&quot; target=&quot;_blank&quot;&gt;Celerstudio&lt;/a&gt;.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">Internal Server Error - Invalid command ‘RewriteEngine’ (Ubuntu Apache/PHP)</title><link href="http://localhost:4000/2018/03/24/500-internal-server-error-apache-php.html" rel="alternate" type="text/html" title="Internal Server Error - Invalid command 'RewriteEngine' (Ubuntu Apache/PHP)" /><published>2018-03-24T00:00:00+05:30</published><updated>2018-03-24T00:00:00+05:30</updated><id>http://localhost:4000/2018/03/24/500-internal-server-error-apache-php</id><content type="html" xml:base="http://localhost:4000/2018/03/24/500-internal-server-error-apache-php.html">&lt;p&gt;What is Internal Server Error?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;b&gt; It usually a server misconfiguration (check .htaccess file) or problem with your server side script. &lt;/b&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;First of all check for error log&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;$   sudo vim /var/log/apache2/error.log &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If log file become empty then enable it via php.ini  &lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;For php7
+$ sudo vim /etc/php/7.0/apache2/php.ini 
+
+or
+
+For php5
+$ sudo vim /etc/php5/apache2/php.ini &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Find display_errors, display_startup_errors , error_reporting  (Which look’s like below)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;;display_errors
+;   Default Value: On
+;   Development Value: On
+;   Production Value: Off
+
+;display_startup_errors
+;   Default Value: Off
+;   Development Value: On
+;   Production Value: Off
+
+;error_reporting
+;   Default Value: E_ALL &amp;amp; ~E_NOTICE &amp;amp; ~E_STRICT &amp;amp; ~E_DEPRECATED
+;   Development Value: E_ALL
+;   Production Value: E_ALL &amp;amp; ~E_DEPRECATED &amp;amp; ~E_STRICT&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Uncomment it via removing semicolons (After change it will look like below)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;display_errors
+;   Default Value: On
+;   Development Value: On
+;   Production Value: Off
+
+display_startup_errors
+;   Default Value: Off
+;   Development Value: On
+;   Production Value: Off
+
+error_reporting
+;   Default Value: E_ALL &amp;amp; ~E_NOTICE &amp;amp; ~E_STRICT &amp;amp; ~E_DEPRECATED
+;   Development Value: E_ALL
+;   Production Value: E_ALL &amp;amp; ~E_DEPRECATED &amp;amp; ~E_STRICT&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Restart apache via below command &lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;$ sudo service apache2 restart 
+
+or
+
+$ sudo /etc/init.d/apache2 restart &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now check in error.log file for Internal Server related problem.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;If in error log you got module related problem like below:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;/var/www/html/.htaccess: Invalid command ‘RewriteEngine’, perhaps misspelled or defined by a module not included in the server configuration  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Then perform below command for above error which enable rewrite module of apache2:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;$ sudo a2enmod rewrite &amp;amp;&amp;amp; sudo service apache2 restart&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That’s it. You are done :)&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">What is Internal Server Error? It usually a server misconfiguration (check .htaccess file) or problem with your server side script. First of all check for error log $   sudo vim /var/log/apache2/error.log  If log file become empty then enable it via php.ini   For php7 $ sudo vim /etc/php/7.0/apache2/php.ini or For php5 $ sudo vim /etc/php5/apache2/php.ini Find display_errors, display_startup_errors , error_reporting  (Which look’s like below) ;display_errors ; Default Value: On ; Development Value: On ; Production Value: Off ;display_startup_errors ; Default Value: Off ; Development Value: On ; Production Value: Off ;error_reporting ; Default Value: E_ALL &amp;amp; ~E_NOTICE &amp;amp; ~E_STRICT &amp;amp; ~E_DEPRECATED ; Development Value: E_ALL ; Production Value: E_ALL &amp;amp; ~E_DEPRECATED &amp;amp; ~E_STRICT Uncomment it via removing semicolons (After change it will look like below) display_errors ; Default Value: On ; Development Value: On ; Production Value: Off display_startup_errors ; Default Value: Off ; Development Value: On ; Production Value: Off error_reporting ; Default Value: E_ALL &amp;amp; ~E_NOTICE &amp;amp; ~E_STRICT &amp;amp; ~E_DEPRECATED ; Development Value: E_ALL ; Production Value: E_ALL &amp;amp; ~E_DEPRECATED &amp;amp; ~E_STRICT Restart apache via below command  $ sudo service apache2 restart or $ sudo /etc/init.d/apache2 restart  Now check in error.log file for Internal Server related problem. If in error log you got module related problem like below: /var/www/html/.htaccess: Invalid command ‘RewriteEngine’, perhaps misspelled or defined by a module not included in the server configuration   Then perform below command for above error which enable rewrite module of apache2: $ sudo a2enmod rewrite &amp;amp;&amp;amp; sudo service apache2 restart That’s it. You are done :)</summary></entry><entry><title type="html">What is GitHub Pages, Jekyll, Poole, Hyde and Hydeout?</title><link href="http://localhost:4000/2017/12/08/what-is-jekyll.html" rel="alternate" type="text/html" title="What is GitHub Pages, Jekyll, Poole, Hyde and Hydeout?" /><published>2017-12-08T00:00:00+05:30</published><updated>2017-12-08T00:00:00+05:30</updated><id>http://localhost:4000/2017/12/08/what-is-jekyll</id><content type="html" xml:base="http://localhost:4000/2017/12/08/what-is-jekyll.html">&lt;p&gt;Hello, Hope all good!&lt;/p&gt;
 
 &lt;p&gt;This is the first post on my personal blog and I want everyone to know how I setup this site using Jekyll and GitHub Pages. &lt;/p&gt;
 

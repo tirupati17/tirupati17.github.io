@@ -20,8 +20,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/main.css" />
-  <link rel="stylesheet" type="text/css" href="/css/jekyll-photo-gallery.css">
-  <link rel="stylesheet" href="/css/justifiedGallery.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/jekyll-photo-gallery.css">
+  <link rel="stylesheet" href="/css/justifiedGallery.min.css"> -->
   
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
@@ -35,6 +35,12 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 
   <!-- Additional head bits without overriding original head -->
+
+  <!-- Optional footer content -->
+
+
+
+
 </head>
 
 
@@ -70,6 +76,20 @@
     
       <a class="page-link "
           href="/about.html">About</a>
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
     
   
 
@@ -171,10 +191,28 @@
   
 
   
+    
+  
+
+  
 
 
   
 
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
 
   
     
@@ -282,13 +320,17 @@
   
 
   
+    
+  
+
+  
 
 
   <!-- Optional additional links to insert in sidebar nav -->
-
+<!-- 
 <a class="home-link  active"
     href="/photography">Travels</a>
-
+ -->
 </nav>
 
 
@@ -364,6 +406,109 @@
 
   
 
+  
+  <article class="post-body">
+    <h2 class="post-title">
+      <a href="/2018/03/24/500-internal-server-error-apache-php.html">
+        Internal Server Error - Invalid command 'RewriteEngine' (Ubuntu Apache/PHP)
+      </a>
+    </h2>
+    <div class="post-meta">
+  <span class="post-date">24 Mar 2018</span>
+  <span class="post-categories">
+    
+  </span>
+</div>
+
+    
+      <p>What is Internal Server Error?</p>
+
+<blockquote>
+  <p><b> It usually a server misconfiguration (check .htaccess file) or problem with your server side script. </b></p>
+</blockquote>
+
+<p>First of all check for error log</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">$   sudo vim /var/log/apache2/error.log </code></pre></figure>
+
+<p>If log file become empty then enable it via php.ini  </p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">For php7
+$ sudo vim /etc/php/7.0/apache2/php.ini 
+
+or
+
+For php5
+$ sudo vim /etc/php5/apache2/php.ini </code></pre></figure>
+
+<p>Find display_errors, display_startup_errors , error_reporting  (Which look’s like below)</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">;display_errors
+;   Default Value: On
+;   Development Value: On
+;   Production Value: Off
+
+;display_startup_errors
+;   Default Value: Off
+;   Development Value: On
+;   Production Value: Off
+
+;error_reporting
+;   Default Value: E_ALL &amp; ~E_NOTICE &amp; ~E_STRICT &amp; ~E_DEPRECATED
+;   Development Value: E_ALL
+;   Production Value: E_ALL &amp; ~E_DEPRECATED &amp; ~E_STRICT</code></pre></figure>
+
+<p>Uncomment it via removing semicolons (After change it will look like below)</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">display_errors
+;   Default Value: On
+;   Development Value: On
+;   Production Value: Off
+
+display_startup_errors
+;   Default Value: Off
+;   Development Value: On
+;   Production Value: Off
+
+error_reporting
+;   Default Value: E_ALL &amp; ~E_NOTICE &amp; ~E_STRICT &amp; ~E_DEPRECATED
+;   Development Value: E_ALL
+;   Production Value: E_ALL &amp; ~E_DEPRECATED &amp; ~E_STRICT</code></pre></figure>
+
+<p>Restart apache via below command </p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">$ sudo service apache2 restart 
+
+or
+
+$ sudo /etc/init.d/apache2 restart </code></pre></figure>
+
+<p>Now check in error.log file for Internal Server related problem.</p>
+
+<hr />
+
+<p>If in error log you got module related problem like below:</p>
+
+<blockquote>
+  <p>/var/www/html/.htaccess: Invalid command ‘RewriteEngine’, perhaps misspelled or defined by a module not included in the server configuration  </p>
+</blockquote>
+
+<p>Then perform below command for above error which enable rewrite module of apache2:</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">$ sudo a2enmod rewrite &amp;&amp; sudo service apache2 restart</code></pre></figure>
+
+<p>That’s it. You are done :)</p>
+
+    
+
+    
+      
+      
+      
+
+      
+    
+  </article>
   
   <article class="post-body">
     <h2 class="post-title">
@@ -475,8 +620,8 @@ title: Home
 </div>
     </main>
 
-    <!-- Optional footer content -->
-<script src="/js/vendor/jquery-1.9.1.min.js"></script>
-<script src="/js/plugins/jquery.justifiedGallery.min.js"></script>
+    
+<!-- <script src="/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="/js/plugins/jquery.justifiedGallery.min.js"></script> -->
   </body>
 </html>

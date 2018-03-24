@@ -1,0 +1,23 @@
+-
+ title: Himachal - Chitkul-Kalpa
+ directory: himachal/2017
+ preview:
+  filename: VS-2012-5900
+  original: VS-2012-5900-6000x4000.jpg
+  sizes:
+  - VS-2012-5900-4242x2828.jpg
+  - VS-2012-5900-2121x1414.jpg
+  - VS-2012-5900-2999x1999.jpg
+  thumbnail: VS-2012-5900-thumbnail.jpg
+-
+ title: Leh-Ladakh
+ directory: ladakh
+ picture_path: ladakh/2017
+ preview:
+  filename: Lichtfestival-0003
+  original: Lichtfestival-0003-6000x4000.jpg
+  sizes:
+  - Lichtfestival-0003-2121x1414.jpg
+  - Lichtfestival-0003-2999x1999.jpg
+  - Lichtfestival-0003-4242x2828.jpg
+  thumbnail: Lichtfestival-0003-thumbnail.jpg
