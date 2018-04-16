@@ -5,7 +5,7 @@ title: Projects
 
 <h4>Under CelerStudio </h4>
 `iOS` (via me)
-- <a href="http://www.wreely.com" target="_blank">Wreely</a> `Actively working`
+- <a href="http://www.wreely.com" target="_blank">Wreely</a> `swift``firebase`
 - <a href="https://angel.co/projects/375458-raileazy-indian-railway-rail-timetable?src=startup_profile" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a> `objective-c`
 - <a href="https://angel.co/projects/375467-office-in-out?src=startup_profile" target="_blank">Office In-Out</a> `objective-c`
 - <a href="https://angel.co/projects/401144-currency-converter-free-and-quick-converter?src=more_projects" target="_blank">Currency Converter - Free and Quick Converter</a> `swift`
@@ -15,11 +15,11 @@ title: Projects
 - <a href="https://angel.co/projects/374610-personal-media-vault?src=more_projects" target="_blank">Personal Media Vault</a> `objective-c`
 
 `Web` (via me)
-- <a href="http://wreely.com" target="_blank">Wreely</a> `Actively working`
-- <a href="https://angel.co/projects/375475-raileazy-indian-railway-rail-timetable?src=more_projects" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a>
+- <a href="http://wreely.com" target="_blank">Wreely</a> `PHP CodeIgniter``Slim Framework``MySql``HTML``CSS``Javascript`
+- <a href="https://angel.co/projects/375475-raileazy-indian-railway-rail-timetable?src=more_projects" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a> `PHP CodeIgniter``Slim Framework``MySql``HTML``CSS``Javascript` 
 
 `Android` (via my android colleagues)
-- <a href="http://wreely.com" target="_blank">Wreely</a> `Actively working`
+- <a href="http://wreely.com" target="_blank">Wreely</a>
 - <a href="https://angel.co/projects/375474-raileazy-indian-railway-android-apps-on-google-play?src=more_projects" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a>
 - <a href="https://angel.co/projects/375472-banklog-android-apps-on-google-play?src=more_projects" target="_blank">Banklog</a>
 - <a href="https://angel.co/projects/375473-cricket-live-android-apps-on-google-play?src=more_projects" target="_blank">Cricket Live</a>

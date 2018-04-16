@@ -35,7 +35,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 `Under CelerStudio I've finished few below listed products for iOS, Android and Web.`
 
 `iOS` (via me)
-- <a href="http://wreely.com" target="_blank">Wreely</a> `Actively working`
+- <a href="http://wreely.com" target="_blank">Wreely</a>
 - <a href="https://angel.co/projects/375458-raileazy-indian-railway-rail-timetable?src=startup_profile" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a> `Objective-C`
 - <a href="https://angel.co/projects/375467-office-in-out?src=startup_profile" target="_blank">Office In-Out</a> `Objective-C`
 - <a href="https://angel.co/projects/401144-currency-converter-free-and-quick-converter?src=more_projects" target="_blank">Currency Converter - Free and Quick Converter</a> `swift`
@@ -46,11 +46,11 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 - <a href="https://www.dropbox.com/sh/ulqptfv8znowheq/AABCCeJMJHITb5ToJT_1d_pTa?dl=0" target="_blank">Cricket Live</a> `Objective-C`
 
 `Web` (via me)
-- <a href="http://wreely.com" target="_blank">Wreely</a> `Actively working`
+- <a href="http://wreely.com" target="_blank">Wreely</a>
 - <a href="https://angel.co/projects/375475-raileazy-indian-railway-rail-timetable?src=more_projects" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a>
 
 `Android` (via my android colleagues)
-- <a href="http://wreely.com" target="_blank">Wreely</a> `Actively working`
+- <a href="http://wreely.com" target="_blank">Wreely</a> 
 - <a href="https://angel.co/projects/375474-raileazy-indian-railway-android-apps-on-google-play?src=more_projects" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a>
 - <a href="https://angel.co/projects/375472-banklog-android-apps-on-google-play?src=more_projects" target="_blank">Banklog</a>
 - <a href="https://angel.co/projects/375473-cricket-live-android-apps-on-google-play?src=more_projects" target="_blank">Cricket Live</a>
