@@ -17,5 +17,50 @@ As an Internet Entrepreneur, have executed dozens of apps for end users.
 
 [Check out my project work](/category/projects)
 
-<!-- <h4>@quickupdate </h4>
-> For the right opportunity I am definitely willing to relocate in London, US, Dubai, Thailand (May be nearby beach area) or any suitable country for work if any one of you ready to sponsor my visa. -->
+---
+
+<h3>Languages I mostly work with</h3>
+- Swift (Professionally)
+- Objective-C (Professionally)
+- React Native (For Learning & Experiments)
+- PHP, Javascript, HTML & CSS (For self products)
+- Python (For Learning & Experiments)
+
+<h3>Version control</h3>
+- Git
+
+<h3>Tools I use on daily basis</h3>
+- Slack
+- Pivotal Tracker
+- Trello
+- GitLab
+- Taiga (rarely)
+- GitHub
+- Bitbucket
+- Sourcetree (Git GUI)
+
+<h3>Project management methodology I mostly follow</h3>
+- Agile
+- Kanban
+- Scrum
+
+<h3>Favourite Editors & IDE</h3>
+- Xcode
+- Vim
+- Atom
+- Visual Studio Code
+
+<h3>Books I usually reads</h3>
+- `Advanced Swift` - Chris Eidhof, Ole Begemann, and Airspeed Velocity
+- `Clean Code: A Handbook of Agile Software Craftsmanship.` - Robert C. Martin Series
+- `Structure and Interpretation of Computer Programs` - Hal Abelson
+- `Introduction to Algorithms` - Thomas H. Cormen
+
+<h3>Blog & Newsletter</h3>
+- [Swiftweekly](http://digest.swiftweekly.com)
+- [objc](https://www.objc.io/blog)
+- [Raywenderlich](https://www.raywenderlich.com)
+
+<!-- 
+<h4>@quickupdate [April 2018]</h4>
+> For the right opportunity I am definitely willing to relocate in London, US, Dubai, Thailand or any suitable country for work if any one of you ready to sponsor my visa for that country. Basically want both change and challenge (Want to work under good full stack influencer or say tech lead or say a good mentor). I've been working alone for about last 3 years, now seriously I want to get out of this.  -->

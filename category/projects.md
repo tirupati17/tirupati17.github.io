@@ -3,6 +3,9 @@ layout: category
 title: Projects
 ---
 
+<h4>Under Citysocializer</h4>
+- <a href="https://itunes.apple.com/in/app/citysocializer/id581315807?mt=8" target="_blank">Citysocializer</a> `iPhone`
+
 <h4>Under CelerStudio </h4>
 `iOS` (via me)
 - <a href="http://www.wreely.com" target="_blank">Wreely</a> `swift``firebase`

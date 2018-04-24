@@ -5,7 +5,7 @@ highlighter:       rouge
 # Setup
 title:             Tirupati Balan
 tagline:           'Personal Blog'
-description:       'An iOS Developer and Internet Entrepreneur. Founder at <a href="http://celerstudio.com" target="_blank">Celerstudio</a>.'
+description:       'An iOS Developer and Internet Entrepreneur'
 url:               http://www.tirupatibalan.com
 baseurl:           # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
@@ -18,8 +18,8 @@ owner:
   name:           Tirupati Balan
   
 author:
-  name:            'Andrew Fong'
-  url:             https://twitter.com/fongandrewc
+  name:            'Tirupati Balan'
+  url:             https://twitter.com/tirupati17
 
 paginate:          5
 # paginate_path:   '/page:num'
