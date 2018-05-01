@@ -5,7 +5,7 @@ sidebar_link: true
 ---
 
 <h4>Citysocializer - Lead iOS Developer</h4>
-> 1 Aug 2015 - Present (Almost 2.4 years)
+> 1 Aug 2015 - Present (Almost 2 yrs 10 mos)
 <!-- 
 Well, Working independently at Celerstudio has made me realize that ideas, products, startups etc etc are good things but for monthly expenses parallelly you really need something `which is profitable` (product) `or` you are working for someone `who is profitable`(employer) and Yep for that I've `Citysocializer`(my employer) subscription-based social networking website & app based in London  where I'm working as Lead iOS Developer since Aug 2015 remotely from India. -->
 
@@ -16,8 +16,8 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 
 ---
 
-<h4>Celerstudio - Lead iOS Developer and UI/UX Expert</h4>
-> 1 Jan 2015 - Present (Almost 3 years)
+<h4>Celerstudio - Lead Software Engineer | Founder - iOS | JAVASCRIPT | PHP</h4>
+> 1 Jan 2015 - Aug 2015 (8 Months)
 
 <!-- <p>
     After spending almost 10 months at CelerApps (11 March 2014 - 31 Dec 2014) I realize that there is something which I want to transform i.e the amount of time spend on a product because without your dedicated effort it's not possible to build any perfect product.
@@ -71,8 +71,8 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 
 ---
 
-<h4>CelerApps (Under Redpanda) - Partner (Lead iOS Developer)`</h4>
-> 11 Mar 2014 - 31 Dec 2014 (10 month)
+<h4>RedPanda Innovation Lab - Application Developer (iOS)`</h4>
+> Dec 2013 - 31 Dec 2014 (1 Year 1 Months)
 
 <!-- <p>At CelerApps along with Redpanda Team with a lot of Karan support, I have learned a lot from him what exactly the entrepreneur means to me and I found that it's not as easy as I thought but remember <span style="font-weight:bold;">"in life nothing is simple as simpler".</span></p>
 <p>Remember for your survive and monthly expenses you have to do consulting, without consulting it's not possible to generate money except if you have some amazing product but currently, we don't have it.</p>
@@ -82,7 +82,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 <p>Now at CelerApps we are doing great with consulting work we build dozens of mobile apps for differents brands & together 40+ All over apps experience and everyone here handling his entrepreneurship role under Karan guideline.</p>
 <p>What next for product.. yep we again trying our luck with one awesome idea and will always try our luck with dedicated hard work remember <span style="font-weight:bold;">"Each mistake teaches you something new about yourself. There is no failure, remember, except in no longer trying. It is the courage to continue that counts."</span></p> -->
 
-`Under CelerApps I've executed below few apps for our clients`
+`Under Redpanda Innovation Lab`
 - <a href="https://www.dropbox.com/sh/xwjuzii7jiiut6d/AABhNUzWzgIcucVmlZzhNRKFa?dl=0" target="_blank">ShopSweetie (Later Stylio)</a> `Objective-C`
 - <a href="https://www.dropbox.com/sh/pg3wr1zpp8ocffi/AAD5akJlrcG9Zvg80qzrFkERa?dl=0" target="_blank">WeddingPlanner</a> `Objective-C`
 - <a href="https://itunes.apple.com/in/app/mahanews/id871107735?mt=8" target="_blank">MahaNews</a> `Objective-C`
@@ -93,26 +93,27 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 - <a href="https://www.dropbox.com/sh/wqbd0oskrmb82je/AACDmraF2ncR-sSKMBNs8n2wa?dl=0" target="_blank">Qster</a> `Objective-C`
 - <a href="https://www.dropbox.com/sh/cxd5338k3jt71kr/AABTGAiBBV05IZ3vx3JHZvJYa?dl=0" target="_blank">Sab Play</a> `Objective-C`
 - <a href="https://www.dropbox.com/sh/uupj6xxec8acur4/AACJ6X3cjqxuLns5uIQSjPPXa?dl=0" target="_blank">Macro E</a> `Objective-C`
+- <a href="https://itunes.apple.com/in/app/gabbar-the-legend/id785219111?mt=8" target="_blank">Gabbar - The Legend</a> `Objective-C`,
+- <a href="https://www.dropbox.com/sh/l3u5myh8pudxr8b/AACT8DOCPEXNMNVkjhVPwJiea?dl=0" target="_blank">Bond Calculator</a> 
 
 <!-- <p>P.S: I mentioned 11 March which was the start date of CelerApps because at that day http://celerapps.com site becomes live.</p> -->
 
----
 
-<h4>RedPanda Innovation Lab - Lead iOS Developer</h4>
+<!-- <h4>RedPanda Innovation Lab - Lead iOS Developer</h4>
 > Dec 2013 - Mar 2014 (4 month)
-
+ -->
 <!-- <p>After spending almost 2 years at Indigo Consulting I thought let's do something different and then I joined Redpanda. The place where I found most intelligent people ever and still learning a lot every day.</p>
 <p>But after a few month, I feel I want to do something with my own ideas like we did in indigo through unofficial CelerApps.Then Karan (Founder of Redpanda) suggested me lets start your own company under RedPanda Venture and do what you really want to do.</p>
 <p>Then after a formal agreement with Karan I called Shivam(Android Developer) and Saya(Android Developer) from Indigo Consulting & they joined me along with Pooja as Windows Developer.</p>
 <p>So we finally found CelerApps here at Redpanda as RedPanda Venture.</p> -->
 
-`Under Redpanda Innovation Lab`
-- <a href="https://itunes.apple.com/in/app/gabbar-the-legend/id785219111?mt=8" target="_blank">Gabbar - The Legend</a> `Objective-C`, `Independent Product`
+<!-- `Under Redpanda Innovation Lab` -->
+<!-- - <a href="https://itunes.apple.com/in/app/gabbar-the-legend/id785219111?mt=8" target="_blank">Gabbar - The Legend</a> `Objective-C`, `Independent Product`
 - <a href="https://www.dropbox.com/sh/l3u5myh8pudxr8b/AACT8DOCPEXNMNVkjhVPwJiea?dl=0" target="_blank">Bond Calculator</a> `Independent Product`
-
+ -->
 ---
 
-<h4>Indigo Consulting, A Leo Burnett Company - Sr. iOS Developer</h4>
+<h4>Indigo Consulting, A Leo Burnett Company - Application Developer (iOS) </h4>
 > Nov 2011 - Dec 2013 (Almost 2 year)
 
 <!-- <p>Worked on iOS based application for reputed brands like ICICI Bank, Asian Paints, and HSBC Amanah.</p>
@@ -127,8 +128,8 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 
 ---
 
-<h4>CloudGanga - iOS Developer</h4>
-> Apr 2011 - Nov 2011 (6 month)
+<h4>CloudGanga - Software Engineer (iOS | PHP)</h4>
+> May 2010 - Nov 2011 (1 Year 7 Months)
 
 <!-- <p>Worked on so many iOS-based utility apps and also worked on PHP based site.</p>
 <p>Here learned a lot about PHP and learned that PHP is a quick server side language which every mobile developer should know.</p> -->
@@ -147,27 +148,26 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 
 ---
 
-<h4>Magnanimous Software - iOS Developer</h4>
+<!-- <h4>Magnanimous Software - iOS Developer</h4>
 > Nov 2010 - Apr 2011 (6 month)
-
+ -->
 <!-- <p>Based on QT C++ experience I got selected here and this is the place where I learned HOW TO CODE in iOS and lots more.</p> -->
 
-`Under Magnanimous Software`
+<!-- `Under Magnanimous Software`
 - <a href="https://www.dropbox.com/sh/muqyokx0njmo6dy/AACgqCmWDNXL5e7i04tJSVR8a?dl=0" target="_blank">eBillity</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/rrwqt5o4je5tvut/AABh-hWPw8wLSA65SppELrG3a?dl=0" target="_blank">Pocket Agent</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/svnpj8sdq6rog3o/AABv2w3JrcFtltSvkmzo9AM_a?dl=0" target="_blank">Event Locator</a> `iPhone`
+ -->
 
----
-
-<h4>Fortune Infocomm - QT C++ GUI Programmer</h4>
-> May 17 Nov 2010 - Nov 2010 (6 month)
+<!-- <h4>Fortune Infocomm - QT C++ GUI Programmer</h4>
+> May 17 Nov 2010 - Nov 2010 (6 month) -->
 
 <!-- <p>On 15 May I submitted my last year project Black-Book and after one day of rest, I started working on fortune Infocomm from 17th May. Here I worked on different programming languages like QT, PHP and .NET but mostly worked on QT almost 4 & half month.</p>
 <p>My fresh 6-month experience with almost no salary ;) but enjoyed a lot working on different technology and learned that <span style="font-weight:bold;">"at career start don't bother about salary & all, just do what you really want to do and love."</span></p> -->
 
-`Under Fortune Infocomm`
+<!-- `Under Fortune Infocomm` -->
 <!-- > You won't believe here I worked on an app which was similar to whatspp or says more advanced version and I was almost leading the project via managing 2 android, 2 windows, 1 iOS developer and I was responsible for Nokia device using QT C++ and as a backend developer using C#. -->
 
-- <a href="" target="_blank">SPC (Smart Phone Connected)</a> `Nokia Devices`, `QT C++`, `C#`
+<!-- - <a href="" target="_blank">SPC (Smart Phone Connected)</a> `Nokia Devices`, `QT C++`, `C#` -->
 
 NOTE: MOST OF APP REFERENCE LINKS ARE DROPBOX LINK WITH APP SCREENSHOT BECAUSE SOMETIME ITUNES LINK WON'T WORK DUE TO APP REMOVAL.

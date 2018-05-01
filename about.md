@@ -8,14 +8,14 @@ Hello, Hope all good!!
 
 I'm Tirupati Balan, An iOS Developer and Internet Entrepreneur.
 
-<p class="message">
+<!-- <p class="message">
   Well, I said iOS Developer because I spend a lot of my professional time by developing iOS apps specially in Objective-C (now swift) and Internet Entrepreneur may be because I've actively worked on or say love to work or love to manage or love to build something useful (apps or sites) in this internet-dependent world.
 </p>
 As an iOS Developer, I've built around 40+ apps for clients via freelancing, direct clients and my agencies tenure.
 
 As an Internet Entrepreneur, have executed dozens of apps for end users.
 
-[Check out my project work](/category/projects)
+[Check out my project work](/category/projects) -->
 
 ---
 
@@ -25,6 +25,8 @@ As an Internet Entrepreneur, have executed dozens of apps for end users.
 - React Native (For Learning & Experiments)
 - PHP, Javascript, HTML & CSS (For self products)
 - Python (For Learning & Experiments)
+- Markdown (For my blog)
+- YAML (For my blog)
 
 <h3>Version control</h3>
 - Git
@@ -49,6 +51,7 @@ As an Internet Entrepreneur, have executed dozens of apps for end users.
 - Vim
 - Atom
 - Visual Studio Code
+- Sublime Text (for quick edit)
 
 <h3>Books I usually reads</h3>
 - `Advanced Swift` - Chris Eidhof, Ole Begemann, and Airspeed Velocity
@@ -56,10 +59,18 @@ As an Internet Entrepreneur, have executed dozens of apps for end users.
 - `Structure and Interpretation of Computer Programs` - Hal Abelson
 - `Introduction to Algorithms` - Thomas H. Cormen
 
-<h3>Blog & Newsletter</h3>
+<h3>Blogs I follow</h3>
+> I usually use [RSS Bot](https://itunes.apple.com/in/app/rss-bot-news-notifier/id605732865?mt=12) notifier to get updates from below blogs
+
 - [Swiftweekly](http://digest.swiftweekly.com)
 - [objc](https://www.objc.io/blog)
 - [Raywenderlich](https://www.raywenderlich.com)
+- [Apple Developer News](https://www.raywenderlich.com)
+- [Swift.org](https://swift.org/blog)
+- [Ole Begemann](https://oleb.net/blog)
+- [NSHipster](http://nshipster.com)
+- [iOS Dev Weekly](https://iosdevweekly.com)
+- [What's new in Swift?](https://www.whatsnewinswift.com)
 
 <!-- 
 <h4>@quickupdate [April 2018]</h4>

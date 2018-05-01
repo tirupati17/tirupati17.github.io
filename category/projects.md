@@ -63,7 +63,7 @@ title: Projects
 - <a href="" target="_blank">Bachat</a> `iOS`, `UI/UX`, `Design`, `Project Management`, `Via Direct Client`
 - <a href="https://www.dropbox.com/sh/cjyquh8gavhzg1l/AAA2O7fspNVIfciMMprGgwUna?dl=0" target="_blank">Reality</a> `iOS - iPad`, `Via Agencies`, `In-House`
 
-`Under CelerApps I've executed below few apps for our clients`
+`Under Redpanda Innovation Lab`
 - <a href="https://www.dropbox.com/sh/xwjuzii7jiiut6d/AABhNUzWzgIcucVmlZzhNRKFa?dl=0" target="_blank">ShopSweetie (Later Stylio)</a> `Objective-c`
 - <a href="https://www.dropbox.com/sh/pg3wr1zpp8ocffi/AAD5akJlrcG9Zvg80qzrFkERa?dl=0" target="_blank">WeddingPlanner</a> `Objective-c`
 - <a href="https://itunes.apple.com/in/app/mahanews/id871107735?mt=8" target="_blank">MahaNews</a> `Objective-c`
@@ -74,8 +74,6 @@ title: Projects
 - <a href="https://www.dropbox.com/sh/wqbd0oskrmb82je/AACDmraF2ncR-sSKMBNs8n2wa?dl=0" target="_blank">Qster</a> `Objective-c`
 - <a href="https://www.dropbox.com/sh/cxd5338k3jt71kr/AABTGAiBBV05IZ3vx3JHZvJYa?dl=0" target="_blank">Sab Play</a> `Objective-c`
 - <a href="https://www.dropbox.com/sh/uupj6xxec8acur4/AACJ6X3cjqxuLns5uIQSjPPXa?dl=0" target="_blank">Macro E</a> `Objective-c`
-
-`Under Redpanda Innovation Lab`
 - <a href="https://itunes.apple.com/in/app/gabbar-the-legend/id785219111?mt=8" target="_blank">Gabbar - The Legend</a> `Objective-c`, `Independent Product`
 - <a href="https://www.dropbox.com/sh/l3u5myh8pudxr8b/AACT8DOCPEXNMNVkjhVPwJiea?dl=0" target="_blank">Bond Calculator</a> `Independent Product`
 
@@ -97,12 +95,12 @@ title: Projects
 - <a href="https://www.dropbox.com/sh/a93l9dftxtz8xty/AACTLFMp1Qt797anXDBx3qnba?dl=0" target="_blank">Pradaxa</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/zogh35quspqseno/AAC-2-BP0od4C6L31kETITbda?dl=0" target="_blank">Device Management System</a> `PHP`
 
-`Under Magnanimous Software`
+<!-- `Under Magnanimous Software`
 - <a href="https://www.dropbox.com/sh/muqyokx0njmo6dy/AACgqCmWDNXL5e7i04tJSVR8a?dl=0" target="_blank">eBillity</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/rrwqt5o4je5tvut/AABh-hWPw8wLSA65SppELrG3a?dl=0" target="_blank">Pocket Agent</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/svnpj8sdq6rog3o/AABv2w3JrcFtltSvkmzo9AM_a?dl=0" target="_blank">Event Locator</a> `iPhone`
 
 `Under Fortune Infocomm`
 - <a href="" target="_blank">SPC (Smart Phone Connected)</a> `Nokia Devices`, `QT C++`, `C#`
-
+ -->
 NOTE: MOST OF APP REFERENCE LINKS ARE DROPBOX LINK WITH APP SCREENSHOT BECAUSE SOMETIME ITUNES LINK WON'T WORK DUE TO APP REMOVAL.
