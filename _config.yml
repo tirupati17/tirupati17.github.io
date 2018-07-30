@@ -6,7 +6,7 @@ highlighter:       rouge
 title:             Tirupati Balan
 tagline:           'Personal Blog'
 description:       'An iOS Developer and Internet Entrepreneur'
-url:               http://www.tirupatibalan.com
+url:               https://www.tirupatibalan.com
 baseurl:           # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
