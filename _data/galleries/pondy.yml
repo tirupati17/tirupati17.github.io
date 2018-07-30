@@ -1,0 +1,37 @@
+picture_path: pondy/2015
+preview:
+  filename: pondy-2015-01
+  original: pondy-2015-01.jpg
+  sizes:
+  - pondy-2015-01.jpg
+  thumbnail: pondy-2015-01.jpg
+  title: Paradise Island
+  caption: Using iPhone 5 Camera
+pictures:
+- sizes:
+  - pondy-2015-01.jpg
+  thumbnail: pondy-2015-01.jpg
+
+- sizes:
+  - pondy-2015-02.jpg
+  thumbnail: pondy-2015-02.jpg
+
+- sizes:
+  - pondy-2015-03.jpg
+  thumbnail: pondy-2015-03.jpg
+
+- sizes:
+  - pondy-2015-04.jpg
+  thumbnail: pondy-2015-04.jpg
+
+- sizes:
+  - pondy-2015-05.jpg
+  thumbnail: pondy-2015-05.jpg
+
+- sizes:
+  - pondy-2015-06.jpg
+  thumbnail: pondy-2015-06.jpg
+
+- sizes:
+  - pondy-2015-07.jpg
+  thumbnail: pondy-2015-07.jpg

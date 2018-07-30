@@ -2,22 +2,38 @@
  title: Himachal - Chitkul-Kalpa
  directory: himachal/2017
  preview:
-  filename: VS-2012-5900
-  original: VS-2012-5900-6000x4000.jpg
+  filename: 17200933_10207435243953329_4414932682603919366_n_10207435243953329
+  original: 17200933_10207435243953329_4414932682603919366_n_10207435243953329.jpg
   sizes:
-  - VS-2012-5900-4242x2828.jpg
-  - VS-2012-5900-2121x1414.jpg
-  - VS-2012-5900-2999x1999.jpg
-  thumbnail: VS-2012-5900-thumbnail.jpg
+  - 17200933_10207435243953329_4414932682603919366_n_10207435243953329.jpg
+  thumbnail: 17200933_10207435243953329_4414932682603919366_n_10207435243953329.jpg
 -
  title: Leh-Ladakh
  directory: ladakh
  picture_path: ladakh/2017
  preview:
-  filename: Lichtfestival-0003
-  original: Lichtfestival-0003-6000x4000.jpg
+  filename: 28871138_10209812854712112_7738142830882717696_n_10209812854672111
+  original: 28871138_10209812854712112_7738142830882717696_n_10209812854672111.jpg
   sizes:
-  - Lichtfestival-0003-2121x1414.jpg
-  - Lichtfestival-0003-2999x1999.jpg
-  - Lichtfestival-0003-4242x2828.jpg
-  thumbnail: Lichtfestival-0003-thumbnail.jpg
+  - 28871138_10209812854712112_7738142830882717696_n_10209812854672111.jpg
+  thumbnail: 28871138_10209812854712112_7738142830882717696_n_10209812854672111.jpg
+-
+ title: Pondicherry
+ directory: pondy
+ picture_path: pondy/2015
+ preview:
+  filename: pondy-2015-01
+  original: pondy-2015-01.jpg
+  sizes:
+  - pondy-2015-01.jpg
+  thumbnail: pondy-2015-01.jpg
+-
+ title: Kanyakumari
+ directory: kanyakumari
+ picture_path: kanyakumari/2015
+ preview:
+  filename: kanyakumari-2015-01
+  original: kanyakumari-2015-01.jpg
+  sizes:
+  - kanyakumari-2015-01.jpg
+  thumbnail: kanyakumari-2015-01.jpg

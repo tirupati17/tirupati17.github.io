@@ -1,0 +1,25 @@
+picture_path: kanyakumari/2015
+preview:
+  filename: kanyakumari-2015-01
+  original: kanyakumari-2015-01.jpg
+  sizes:
+  - kanyakumari-2015-01.jpg
+  thumbnail: kanyakumari-2015-01.jpg
+  title: Paradise Island
+  caption: Using iPhone 5 Camera
+pictures:
+- sizes:
+  - kanyakumari-2015-01.jpg
+  thumbnail: kanyakumari-2015-01.jpg
+- sizes:
+  - kanyakumari-2015-02.jpg
+  thumbnail: kanyakumari-2015-02.jpg
+- sizes:
+  - kanyakumari-2015-03.jpg
+  thumbnail: kanyakumari-2015-03.jpg
+- sizes:
+  - kanyakumari-2015-04.jpg
+  thumbnail: kanyakumari-2015-04.jpg
+- sizes:
+  - kanyakumari-2015-05.jpg
+  thumbnail: kanyakumari-2015-05.jpg

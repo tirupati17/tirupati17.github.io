@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Travels
-sidebar_link: false
+sidebar_link: true
 permalink: /travels/
 ---
 
-<p>Hello, Hope all good. Check out my himalayas experience</p>
+<p>Hello, Hope all good. I have created this travel section specially to share my travel photos</p>
 
 {% assign count = 0 %}
 {% assign align = "left" %}
