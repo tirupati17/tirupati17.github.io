@@ -115,13 +115,13 @@ module Jekyll
       photos.each do |photo, details|
         [nil, *details, nil].each_cons(3){|prev, curr, nxt|
           if(curr["album"] == text.strip)
-            @result = @result+'<div itemscope itemtype="http://schema.org/Photograph">
+            @result = @result+'<div itemscope itemtype="https://schema.org/Photograph">
                                       <a itemprop="image" class="swipebox" title="'+curr["title"]+'" href="/photography/'+curr["title"].strip.gsub(' ', '-').gsub(/[^\w-]/, '')+'/">
                                         <img alt="'+curr["title"]+'" itemprop="thumbnailUrl" src="/images/photography/thumbnails/'+curr["img"]+'.jpg"/>
                                         <meta itemprop="name" content="'+curr["title"]+'" />
                                         <meta itemprop="isFamilyFriendly" content="true" />
-                                        <div itemprop="creator" itemscope itemtype="http://schema.org/Person">
-                                          <div itemprop="sameAs" href="http://theowinter.ch/about">
+                                        <div itemprop="creator" itemscope itemtype="https://schema.org/Person">
+                                          <div itemprop="sameAs" href="https://theowinter.ch/about">
                                             <meta itemprop="name" content="Theo Winter"/>
                                           </div>
                                         </div>

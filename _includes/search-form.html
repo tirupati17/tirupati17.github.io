@@ -6,7 +6,7 @@
       Hacky strip of protocol to the sitesearch value we pass to Google
     {% endcomment %}
     {% assign url = site.url | replace_first: 'https://', '' %}
-    {% assign url = url | replace_first: 'http://', '' %}
+    {% assign url = url | replace_first: 'https://', '' %}
     {% assign url = url | replace_first: 'spdy://', '' %}
     {% assign url = url | replace_first: '//', '' %}
     <input name="sitesearch" type="hidden"

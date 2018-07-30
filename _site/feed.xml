@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-30T19:10:24+05:30</updated><id>http://localhost:4000/</id><title type="html">Tirupati Balan</title><subtitle>An iOS Developer and Internet Entrepreneur</subtitle><author><name>Tirupati Balan</name></author><entry><title type="html">Internal Server Error - Invalid command ‘RewriteEngine’ (Ubuntu Apache/PHP)</title><link href="http://localhost:4000/2018/03/24/500-internal-server-error-apache-php.html" rel="alternate" type="text/html" title="Internal Server Error - Invalid command 'RewriteEngine' (Ubuntu Apache/PHP)" /><published>2018-03-24T00:00:00+05:30</published><updated>2018-03-24T00:00:00+05:30</updated><id>http://localhost:4000/2018/03/24/500-internal-server-error-apache-php</id><content type="html" xml:base="http://localhost:4000/2018/03/24/500-internal-server-error-apache-php.html">&lt;p&gt;What is Internal Server Error?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-30T19:19:50+05:30</updated><id>http://localhost:4000/</id><title type="html">Tirupati Balan</title><subtitle>An iOS Developer and Internet Entrepreneur</subtitle><author><name>Tirupati Balan</name></author><entry><title type="html">Internal Server Error - Invalid command ‘RewriteEngine’ (Ubuntu Apache/PHP)</title><link href="http://localhost:4000/2018/03/24/500-internal-server-error-apache-php.html" rel="alternate" type="text/html" title="Internal Server Error - Invalid command 'RewriteEngine' (Ubuntu Apache/PHP)" /><published>2018-03-24T00:00:00+05:30</published><updated>2018-03-24T00:00:00+05:30</updated><id>http://localhost:4000/2018/03/24/500-internal-server-error-apache-php</id><content type="html" xml:base="http://localhost:4000/2018/03/24/500-internal-server-error-apache-php.html">&lt;p&gt;What is Internal Server Error?&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;b&gt; It usually a server misconfiguration (check .htaccess file) or problem with your server side script. &lt;/b&gt;&lt;/p&gt;
@@ -96,7 +96,7 @@ You can create and publish GitHub Pages online using the Jekyll Theme Chooser.&l
 &lt;p&gt;&lt;a href=&quot;https://help.github.com/articles/what-is-github-pages/&quot;&gt;Reference&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4&gt;What is Jekyll?&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a simple, blog-aware, static site generator for personal, project, or organization sites. Written in Ruby by Tom Preston-Werner, GitHub’s co-founder, it is distributed under an open source license.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a simple, blog-aware, static site generator for personal, project, or organization sites. Written in Ruby by Tom Preston-Werner, GitHub’s co-founder, it is distributed under an open source license.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Instead of using databases, Jekyll takes the content, renders Markdown or Textile and Liquid templates, and produces a complete, static website ready to be served by Apache HTTP Server, Nginx or another web server.&lt;/p&gt;
@@ -116,13 +116,13 @@ You can create and publish GitHub Pages online using the Jekyll Theme Chooser.&l
 
 &lt;h4&gt;Meet Poole&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;  is the butler for Jekyll, the static site generator.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://getpoole.com&quot;&gt;Poole&lt;/a&gt;  is the butler for Jekyll, the static site generator.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;It’s designed and developed by &lt;a href=&quot;https://markdotto.com&quot;&gt;@mdo&lt;/a&gt; to provide a clear and concise foundational setup for any Jekyll site.&lt;br /&gt;It does so by furnishing a full vanilla Jekyll install with example templates, pages, posts, and styles.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://getpoole.com/&quot;&gt;Reference&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://getpoole.com/&quot;&gt;Reference&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 

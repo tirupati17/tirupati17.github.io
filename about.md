@@ -62,13 +62,13 @@ As an Internet Entrepreneur, have executed dozens of apps for end users.
 <h3>Blogs I follow</h3>
 > I usually use [RSS Bot](https://itunes.apple.com/in/app/rss-bot-news-notifier/id605732865?mt=12) notifier to get updates from below blogs
 
-- [Swiftweekly](http://digest.swiftweekly.com)
+- [Swiftweekly](https://digest.swiftweekly.com)
 - [objc](https://www.objc.io/blog)
 - [Raywenderlich](https://www.raywenderlich.com)
 - [Apple Developer News](https://www.raywenderlich.com)
 - [Swift.org](https://swift.org/blog)
 - [Ole Begemann](https://oleb.net/blog)
-- [NSHipster](http://nshipster.com)
+- [NSHipster](https://nshipster.com)
 - [iOS Dev Weekly](https://iosdevweekly.com)
 - [What's new in Swift?](https://www.whatsnewinswift.com)
 

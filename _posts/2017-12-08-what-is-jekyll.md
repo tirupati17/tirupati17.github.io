@@ -23,7 +23,7 @@ GitHub Pages is a static site hosting service.
 <a href="https://help.github.com/articles/what-is-github-pages/">Reference</a>
 
 <h4>What is Jekyll?</h4>
-[Jekyll](http://jekyllrb.com) is a simple, blog-aware, static site generator for personal, project, or organization sites. Written in Ruby by Tom Preston-Werner, GitHub's co-founder, it is distributed under an open source license.
+[Jekyll](https://jekyllrb.com) is a simple, blog-aware, static site generator for personal, project, or organization sites. Written in Ruby by Tom Preston-Werner, GitHub's co-founder, it is distributed under an open source license.
 
 > Instead of using databases, Jekyll takes the content, renders Markdown or Textile and Liquid templates, and produces a complete, static website ready to be served by Apache HTTP Server, Nginx or another web server.
 
@@ -39,11 +39,11 @@ Few useful article's related to Jekyll and GitHub Pages:<br>
 
 <h4>Meet Poole</h4>
 
-[Poole](http://getpoole.com)  is the butler for Jekyll, the static site generator.
+[Poole](https://getpoole.com)  is the butler for Jekyll, the static site generator.
 
 > It's designed and developed by [@mdo](https://markdotto.com) to provide a clear and concise foundational setup for any Jekyll site.<br>It does so by furnishing a full vanilla Jekyll install with example templates, pages, posts, and styles.
 
-<a href="http://getpoole.com/">Reference</a>
+<a href="https://getpoole.com/">Reference</a>
 
 ---
 
