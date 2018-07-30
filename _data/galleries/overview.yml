@@ -23,11 +23,11 @@
  directory: pondy
  picture_path: pondy/2015
  preview:
-  filename: pondy-2015-01
-  original: pondy-2015-01.jpg
+  filename: pondy_2015_01
+  original: pondy_2015_01.jpg
   sizes:
-  - pondy-2015-01.jpg
-  thumbnail: pondy-2015-01.jpg
+  - pondy_2015_01.jpg
+  thumbnail: pondy_2015_01.jpg
 -
  title: Kanyakumari
  directory: kanyakumari
