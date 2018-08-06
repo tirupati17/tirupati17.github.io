@@ -13,6 +13,8 @@ baseurl:           # the optional subpath of your site, e.g. "/blog"
                   # other pages at root, see the paginate_path and
                   # sidebar_blog_link below.
 
+gems: [jekyll_github_sample, jekyll-paginate, jekyll-gist, jekyll-feed, jekyll-watch]
+
 google_analytics: UA-31207525-1
 owner:
   name:           Tirupati Balan
@@ -27,12 +29,11 @@ paginate:          5
 disqus:
   shortname:       tirupatibalan
 
-plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-watch
-  - jekyll_github_sample
+# plugins:
+#   - jekyll-feed
+#   - jekyll-gist
+#   - jekyll-paginate
+#   - jekyll-watch
 
 # Custom vars
 appstore_icon:     https://png.icons8.com/apple-app-store/dusk/50/000000
