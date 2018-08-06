@@ -54,6 +54,7 @@ As an Internet Entrepreneur, have executed dozens of apps for end users.
 - Sublime Text (for quick edit)
 
 <h3>Books I usually reads</h3>
+- `App Architecture - iOS Application Design Patterns in Swift` - Chris Eidhof, Matt Gallagher, and Florian Kugler
 - `Advanced Swift` - Chris Eidhof, Ole Begemann, and Airspeed Velocity
 - `Clean Code: A Handbook of Agile Software Craftsmanship.` - Robert C. Martin Series
 - `Structure and Interpretation of Computer Programs` - Hal Abelson
@@ -68,6 +69,7 @@ As an Internet Entrepreneur, have executed dozens of apps for end users.
 - [Apple Developer News](https://www.raywenderlich.com)
 - [Swift.org](https://swift.org/blog)
 - [Ole Begemann](https://oleb.net/blog)
+- [Chris Eidhof](http://chris.eidhof.nl/)
 - [NSHipster](https://nshipster.com)
 - [iOS Dev Weekly](https://iosdevweekly.com)
 - [What's new in Swift?](https://www.whatsnewinswift.com)

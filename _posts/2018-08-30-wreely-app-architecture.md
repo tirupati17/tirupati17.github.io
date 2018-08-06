@@ -2,7 +2,7 @@
 layout: post
 comments: false
 title: How I setup `Wreely - Community Platform` app architecture 
-# excerpt_separator:  <!--more-->
+excerpt_separator:  <!--more-->
 ---
 
 Hello!!
@@ -15,7 +15,7 @@ Before talking about architecture and all let me share `Tools` I have used in th
 - [Slack](https://slack.com) `For centralized project communication`
 - [Trello](https://trello.com) `For project initial to-do list, list of project screen along with use cases for each screen, future plan etc`
 - [GitLab Issues](https://docs.gitlab.com/ee/user/project/issues/) `For project issue tracking (Kanban style board)`
-- [GitLab CI](https://about.gitlab.com/features/gitlab-ci-cd/) `For continues integration`
+- [GitLab CI](https://about.gitlab.com/features/gitlab-ci-cd/) `For continuous integration`
 - [GitLab](https://gitlab.com) `For version control`
 - [Codacy](https://www.codacy.com/) `For code review`
 
@@ -91,10 +91,11 @@ It includes implementation of below:
 - Post Data (For image or any binary data)
 - Pass success/failure closure so once network connection manager get a response from the server it will inform this class 
 
-{% github_sample_ref tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSAPIRequest.swift %}
+<!-- {% github_sample_ref tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSAPIRequest.swift %}
 {% highlight ruby %}
 {% github_sample tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSAPIRequest.swift %}
-{% endhighlight %}
+{% endhighlight %} -->
+{% gist 585a12c95a604f2c2e8527d73b742dce %}
 
 **Filename Standard**: Project two main initial capital word(2 Letters) + APIRequest i.e If your project name is Facebook then name should be `FBAPIRequest` 
 
@@ -110,10 +111,11 @@ It includes implementation of below:
 - This class must synthesize(get/set) a singleton class of self
 - Once got a response via session manager class handle it here and call a database manager (singleton class) response handler method 
 
-{% github_sample_ref tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSConnectionManager.swift %}
+<!-- {% github_sample_ref tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSConnectionManager.swift %}
 {% highlight ruby %}
 {% github_sample tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSConnectionManager.swift %}
-{% endhighlight %}
+{% endhighlight %} -->
+{% gist 585a12c95a604f2c2e8527d73b742dce %}
 
 **Other utilities this class handles:**
 
@@ -126,7 +128,8 @@ It includes implementation of below:
 - Perform GET, POST, PUT etc based on API Request class details
 - Get full path of URL using API Request class and constant base URL
 
-{% github_sample_ref tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSHTTPSessionManager.swift %}
+<!-- {% github_sample_ref tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSHTTPSessionManager.swift %}
 {% highlight ruby %}
 {% github_sample tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSHTTPSessionManager.swift %}
-{% endhighlight %}
+{% endhighlight %} -->
+{% gist 585a12c95a604f2c2e8527d73b742dce %}
