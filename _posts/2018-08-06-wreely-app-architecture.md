@@ -1,8 +1,8 @@
 ---
 layout: post
-comments: true
+comments: false
 title: How I setup `Wreely - Community Platform` app architecture 
-excerpt_separator:  <!--more-->
+# excerpt_separator:  <!--more-->
 ---
 
 Hello!!
@@ -17,6 +17,7 @@ Before talking about architecture and all let me share `Tools` I have used in th
 - [GitLab Issues](https://docs.gitlab.com/ee/user/project/issues/) `For project issue tracking (Kanban style board)`
 - [GitLab CI](https://about.gitlab.com/features/gitlab-ci-cd/) `For continues integration`
 - [GitLab](https://gitlab.com) `For version control`
+- [Codacy](https://www.codacy.com/) `For code review`
 
 Now as per below list of GitLab issue list I will explain what I had did in that issue commit using issue number.
 
@@ -73,107 +74,59 @@ For dependency manager, I have used cocoapods
 
 The content of Podfile as below - `Improving it everyday`
 
-```
-platform :ios, :deployment_target => "9.1"
-use_frameworks!
+{% github_sample_ref /tirupati17/wreely-social-iphone/blob/master/Podfile %}
+{% highlight ruby %}
+{% github_sample /tirupati17/wreely-social-iphone/blob/master/Podfile 0 26 %}
+{% endhighlight %}
 
-def pods
-    
-    #analytics
-    pod 'Fabric'
-    #pod 'Crashlytics' #if enable along with Answers then may be will show dublicate symbol error
-    pod 'Answers'
-    pod 'Mixpanel-swift'
+<h3> Setup network connection manager via Alamofire as base library </h3> 
 
-    #database
-    pod 'Firebase/Core'
-    pod 'Firebase/Database'
-    pod 'Firebase/Auth'
-    pod 'Firebase/Messaging'
+It includes implementation of below:
 
-    #pod 'Firebase/Performance'
+`Create API request class which handle common HTTP request parameter like below`
 
-    #notification
-    pod 'OneSignal', '>= 2.6.2', '< 3.0'
+- Url string
+- Http Method    
+- Request parameter 
+- Post Data (For image or any binary data)
+- Pass success/failure closure so once network connection manager get a response from the server it will inform this class 
 
-    #network
-    pod 'Alamofire', '~> 4.5'
-    
-    #image
-    pod 'Kingfisher'
-    pod 'Letters'
+{% github_sample_ref tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSAPIRequest.swift %}
+{% highlight ruby %}
+{% github_sample tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSAPIRequest.swift %}
+{% endhighlight %}
 
-    #datepicker
-    pod 'ScrollableDatepicker', :git => 'https://github.com/iamjason/ScrollableDatepicker', :branch => 'swift-4'
+**Filename Standard**: Project two main initial capital word(2 Letters) + APIRequest i.e If your project name is Facebook then name should be `FBAPIRequest` 
 
-    #parser
-    pod 'SwiftyJSON'
-    
-    #logger
-    pod 'Log' #colorfull log based on type
-    
-    #alert
-    pod 'SCLAlertView'
-    pod 'Toast-Swift', '~> 3.0.1'
-    pod 'NotificationBannerSwift' # not in use
-    
-    #indicator
-    pod 'NVActivityIndicatorView'
+**Other utilities this class handles:** 
+- Request pagination (page number and per page)
+- Which core data or realm model should be used based on a request type
+- Create detail error dictionary return method because here only you are getting request parameter and response object
 
-    #rx
-    pod 'RxSwift',    '~> 4.0'
+`Create network connection manager class`
 
-    #model
-    pod 'ObjectMapper', '~> 3.1'
+- Initiate HTTP session manager class from here based on a request parameters getting from API request  
+- Pass success/failure closure so once session manager get a response from the server it will inform this class 
+- This class must synthesize(get/set) a singleton class of self
+- Once got a response via session manager class handle it here and call a database manager (singleton class) response handler method 
 
-    #auto-layout
-    pod 'SnapKit', '~> 4.0.0'
-    
-    #form-builder
-    pod 'Eureka'
-    
-    #animation
-    pod 'RevealingSplashView' # not in use
-    pod 'ParallaxHeader', '~> 2.0.0'
-    pod 'EMSpinnerButton' # not in use
-    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git' # not in use
+{% github_sample_ref tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSConnectionManager.swift %}
+{% highlight ruby %}
+{% github_sample tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSConnectionManager.swift %}
+{% endhighlight %}
 
-    #utilities
-    pod 'SwiftyUserDefaults'
-    pod 'InteractiveSideMenu'
-    pod 'FontAwesome.swift'
-    pod 'ListPlaceholder'
-    pod 'SwiftLint'
-    pod 'PopupDialog', '~> 0.7'
-    pod 'LBTAComponents'
-    
-    #pod 'ChameleonFramework/Swift' use for theme
+**Other utilities this class handles:**
 
-    #design
-    pod 'Material', '~> 2.0'
-    pod 'CocoaLumberjack/Swift' # not in use
+- Network reachability implementation
+- Which request should read or not like for login and sign up it should not check for a valid session for all other requests you should check for a valid token before performing it
 
-end
+`Create HTTP session manager class (Should inherit from SessionManager- Alamofire if you are using it)`
 
-target 'WreelySocial' do
-    pods
-end
+- Perform actual network request via the third party library i.e Alamofire or Apple native one to handle session request 
+- Perform GET, POST, PUT etc based on API Request class details
+- Get full path of URL using API Request class and constant base URL
 
-target 'WreelySocialTests' do
-#    target "WreelySocialTests"
-#    target "WreelySocialUITests"
-
-    pod 'Quick'
-    pod 'Nimble'
-    pod 'RxBlocking', '~> 4.0'
-    pod 'RxTest',     '~> 4.0'
-end
-
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '4.1'
-        end
-    end
-end
-```
+{% github_sample_ref tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSHTTPSessionManager.swift %}
+{% highlight ruby %}
+{% github_sample tirupati17/wreely-social-iphone/blob/master/WreelySocial/Classes/WSLibrary/WSConnection/API/WSHTTPSessionManager.swift %}
+{% endhighlight %}
