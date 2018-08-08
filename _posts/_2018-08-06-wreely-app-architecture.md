@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: How I setup `Wreely - Community Platform` app 
+title: How I architect `Wreely - Community Platform` swift based iPhone app 
 excerpt_separator:  <!--more-->
 ---
 
@@ -30,7 +30,8 @@ Now as per below list of GitLab issue list I will explain what I had did in that
 7. Setup base class and protocols for in-built view controllers and UI classes
 8. Splash view controller implementation using `view`, `presenter` and `protocols` architecture
 
----
+ ---
+
 <h3>Initial project setup</h3>
 
 1. Created project via latest Xcode with init git repo
@@ -40,6 +41,8 @@ Now as per below list of GitLab issue list I will explain what I had did in that
 
 {% gist a7f034251ac16d6580e3948c12f08067 %}
 
+ ---
+
 <h3> Setup network, database, analytics and basic utilities library via dependency manager </h3>
 
 For dependency manager, I have used cocoapods
@@ -47,6 +50,8 @@ For dependency manager, I have used cocoapods
 The content of Podfile as below - `Improving it everyday`
 
 {% gist dca6ca03cea525140629eea9815e68ac %}
+
+ ---
 
 <h3> Setup network connection manager via Alamofire as base library </h3> 
 
@@ -91,13 +96,17 @@ It includes implementation of below:
 
 {% gist 31bb59e4866ab89dacbbe4524a7f4aee %}
 
-<h3> Setup class model as per network response using [Mappable]() </h3>
+ ---
+
+<h3> Setup class model as per network response using Mappable</h3>
 
 As previously in Objective-C I always create model using `Interfaces` but in swift I mostly use `Struct` as because of it's immutable behaviour and allocation on stack.(As we know stack is used for static memory allocation and Heap for dynamic. Variables allocated on the stack are stored directly to the memory and access to this memory is very fast).
 
 Check below struct model as used in project for `User` model
 
 {% gist 4591e802e9f36c79dbd032ecad2da563 %}
+
+ ---
 
 <h3> Setup initial extensions for native controls & class </h3>
 
@@ -113,4 +122,78 @@ In Wreely based on type I have created project necessary extensions only as per 
 
 > Soon will open source this project then you can easily see content of this extensions and all other files.
 
-<h3> Setup helper class for logger, theme, analytics, error and session </h3>
+ ---
+
+<h3> Setup helper class for logger, analytics, error and session </h3>
+
+<h4>Logger</h4>
+My logger class as below which depend on [Log](https://github.com/delba/Log) library - An extensible color logging framework for Swift:
+{% gist 13a034925780d71d4cbc6226da3ab1ac %}
+
+`How to use:`
+
+Call below WSLogger class method directly from anywhere along with optional error type:
+{% highlight swift %}
+WSLogger.log(errorMessage, logType: .kError)
+{% endhighlight %}
+
+<h4>Analytics</h4>
+Customized analytics class for this project which cover `OneSignal`, `Mixpanel`, `Answers` and `Firebase` via one method.
+{% gist 223a33945afbde200300abd6f63d5520 %}
+
+`How to use:`
+
+One should call `WSTracking.sharedTracking.setupInitialTracking()` from login or signup or any start controller after initialization of all supported analytics library in appDelegate 
+
+<h4>Error handle</h4>
+Error handler helper class as below which used in project.
+
+{% gist 7b097bd85fe3775fdbabf1d8f98d9281 %}
+
+`How to use:`
+
+You have to initialize WSError object with customize message as below: 
+{% highlight swift %}
+let error: LocalizedDescriptionError = WSError.customError(message: "Custom error here")
+{% endhighlight %}
+
+Later call default `localizedDescription` protocol to get this custom message.
+{% highlight swift %}
+print(error.localizedDescription)
+{% endhighlight %}
+
+<h4>Session management</h4>
+
+Wreely session management is fully depend on user based `access_token` key of UserDefault object. If exist it will fetch user details from server during splash screen load and if not it will skip to otp login screen.
+
+All other internal endpoints need this `access_token` to get valid response.
+
+See below implementation of WSSession class 
+{% gist 68dc20c99f9939b9fca2d73e9213a6ee %}
+
+`How to use:`
+
+1. After successful access token response from server save it on session class via session manager singleton class
+{% highlight swift %}
+WSSessionManager.sessionManager.setAccessToken(response["access_token"] as! String)
+{% endhighlight %}
+
+2. Once session is saved now you have to call user detail endpoint to save user object in current session via WSSessionManager
+{% highlight swift %}
+WSSessionManager.sessionManager.setCurrentUser(userObject)
+{% endhighlight %}
+
+3. To get the active current user just call `activeSession` class func of `WSSession` where it will fetch current active session object via singleton class of WSSessionManager and then call `currentUser` instance func
+{% highlight swift %}
+WSSession.activeSession().currentUser()
+{% endhighlight %}
+
+4. For logout call `logout` use as below which uses same way to get WSSession object as explained above:
+{% highlight swift %}
+WSSession.activeSession().logout()
+{% endhighlight %}
+
+<h3> Setup base class and protocols for in-built view controllers and UI classes </h3>
+
+
+<h3> Splash view controller implementation using `view`, `presenter` and `protocols` architecture </h3> 
