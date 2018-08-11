@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: How I architect `Wreely - Community Platform` swift based iPhone app 
+title: How I architect Wreely - Community Platform swift based iPhone app 
 excerpt_separator:  <!--more-->
 ---
 
@@ -10,6 +10,8 @@ Hello!!
 Hope all good.
 
 Let me introduce my [Wreely - Community Platform](https://itunes.apple.com/us/app/wreely-community-platform/id1351815873?ls=1&mt=8) app architecure to you guys that How I implemented it using swift 4.0 language along with `view`, `presenter` and `protocols` way to architect this app.
+
+>  NOTE: This is not a tutorial for any kind of architectural setup. It is just a overview of my current project architecure which I'm sharing to keep track of project standard, for colleagues and clients.
 
 Before talking about architecture and all let me share `Tools` I have used in this project.
 - [Slack](https://slack.com) `For centralized project communication`
@@ -195,5 +197,38 @@ WSSession.activeSession().logout()
 
 <h3> Setup base class and protocols for in-built view controllers and UI classes </h3>
 
+As we know swift is protocol oriented programming (POP) rather than object oriented programming(OOP) which gives him ability to do more with protocol declaration.
 
-<h3> Splash view controller implementation using `view`, `presenter` and `protocols` architecture </h3> 
+We can:
+1. Inherit protocols
+2. Create extension
+3. Even type cast it
+
+In Wreely I have used protocols for each view controller via `view` and `presenter` as both confirming to each other protocol and calling protocol methods whenever necessary.
+
+Let me give you simple example of WSOTPView module which contain below files.
+1. WSOTPProtocol.swift  
+2. WSOTPView.swift
+3. WSOTPPresenter.swift
+4. WSOTPCell.swift
+
+Check below WSOTPProtocol implementation where `WSOTPViewProtocol` and `WSOTPPresenterProtocol` initiated which will later adopted by WSOTPView and WSOTPPresenter respectively 
+
+{% gist 3f8bb367e096c83e9689155eccb49dee %}
+
+Once above protocol initiated now let's see WSOTPView implementation which adopted WSOTPViewProtocol methods which will call by WSOTPPresenter whenever necessary. 
+
+{% gist f64e0db0f1365c9ab249ca387948c984 %}
+
+Same way you can see WSOTPPresenter implementation which adopted WSOTPPresenterProtocol methods which will call by WSOTPView as whenever necessary.
+
+{% gist 7c43d2fa8100b5ee48a9c07eb3876669 %}
+
+Along with above view design pattern I have used storyboard for UI view and even for table view cells responsibility. Check below `WSOTPCell` implementation which is implemented using storyboard outlet.
+
+{% gist 073712b21117c2499a682b27f4b3a728 %}
+
+`WSOTPCell` inherited by `WSTableViewCell` which has below implementation
+
+{% gist 6d229ced8d5623662bbc730b3ee56998 %}
+
