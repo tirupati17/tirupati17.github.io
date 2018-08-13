@@ -9,7 +9,7 @@ Hello!!
 
 Hope all good.
 
-Let me introduce my [Wreely - Community Platform](https://itunes.apple.com/us/app/wreely-community-platform/id1351815873?ls=1&mt=8) app architecture to you guys that How I implemented it using swift 4.0 language along with `view`, `presenter` and `protocols` way to architect this app.
+Let me introduce my [Wreely - Community Platform](https://itunes.apple.com/us/app/wreely-community-platform/id1351815873?ls=1&mt=8) app architecture to you guys that How I implemented it using swift 4.1 language along with `view`, `presenter` and `protocols` way to architect this app.
 
 >  NOTE: This is not a tutorial for any kind of architectural setup (While I'm trying it should be but for now it is not looking like that). It is just an overview of my current project architecture which I'm sharing to keep track of my swift project standards and reference for colleagues.
 
