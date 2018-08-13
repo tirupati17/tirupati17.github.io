@@ -13,7 +13,7 @@ Let me introduce my [Wreely - Community Platform](https://itunes.apple.com/us/ap
 
 >  NOTE: This is not a tutorial for any kind of architectural setup (While I'm trying it should be but for now it is not looking like that). It is just an overview of my current project architecture which I'm sharing to keep track of my swift project standards and reference for colleagues.
 
-Before talking about architecture and all let me share `Tools` I have used in this project.
+Before starting app design pattern, architecture & all let me share `Tools` I have used in this project.
 - [Slack](https://slack.com) `For centralized project communication`
 - [Trello](https://trello.com) `For project initial to-do list, list of project screen along with use cases for each screen, future plan etc`
 - [GitLab Issues](https://docs.gitlab.com/ee/user/project/issues/) `For project issue tracking (Kanban style board)`
