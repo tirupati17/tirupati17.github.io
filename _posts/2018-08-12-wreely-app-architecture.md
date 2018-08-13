@@ -192,7 +192,7 @@ You have to initialize WSError object with customize message as below:
 let error: LocalizedDescriptionError = WSError.customError(message: "Custom error here")
 {% endhighlight %}
 
-Later call default `localizedDescription` protocol to get this custom message.
+Later call default `localizedDescription` protocol method to get this custom message.
 {% highlight swift %}
 print(error.localizedDescription)
 {% endhighlight %}
