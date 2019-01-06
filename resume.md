@@ -4,26 +4,35 @@ title: Professional Timeline
 sidebar_link: true
 ---
 
-<h4>Citysocializer - Lead iOS Developer</h4>
-> 1 Aug 2015 - Present (Almost 2 yrs 10 mos)
-<!-- 
-Well, Working independently at Celerstudio has made me realize that ideas, products, startups etc etc are good things but for monthly expenses parallelly you really need something `which is profitable` (product) `or` you are working for someone `who is profitable`(employer) and Yep for that I've `Citysocializer`(my employer) subscription-based social networking website & app based in London  where I'm working as Lead iOS Developer since Aug 2015 remotely from India. -->
 
-<!-- I'm really enjoying working for Citysocializer as part-time developer (yep working only 2 days in a week). Because of this, on remaining days, I'm easily focusing on my own product work under Celerstudio. -->
+<!-- 
+
+<h4>Wreely - Product Architect & Lead iOS Developer</h4>
+> Oct 2017 - Present
+
+-->
+
+<h4>Citysocializer - Lead iOS Developer</h4>
+> 1 Aug 2015 - Nov 2018 (3 yrs 5 mos)
+
+<!-- 
+Well, Working independently at Celerstudio has made me realize that ideas, products, startups etc etc are good things but for monthly expenses parallely you really need something `which is profitable` (product) `or` you are working for someone `who is profitable`(employer) and Yep for that I had `Citysocializer`(my employer) subscription-based social networking website & app based in London  where I was working as Lead iOS Developer since Aug 2015 remotely from India only. -->
+
+<!-- I'd enjoyed working for Citysocializer as part-time developer (yep working only 3 days in a week). Because of this, on remaining days, I'd easily focused on my own product work under Celerstudio. -->
 
 `Under Citysocializer I'm responsible for below app`
 - <a href="https://itunes.apple.com/in/app/citysocializer/id581315807?mt=8" target="_blank">Citysocializer</a> `iPhone`
 
 ---
 
-<h4>Celerstudio - Lead Software Engineer | Founder - iOS | JAVASCRIPT | PHP</h4>
-> 1 Jan 2015 - Aug 2015 (8 Months)
+<h4>CelerStudio - Lead Software Engineer | Founder - iOS | JAVASCRIPT | PHP</h4>
+> 1 Jan 2015 - Present
 
 <!-- <p>
     After spending almost 10 months at CelerApps (11 March 2014 - 31 Dec 2014) I realize that there is something which I want to transform i.e the amount of time spend on a product because without your dedicated effort it's not possible to build any perfect product.
 </p>
 <p>
-    At CelerApps doing consulting and client work, it's a little bit difficult for me to create something as there are so many activities to do while you are working as a consulting company but I love working for CelerApps under RedPanda Innovation Lab all people are very talented and loveable.
+    At CelerApps working mostly on client work, which become little bit difficult for me to create something as there are so many activities to do while you are working as a consulting company but I love working for CelerApps under RedPanda Innovation Lab all people are smart, talented and loveable.
 </p>
 <p>
     So, again after a lot of discussion with my colleagues at CelerApps I decided to leave CelerApps as it is under RedPanda Innovation Lab and started my own independent product development firm <a href="https://celerstudio.com" target="_blank">CelerStudio</a>.

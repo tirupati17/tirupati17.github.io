@@ -90,3 +90,5 @@ $ sudo a2enmod rewrite && sudo service apache2 restart
 {% endhighlight %}
 
 That's it. You are done :)
+
+{% include adsense.html %}
