@@ -14,6 +14,7 @@ In this article, I'll try to explain how I went through multiple articles for fa
 In framework development, when we build our framework it will create two versions of .framework file as below
 - For Device i.e armv7, armv7s, arm64 (`In Debug-iphoneos dir`)
 - For Simulator i.e x86_64, i386 (`In Debug-iphonesimulator dir`)
+
 After combining above two versions of the framework the resulting framework is called `fat` or `universal` or `universal static` framework or library.
 
 > NOTE: x86_64, i386 are not valid device architecture, means it will gonna fail during build upload or build validation process.
