@@ -75,8 +75,9 @@ $ lipo -info path_to_framework/framework_name.framework/framework_name
 
 The output you will see:
 
-`Architecture in the fat file: framework_name are: x86_64 i386 armv7 armv7s arm64
-Means your .framework will be available for both simulator as well as device architecture!!`
+`Architecture in the fat file: framework_name are: x86_64 i386 armv7 armv7s arm64`
+
+Means your .framework will be available for both simulator as well as device architecture!!
 
 ---
 
