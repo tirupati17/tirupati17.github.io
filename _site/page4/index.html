@@ -11,7 +11,7 @@
 
   <title>
     
-      Travels &middot; Tirupati Balan
+      Tirupati Balan &middot; Personal Blog
     
   </title>
 
@@ -44,11 +44,11 @@
 </head>
 
 
-  <body class="page">
+  <body class="index">
 
     <div id="sidebar">
   <header>
-    <div class="site-title">
+    <h1 class="site-title">
       <a href="/">
         
           <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
@@ -58,7 +58,7 @@
         
         Tirupati Balan
       </a>
-    </div>
+    </h1>
     <p class="lead">An iOS Developer and Internet Entrepreneur</p>
   </header>
   <nav id="sidebar-nav-links">
@@ -133,7 +133,7 @@
 
   
     
-      <a class="page-link  active"
+      <a class="page-link "
           href="/travels/">Travels</a>
     
   
@@ -344,59 +344,135 @@
 
 
     <main class="container">
-      <header>
-  <h1 class="page-title">Travels</h1>
-</header>
-<div class="content">
-  <p>Hello, Hope all good. I have created this travel section specially to share my travel photos</p>
-
-<div class="row">
-  <div class="half-width gallery-preview left">
-    <h1>Himachal - Chitkul-Kalpa</h1>
-    <a href="http://localhost:4000/travels/himachal.html">
-      <img alt="Himachal - Chitkul-Kalpa" src="http://localhost:4000/assets/photography/himachal/2017/17200933_10207435243953329_4414932682603919366_n_10207435243953329.jpg" />
-    </a>
-  </div>
-
-
-
-
-
-
-  <div class="half-width gallery-preview right">
-    <h1>Leh-Ladakh</h1>
-    <a href="http://localhost:4000/travels/ladakh.html">
-      <img alt="Leh-Ladakh" src="http://localhost:4000/assets/photography/ladakh/2017/28871138_10209812854712112_7738142830882717696_n_10209812854672111.jpg" />
-    </a>
-  </div>
+      <div class="content">
+  
+<div class="pagination">
+  <a class="pagination-item newer"
+     href="/page3">
+    Newer
+  </a>
 </div>
 
-<div class="row">
-  <div class="half-width gallery-preview left">
-    <h1>Pondicherry</h1>
-    <a href="http://localhost:4000/travels/pondy.html">
-      <img alt="Pondicherry" src="http://localhost:4000/assets/photography/pondy/2015/pondy_2015_01.jpg" />
-    </a>
-  </div>
 
 
+  
 
-
-
-
-  <div class="half-width gallery-preview right">
-    <h1>Kanyakumari</h1>
-    <a href="http://localhost:4000/travels/kanyakumari.html">
-      <img alt="Kanyakumari" src="http://localhost:4000/assets/photography/kanyakumari/2015/kanyakumari-2015-01.jpg" />
-    </a>
-  </div>
+  
+  <article class="post-body">
+    <h2 class="post-title">
+      <a href="/2018/03/24/500-internal-server-error-apache-php.html">
+        Internal Server Error - Invalid command 'RewriteEngine' (Ubuntu Apache/PHP)
+      </a>
+    </h2>
+    <div class="post-meta">
+  <span class="post-date">24 Mar 2018</span>
+  <span class="post-categories">
+    
+  </span>
 </div>
 
-<!-- </div> -->
+    
+      <p>What is Internal Server Error?</p>
+
+<blockquote>
+  <p><b> It usually a server misconfiguration (check .htaccess file) or problem with your server side script. </b></p>
+</blockquote>
+
+<p>First of all check for error log</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">$   sudo vim /var/log/apache2/error.log </code></pre></figure>
+
+<p>If log file become empty then enable it via php.ini  </p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">For php7
+$ sudo vim /etc/php/7.0/apache2/php.ini 
+
+or
+
+For php5
+$ sudo vim /etc/php5/apache2/php.ini </code></pre></figure>
+
+<p>Find display_errors, display_startup_errors , error_reporting  (Which look’s like below)</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">;display_errors
+;   Default Value: On
+;   Development Value: On
+;   Production Value: Off
+
+;display_startup_errors
+;   Default Value: Off
+;   Development Value: On
+;   Production Value: Off
+
+;error_reporting
+;   Default Value: E_ALL &amp; ~E_NOTICE &amp; ~E_STRICT &amp; ~E_DEPRECATED
+;   Development Value: E_ALL
+;   Production Value: E_ALL &amp; ~E_DEPRECATED &amp; ~E_STRICT</code></pre></figure>
+
+<p>Uncomment it via removing semicolons (After change it will look like below)</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">display_errors
+;   Default Value: On
+;   Development Value: On
+;   Production Value: Off
+
+display_startup_errors
+;   Default Value: Off
+;   Development Value: On
+;   Production Value: Off
+
+error_reporting
+;   Default Value: E_ALL &amp; ~E_NOTICE &amp; ~E_STRICT &amp; ~E_DEPRECATED
+;   Development Value: E_ALL
+;   Production Value: E_ALL &amp; ~E_DEPRECATED &amp; ~E_STRICT</code></pre></figure>
+
+<p>Restart apache via below command </p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">$ sudo service apache2 restart 
+
+or
+
+$ sudo /etc/init.d/apache2 restart </code></pre></figure>
+
+<p>Now check in error.log file for Internal Server related problem.</p>
+
+<hr />
+
+<p>If in error log you got module related problem like below:</p>
+
+<blockquote>
+  <p>/var/www/html/.htaccess: Invalid command ‘RewriteEngine’, perhaps misspelled or defined by a module not included in the server configuration  </p>
+</blockquote>
+
+<p>Then perform below command for above error which enable rewrite module of apache2:</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">$ sudo a2enmod rewrite &amp;&amp; sudo service apache2 restart</code></pre></figure>
+
+<p>That’s it. You are done :)</p>
+
+
+    
+
+    
+      
+      
+      
+
+      
+    
+  </article>
+  
+
+  
+<div class="pagination">
+  <a class="pagination-item older"
+     href="/page5">
+    Older
+  </a>
+</div>
 
 
 </div>
-
     </main>
 
     
