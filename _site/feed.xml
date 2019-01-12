@@ -1,4 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-11T14:24:04+05:30</updated><id>http://localhost:4000/</id><title type="html">Tirupati Balan</title><subtitle>An iOS Developer and Internet Entrepreneur</subtitle><author><name>Tirupati Balan</name></author><entry><title type="html">Create a universal (fat) framework in iOS along with selected swift version and strip out unwanted architecture</title><link href="http://localhost:4000/2019/01/05/create-fat-framework.html" rel="alternate" type="text/html" title="Create a universal (fat) framework in iOS along with selected swift version and strip out unwanted architecture" /><published>2019-01-05T00:00:00+05:30</published><updated>2019-01-05T00:00:00+05:30</updated><id>http://localhost:4000/2019/01/05/create-fat-framework</id><content type="html" xml:base="http://localhost:4000/2019/01/05/create-fat-framework.html">&lt;p&gt;Recently, I came into the framework development and I’ve learned or say went through lots of things during development like dependency free framework, swift version compatible issue, active architecture build problem, create private framework with cocoapod, method swizzling, threading etc etc&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-12T23:41:51+05:30</updated><id>http://localhost:4000/</id><title type="html">Tirupati Balan</title><subtitle>An iOS Developer and Internet Entrepreneur</subtitle><author><name>Tirupati Balan</name></author><entry><title type="html">Publish closed source framework using CocoaPods</title><link href="http://localhost:4000/2019/01/10/publish-closed-source-framework-cocoapods-ios.html" rel="alternate" type="text/html" title="Publish closed source framework using CocoaPods" /><published>2019-01-10T00:00:00+05:30</published><updated>2019-01-10T00:00:00+05:30</updated><id>http://localhost:4000/2019/01/10/publish-closed-source-framework-cocoapods-ios</id><content type="html" xml:base="http://localhost:4000/2019/01/10/publish-closed-source-framework-cocoapods-ios.html">&lt;p&gt;Well, I’m writing this article based on my own recent experience while I have to upload my closed source compiled framework on CocoaPods means there is no public repo URL except one .framework file along with a license.&lt;/p&gt;
+
+&lt;p&gt;Below articles helped me a lot to finish uploading my closed source framework on CocoaPods.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://guides.cocoapods.org/making/getting-setup-with-trunk.html&quot;&gt;Getting setup with trunk&lt;/a&gt; - &lt;code class=&quot;highlighter-rouge&quot;&gt;Official reference&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://guides.cocoapods.org/making/private-cocoapods.html&quot;&gt;Private cocoapods&lt;/a&gt; - &lt;code class=&quot;highlighter-rouge&quot;&gt;Official reference&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eladnava.com/publish-a-universal-binary-ios-framework-in-swift-using-cocoapods/&quot;&gt;Eladnava&lt;/a&gt; - &lt;code class=&quot;highlighter-rouge&quot;&gt;Third party reference&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.telerik.com/blogs/how-to-use-a-third-party-framework-in-a-private-cocoapod&quot;&gt;Telerik&lt;/a&gt; - &lt;code class=&quot;highlighter-rouge&quot;&gt;Third party reference&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After going through all above articles I have still faced few issues like below&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Unexpected version directory&lt;/li&gt;
+  &lt;li&gt;Wrong &lt;code class=&quot;highlighter-rouge&quot;&gt;.source file&lt;/code&gt; error&lt;/li&gt;
+  &lt;li&gt;Invalid &lt;code class=&quot;highlighter-rouge&quot;&gt;.public_header_files&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Not validating &lt;code class=&quot;highlighter-rouge&quot;&gt;.homepage&lt;/code&gt; url&lt;/li&gt;
+  &lt;li&gt;Specification does not validate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and so on but one thing I have realized all problems are related to .podspec file only which I’m facing whenever I’m validating spec file through pod lint command i.e  &lt;code class=&quot;highlighter-rouge&quot;&gt;pod spec lint&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Let’s discuss step by step how I have created perfect working podspec file and uploaded my .framework successfully&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;If possible go through &lt;a href=&quot;https://www.tirupatibalan.com/2019/01/05/create-fat-framework.html&quot;&gt;this article&lt;/a&gt; where I have explained how one could create a universal framework.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Once you have done with framework create process (&lt;code class=&quot;highlighter-rouge&quot;&gt;as per point 1&lt;/code&gt;) you have to create &lt;code class=&quot;highlighter-rouge&quot;&gt;MyFramework.podspec&lt;/code&gt; file in your project directory.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Paste the below content inside it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Pod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Spec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;                    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'MyFramework'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;version&lt;/span&gt;                 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.0.0'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;summary&lt;/span&gt;                 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'MyFramework summary.'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;homepage&lt;/span&gt;                &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://www.example.com/'&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;author&lt;/span&gt;                  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'MyFramework'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello@example.com'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;license&lt;/span&gt;                 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Apache-2.0'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'LICENSE'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;platform&lt;/span&gt;                &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:ios&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;source&lt;/span&gt;                  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:http&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://example.com/download/ios_sdk/1.0.1/MyFramework.zip'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ios&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;deployment_target&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'9.0'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ios&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;vendored_frameworks&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'MyFramework.framework'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If above spec file works out for you and if it passed &lt;code class=&quot;highlighter-rouge&quot;&gt;pod spec lint&lt;/code&gt; command on your terminal then think 90% of your upload headache passed out.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;During &lt;code class=&quot;highlighter-rouge&quot;&gt;.podspec&lt;/code&gt; validation I have faced validation of &lt;code class=&quot;highlighter-rouge&quot;&gt;.homepage&lt;/code&gt; parameter &lt;a href=&quot;https://github.com/CocoaPods/CocoaPods/issues/2795&quot;&gt;Error reference&lt;/a&gt; so anyhow instead solving it I used &lt;code class=&quot;highlighter-rouge&quot;&gt;--allow-warnings&lt;/code&gt;  in pod lint validation command as below&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;pod spec lint --allow-warnings&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Now create a zip archive of your &lt;code class=&quot;highlighter-rouge&quot;&gt;MyFramework.framework&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;LICENSE&lt;/code&gt; through zip command as below&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;zip &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; MyFramework.zip LICENSE MyFramework.framework &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For licence file content follow &lt;a href=&quot;https://raw.githubusercontent.com/eladnava/mailgen/master/LICENSE&quot;&gt;this&lt;/a&gt; special thanks to &lt;a href=&quot;https://github.com/eladnava&quot;&gt;eladnava&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Upload your MyFramework.zip file on your server and copy the path of uploaded zip file like below which will in use for &lt;code class=&quot;highlighter-rouge&quot;&gt;s.source&lt;/code&gt; parameter&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;download&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ios_sdk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;MyFramework&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;zip&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I have used &lt;a href=&quot;https://firebase.google.com/docs/hosting/&quot;&gt;Firebase Private Hosting&lt;/a&gt; for .zip file upload and &lt;a href=&quot;https://dillinger.io/&quot;&gt;Dillinger&lt;/a&gt; for my installation documentation especially for a client where you can easily create styled HTML, pdf file using simple markdown language.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For publishing your &lt;code class=&quot;highlighter-rouge&quot;&gt;.podspec&lt;/code&gt; file you have to authenticate and use CocoaPods API service i.e &lt;a href=&quot;https://guides.cocoapods.org/making/getting-setup-with-trunk.html&quot;&gt;CocoaPods Trunk&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Follow below command to register yourself &lt;a href=&quot;https://guides.cocoapods.org/making/getting-setup-with-trunk.html#getting-started&quot;&gt;Reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;pod trunk register you@youremail.com ‘Your organization name&lt;span class=&quot;s1&quot;&gt;' &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You can list your sessions by running &lt;code class=&quot;highlighter-rouge&quot;&gt;pod trunk me&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Now finally follow below the last command to push your &lt;code class=&quot;highlighter-rouge&quot;&gt;.podspec&lt;/code&gt; on CocoaPods server &lt;a href=&quot;https://guides.cocoapods.org/making/getting-setup-with-trunk.html#deploying-a-library&quot;&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;pod trunk push MyFramework.podspec&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;After following all above step successfully I’m sure now you are ready to test your pod installation through any test project, Just add below line in your &lt;code class=&quot;highlighter-rouge&quot;&gt;.podfile&lt;/code&gt; and run &lt;code class=&quot;highlighter-rouge&quot;&gt;pod install&lt;/code&gt; command&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;pod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'MyFramework'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.0.0'&lt;/span&gt;  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That’s it!!!!!&lt;/p&gt;
+
+&lt;p&gt;You are done!!!&amp;lt;/br&amp;gt;
+Cheers!!!!&lt;/p&gt;</content><author><name>Tirupati Balan</name></author><summary type="html">Well, I’m writing this article based on my own recent experience while I have to upload my closed source compiled framework on CocoaPods means there is no public repo URL except one .framework file along with a license. Below articles helped me a lot to finish uploading my closed source framework on CocoaPods. Getting setup with trunk - Official reference Private cocoapods - Official reference Eladnava - Third party reference Telerik - Third party reference After going through all above articles I have still faced few issues like below Unexpected version directory Wrong .source file error Invalid .public_header_files Not validating .homepage url Specification does not validate and so on but one thing I have realized all problems are related to .podspec file only which I’m facing whenever I’m validating spec file through pod lint command i.e pod spec lint Let’s discuss step by step how I have created perfect working podspec file and uploaded my .framework successfully If possible go through this article where I have explained how one could create a universal framework. Once you have done with framework create process (as per point 1) you have to create MyFramework.podspec file in your project directory. Paste the below content inside it: Pod::Spec.new do |s| s.name = 'MyFramework' s.version = '1.0.0' s.summary = 'MyFramework summary.' s.homepage = 'https://www.example.com/' s.author = { 'MyFramework' =&amp;gt; 'hello@example.com' } s.license = { :type =&amp;gt; 'Apache-2.0', :file =&amp;gt; 'LICENSE' } s.platform = :ios s.source = { :http =&amp;gt; 'https://example.com/download/ios_sdk/1.0.1/MyFramework.zip' } s.ios.deployment_target = '9.0' s.ios.vendored_frameworks = 'MyFramework.framework' end If above spec file works out for you and if it passed pod spec lint command on your terminal then think 90% of your upload headache passed out. During .podspec validation I have faced validation of .homepage parameter Error reference so anyhow instead solving it I used --allow-warnings in pod lint validation command as below pod spec lint --allow-warnings Now create a zip archive of your MyFramework.framework and LICENSE through zip command as below zip -r MyFramework.zip LICENSE MyFramework.framework For licence file content follow this special thanks to eladnava Upload your MyFramework.zip file on your server and copy the path of uploaded zip file like below which will in use for s.source parameter https://example.com/download/ios_sdk/1.0.1/MyFramework.zip I have used Firebase Private Hosting for .zip file upload and Dillinger for my installation documentation especially for a client where you can easily create styled HTML, pdf file using simple markdown language. For publishing your .podspec file you have to authenticate and use CocoaPods API service i.e CocoaPods Trunk Follow below command to register yourself Reference pod trunk register you@youremail.com ‘Your organization name' You can list your sessions by running pod trunk me Now finally follow below the last command to push your .podspec on CocoaPods server Reference pod trunk push MyFramework.podspec After following all above step successfully I’m sure now you are ready to test your pod installation through any test project, Just add below line in your .podfile and run pod install command pod 'MyFramework', '1.0.0' That’s it!!!!! You are done!!!&amp;lt;/br&amp;gt; Cheers!!!!</summary></entry><entry><title type="html">Create a universal (fat) framework in iOS along with selected swift version and strip out unwanted architecture</title><link href="http://localhost:4000/2019/01/05/create-fat-framework.html" rel="alternate" type="text/html" title="Create a universal (fat) framework in iOS along with selected swift version and strip out unwanted architecture" /><published>2019-01-05T00:00:00+05:30</published><updated>2019-01-05T00:00:00+05:30</updated><id>http://localhost:4000/2019/01/05/create-fat-framework</id><content type="html" xml:base="http://localhost:4000/2019/01/05/create-fat-framework.html">&lt;p&gt;Recently, I came into the framework development and I’ve learned or say went through lots of things during development like dependency free framework, swift version compatible issue, active architecture build problem, create private framework with cocoapod, method swizzling, threading etc etc&lt;/p&gt;
 
 &lt;p&gt;In this article, I’ll try to explain how I went through multiple articles for fat framework creation along with multiple swift version compatibility issues and later how I figured out device architecture problem during upload.&lt;/p&gt;
 
@@ -70,8 +177,9 @@ lipo &lt;span class=&quot;nt&quot;&gt;-create&lt;/span&gt; &lt;span class=&quot;
 
 &lt;p&gt;The output you will see:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Architecture in the fat file: framework_name are: x86_64 i386 armv7 armv7s arm64
-Means your .framework will be available for both simulator as well as device architecture!!&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Architecture in the fat file: framework_name are: x86_64 i386 armv7 armv7s arm64&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Means your .framework will be available for both simulator as well as device architecture!!&lt;/p&gt;
 
 &lt;hr /&gt;
 

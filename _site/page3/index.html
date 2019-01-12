@@ -171,6 +171,10 @@
   
 
   
+    
+  
+
+  
 
 
   
@@ -216,6 +220,10 @@
     
       <a class="category-link "
           href="/category/projects.html">Projects</a>
+    
+  
+
+  
     
   
 
@@ -360,356 +368,143 @@
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2018/08/12/wreely-app-architecture.html">
-        How I architect Wreely - Community Platform swift based iPhone app
+      <a href="/2019/01/01/my-first-react-native-experience.html">
+        My first react-native app experience via forking open source project
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">12 Aug 2018</span>
+  <span class="post-date">01 Jan 2019</span>
   <span class="post-categories">
     
   </span>
 </div>
 
     
-      <p>Hello!!</p>
+      <p>Long back ago I had built <a href="https://github.com/tirupati17/sip-calculator-swift">SIPCalculator</a> for iOS using simple swift language based on Apple MVC architecture and somewhere always wanted to build similar for Android.</p>
 
-<p>Hope all good.</p>
+<p>Now I have found similar open source project in react-native i.e <a href="https://github.com/filippofilip95/gas-oil-mixture-mobile">gas-oil-mixture-mobile</a> on GitHub which somewhere looks like <a href="https://github.com/tirupati17/sip-calculator-swift">SIPCalculator</a> requirement and I will try to rebuild my SIPCalculator based on this <a href="https://github.com/filippofilip95/gas-oil-mixture-mobile">gas-oil-mixture-mobile</a> code base only.</p>
 
-<p>Let me introduce my <a href="https://itunes.apple.com/us/app/wreely-community-platform/id1351815873?ls=1&amp;mt=8">Wreely - Community Platform</a> app architecture to you guys that How I implemented it using swift 4.1 language along with <code class="highlighter-rouge">view</code>, <code class="highlighter-rouge">presenter</code> and <code class="highlighter-rouge">protocols</code> way to architect this app.</p>
+<p>So a few steps I have performed to first build this open source project (As a beginner rect-native developer)</p>
+
+<hr />
+<p>NOTE: First of all even before forking actual project I have installed basic things for developing any react native app via official FB react-native <a href="https://facebook.github.io/react-native/docs/getting-started.html">reference</a></p>
+
+<p>Below 3 commands is basically most important before starting any react-native app i.e</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>brew <span class="nb">install </span>node
+<span class="nv">$ </span>brew <span class="nb">install </span>watchman <span class="o">(</span>Optional but recommended by Facebook to keep track of file changes<span class="o">)</span>
+<span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">-g</span> react-native-cli</code></pre></figure>
+
+<p>Also tried to create test App as per init command</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>react-native init TestProject</code></pre></figure>
+
+<p>After init cd to created project i.e cd /TestProject and performed most important run-ios command as below</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>react-native run-ios </code></pre></figure>
+
+<p>As I’m an iOS developer so I already have Xcode in my system so above command works fine and after few terminal text output my simulator got open and I easily saw my first react native app i.e TestProject on my iOS simulator</p>
+
+<hr />
+
+<p>Now I’ve to build cloned react-native project which I have forked from actual repo so let’s discuss step by step</p>
+
+<ul>
+  <li>I forked it from <a href="https://github.com/filippofilip95/gas-oil-mixture-mobile">gas-oil-mixture-mobile</a></li>
+  <li>Now I cloned it using my own version of <a href="https://github.com/tirupati17/gas-oil-mixture-mobile">gas-oil-mixture-mobile</a> GitHub project URL after fork</li>
+  <li>Jumped to cloned directory i.e <code class="highlighter-rouge">cd /gas-oil-mixture-mobile</code></li>
+  <li>I did  <code class="highlighter-rouge">yarn install</code> on my terminal out of two available option as per readme instructions of <a href="https://github.com/filippofilip95/gas-oil-mixture-mobile">gas-oil-mixture-mobile</a> i.e <code class="highlighter-rouge">$ yarn install or $ npm i</code></li>
+</ul>
 
 <blockquote>
-  <p>NOTE: This is not a tutorial for any kind of architectural setup (While I’m trying it should be but for now it is not looking like that). It is just an overview of my current project architecture which I’m sharing to keep track of my swift project standards and reference for colleagues.</p>
+  <p>Install yarn if you don’t have it <code class="highlighter-rouge">brew install yarn</code> <a href="https://yarnpkg.com/lang/en/docs/install/#mac-stable">As per official reference site</a></p>
 </blockquote>
 
-<p>Before starting app design pattern, architecture &amp; all let me share <code class="highlighter-rouge">Tools</code> I have used in this project.</p>
 <ul>
-  <li><a href="https://slack.com">Slack</a> <code class="highlighter-rouge">For centralized project communication</code></li>
-  <li><a href="https://trello.com">Trello</a> <code class="highlighter-rouge">For project initial to-do list, list of project screen along with use cases for each screen, future plan etc</code></li>
-  <li><a href="https://docs.gitlab.com/ee/user/project/issues/">GitLab Issues</a> <code class="highlighter-rouge">For project issue tracking (Kanban style board)</code></li>
-  <li><a href="https://about.gitlab.com/features/gitlab-ci-cd/">GitLab CI</a> <code class="highlighter-rouge">For continuous integration</code></li>
-  <li><a href="https://gitlab.com">GitLab</a> <code class="highlighter-rouge">For version control</code></li>
-  <li><a href="https://www.codacy.com/">Codacy</a> <code class="highlighter-rouge">For code review</code></li>
+  <li>Now <code class="highlighter-rouge">yarn</code> installed in my system and have performed <code class="highlighter-rouge">yarn start</code> command on my terminal</li>
+  <li>Got <code class="highlighter-rouge">Loading dependency graph, done.</code> message on the terminal (Looks like everything works fine) and suddenly faced an error on the simulator as below</li>
 </ul>
-
-<p>Now as per below list of GitLab issue list I will explain what I had done in that issue commit using issue number.</p>
-
-<ol>
-  <li>Initial project setup</li>
-  <li>Setup network, database, analytics and basic utility library via dependency manager <code class="highlighter-rouge">CocoaPods</code></li>
-  <li>Setup network connection manager via <code class="highlighter-rouge">Alamofire</code> as a base library</li>
-  <li>Setup database connection manager to persist data from remote server - <code class="highlighter-rouge">Not yet implemented</code></li>
-  <li>Setup class model as per network response using <code class="highlighter-rouge">Mappable</code></li>
-  <li>Setup initial extensions for native controls &amp; class</li>
-  <li>Setup helper class for logger, theme, analytics, error, constant and session</li>
-  <li>Setup base class and protocols for inbuilt view controllers and UI classes</li>
-</ol>
-
-<hr />
-
-<h3>Initial project setup</h3>
-
-<ol>
-  <li>Created project via latest Xcode with init git repo</li>
-  <li>Folder structure as below - <code class="highlighter-rouge">Improving it every day</code></li>
-  <li>Except for root and test folder all other folder name starts with <code class="highlighter-rouge">WS</code> (project initial)</li>
-</ol>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/a7f034251ac16d6580e3948c12f08067.js"> </script>
-
-<hr />
-
-<h3> Setup network, database, analytics and basic utilities library via dependency manager </h3>
-
-<p>For dependency manager, I have used CocoaPods</p>
-
-<p>The content of Podfile as below - <code class="highlighter-rouge">Improving it every day</code></p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/dca6ca03cea525140629eea9815e68ac.js"> </script>
-
-<hr />
-
-<h3> Setup network connection manager via Alamofire as base library </h3>
-
-<p>It includes implementation of below:</p>
-
-<p><code class="highlighter-rouge">Create API request class which handle common HTTP request parameter like below</code></p>
-
-<ul>
-  <li>Url string</li>
-  <li>Http Method</li>
-  <li>Request parameter</li>
-  <li>Post Data (For image or any binary data)</li>
-  <li>Pass success/failure closure so once network connection manager get a response from the server it will inform this class</li>
-</ul>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/585a12c95a604f2c2e8527d73b742dce.js"> </script>
-
-<p><strong>Filename Standard</strong>: Project two main initial capital word(2 Letters) + APIRequest i.e If your project name is Facebook then name should be <code class="highlighter-rouge">FBAPIRequest</code></p>
-
-<p><strong>Other utilities this class handles:</strong></p>
-<ul>
-  <li>Request pagination (page number and per page)</li>
-  <li>Which core data or realm model should be used based on a request type</li>
-  <li>Create detail error dictionary return method because here only you are getting request parameter and response object</li>
-</ul>
-
-<p><code class="highlighter-rouge">Create network connection manager class</code></p>
-
-<ul>
-  <li>Initiate HTTP session manager class from here based on a request parameters getting from API request</li>
-  <li>Pass success/failure closure so once session manager get a response from the server it will inform this class</li>
-  <li>This class must synthesize(get/set) a singleton class of self</li>
-  <li>Once got a response via session manager class handle it here and call a database manager (singleton class) response handler method</li>
-</ul>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/eef249131d592f2d5b373f910a73dbe4.js"> </script>
-
-<p><strong>Other utilities this class handles:</strong></p>
-
-<ul>
-  <li>Network reachability implementation</li>
-  <li>Which request should read or not like for login and sign up it should not check for a valid session for all other requests you should check for a valid token before performing it</li>
-</ul>
-
-<p><code class="highlighter-rouge">Create HTTP session manager class (Should inherit from SessionManager- Alamofire if you are using it)</code></p>
-
-<ul>
-  <li>Perform actual network request via the third party library i.e Alamofire or Apple native one to handle session request</li>
-  <li>Perform GET, POST, PUT etc based on API Request class details</li>
-  <li>Get the full path of URL using API Request class and constant base URL</li>
-</ul>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/31bb59e4866ab89dacbbe4524a7f4aee.js"> </script>
-
-<hr />
-
-<h3>Setup database connection manager to persist data from remote server</h3>
 
 <blockquote>
-  <p>For now for persistent storage I have not implemented core data implementation in Wreely app but it is in the queue may be after completion of app remaining feature &amp; optimization will do this.</p>
-</blockquote>
-
-<p>Still, let me explain to you guys that how I will going to implement that soon.
-If your app is fairly static so it is good to implement persistence storage otherwise at the end it’s your choice but remember via below implementation you have to maintain below code which indirectly invites hidden or unwanted bugs which you will only have to maintain.</p>
-
-<p>Below few steps I will perform for database manager implementation.</p>
-
-<ol>
-  <li>
-    <p>Create database manager class with name standard i.e Project two main initial letter + DatabaseManager
-So if your project name is facebook so name it as <code class="highlighter-rouge">FBDatabaseManager</code></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">FBDatabaseManager</code> should implement things of core data to handle the response</p>
-    <ul>
-      <li>Database version (get it via app version)</li>
-      <li>Manage object context (Learn about NSManageObjectContext)</li>
-      <li>Persistent store coordinator (Learn about NSPersistentStoreCoordinator)</li>
-      <li>Manage object model (Learn about NSManageObjectModel)</li>
-      <li>Clean up previous database response</li>
-      <li>Singleton class for shared db manager</li>
-      <li>Save context method for core data</li>
-      <li>During init create <code class="highlighter-rouge">NSManageObjectContext</code> object with <code class="highlighter-rouge">NSMainQueueConcurrencyType</code> along with merge policies and self persistent store coordinator and also implement default app related data insert function task like <code class="highlighter-rouge">Gender</code>, <code class="highlighter-rouge">Relationship Status</code>, <code class="highlighter-rouge">Months</code> etc during this init</li>
-      <li>Perform all save operation of core data model via <code class="highlighter-rouge">NSManageObjectContext</code> object should be in <code class="highlighter-rouge">asynchronous execution on a dispatch queue</code> with <code class="highlighter-rouge">DISPATCH_QUEUE_SERIAL</code> queue option</li>
-      <li>Now finally write handle response function along with API request object so parse it based in API request type</li>
-    </ul>
-  </li>
-</ol>
-
-<p>This parser function should be like below:</p>
-
-<ul>
-  <li>Get a managedObjectContext object from shared DB manager</li>
-  <li>Get parent manage-object from based on API request object</li>
-  <li>Write one more method to customize response object to get a proper dictionary or array object for inserting into the database</li>
-  <li>Finally, save it into core data based on array result from the above step</li>
-</ul>
-
-<hr />
-
-<h3> Setup class model as per network response using Mappable</h3>
-
-<p>As previously in Objective-C I always create a model using <code class="highlighter-rouge">Interfaces</code> but in swift, I mostly use <code class="highlighter-rouge">Struct</code> as because of it’s immutable behavior and allocation on the stack. (As we know stack is used for static memory allocation and Heap for dynamic. Variables allocated on the stack are stored directly to the memory and access to this memory is very fast).</p>
-
-<p>Check below struct model as used in the project for <code class="highlighter-rouge">User</code> model</p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/4591e802e9f36c79dbd032ecad2da563.js"> </script>
-
-<hr />
-
-<h3> Setup initial extensions for native controls &amp; class </h3>
-
-<p>Swift has the amazing set of open source extensions library which you can use via dependency manager CocoaPods or Carthage.</p>
-
-<p>Few good libraries for extensions are as below:</p>
-<ul>
-  <li><a href="https://github.com/SwifterSwift/SwifterSwift">SwifterSwift</a></li>
-  <li><a href="https://github.com/goktugyil/EZSwiftExtensions">EZSwiftExtensions</a></li>
-</ul>
-
-<p>In Wreely based on type, I have created project necessary extensions only as per below folder structure.</p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/02a67132058bc472f94492006287867e.js"> </script>
-
-<blockquote>
-  <p>Soon will open source this project then you can easily see the content of these extensions and all other files.</p>
+  <p>NOTE: Nowadays I’m doing below error parameter detailing for myself only to keep track of error complexity.</p>
 </blockquote>
 
 <hr />
 
-<h3> Setup helper class for logger, analytics, error and session </h3>
+<p><code class="highlighter-rouge">Error Code:</code> #001 <br />
+<code class="highlighter-rouge">Error Title:</code> bundling failed: Error: Unable to resolve module <br />
+<code class="highlighter-rouge">Error Detail:</code> bundling failed: Error: Unable to resolve module i.e /node_modules/react-native/Libraries/Animated/src/AnimatedImplementation.js file not exist <br />
+<code class="highlighter-rouge">Error Responsible:</code> System (As Happening to too many users but un-expected way as per error references) <br />
+<code class="highlighter-rouge">Error Level:</code> Critical (As per error references) <br />
+<code class="highlighter-rouge">Error Type:</code> Unexpected <br />
+<code class="highlighter-rouge">Error References:</code> https://github.com/facebook/react-native/issues/11257 <br />
+<code class="highlighter-rouge">Solid Solution:</code> NA (Let me know if there is any) <br />
+<code class="highlighter-rouge">Workaround Solution:</code> https://github.com/facebook/react-native/issues/11498 <br /></p>
 
-<h4>Logger</h4>
-<p>My logger class as below which depend on <a href="https://github.com/delba/Log">Log</a> library - An extensible color logging framework for Swift:</p>
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/13a034925780d71d4cbc6226da3ab1ac.js"> </script>
+<hr />
 
-<p><code class="highlighter-rouge">How to use:</code></p>
+<ul>
+  <li>Seriously this error stopped me to continue react-native development for a while (But anyhow I had taken few minute breaks and started to solve this error again and workaround solution worked for me <code class="highlighter-rouge">as below</code></li>
+</ul>
 
-<p>Call below WSLogger class method directly from anywhere along with optional error type:</p>
+<blockquote>
+  <p>As per error <a href="https://github.com/facebook/react-native/issues/11498">workaround solution</a> reference</p>
+</blockquote>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kt">WSLogger</span><span class="o">.</span><span class="nf">log</span><span class="p">(</span><span class="n">errorMessage</span><span class="p">,</span> <span class="nv">logType</span><span class="p">:</span> <span class="o">.</span><span class="n">kError</span><span class="p">)</span></code></pre></figure>
-
-<h4>Analytics</h4>
-<p>Customized analytics class for this project which cover <code class="highlighter-rouge">OneSignal</code>, <code class="highlighter-rouge">Mixpanel</code>, <code class="highlighter-rouge">Answers</code> and <code class="highlighter-rouge">Firebase</code> via one method.</p>
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/223a33945afbde200300abd6f63d5520.js"> </script>
-
-<p><code class="highlighter-rouge">How to use:</code></p>
-
-<p>One should call <code class="highlighter-rouge">WSTracking.sharedTracking.setupInitialTracking()</code> from login or signup or any start controller after initialization of all supported analytics library in appDelegate</p>
-
-<h4>Error handle</h4>
-<p>Error handler helper class as below which used in the project.</p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/7b097bd85fe3775fdbabf1d8f98d9281.js"> </script>
-
-<p><code class="highlighter-rouge">How to use:</code></p>
-
-<p>You have to initialize WSError object with customize message as below:</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">LocalizedDescriptionError</span> <span class="o">=</span> <span class="kt">WSError</span><span class="o">.</span><span class="nf">customError</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="s">"Custom error here"</span><span class="p">)</span></code></pre></figure>
-
-<p>Later call default <code class="highlighter-rouge">localizedDescription</code> protocol method to get this custom message.</p>
-
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="p">)</span></code></pre></figure>
-
-<h4>Session management</h4>
-
-<p>Wreely session management fully depends on user-based <code class="highlighter-rouge">access_token</code> key of UserDefault object. If exist it will fetch user details from the server during splash screen load and if not it will skip to OTP login screen.</p>
-
-<p>All other internal endpoints need this <code class="highlighter-rouge">access_token</code> to get a valid response.</p>
-
-<p>See below implementation of WSSession class</p>
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/68dc20c99f9939b9fca2d73e9213a6ee.js"> </script>
-
-<p><code class="highlighter-rouge">How to use:</code></p>
+<hr />
 
 <ol>
-  <li>After successful access token response from server save it on session class via session manager singleton class</li>
+  <li>Click “Reset content and settings…” in the simulator’s drop-down menu and confirm</li>
+  <li>Close the simulator after it reloads</li>
+  <li>Close the terminal window running watchman</li>
+  <li>Run the following commands within terminal inside of your project’s directory:</li>
 </ol>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kt">WSSessionManager</span><span class="o">.</span><span class="n">sessionManager</span><span class="o">.</span><span class="nf">setAccessToken</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s">"access_token"</span><span class="p">]</span> <span class="k">as!</span> <span class="kt">String</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>watchman watch-del-all
+<span class="nv">$ </span><span class="nb">rm</span> <span class="nt">-rf</span> ./node_modules
+<span class="nv">$ </span>npm cache clean
+<span class="nv">$ </span> yarn cache clean
+<span class="nv">$ </span><span class="nb">rm</span> <span class="nt">-rf</span> <span class="nv">$TMPDIR</span>/react-<span class="k">*</span>
+<span class="nv">$ </span>yarn <span class="nb">install</span>
+<span class="nv">$ </span>npm cache clean
+<span class="nv">$ </span>yarn cache clean
+<span class="nv">$ </span>yarn add uuid</code></pre></figure>
 
-<ol>
-  <li>Once session is saved now you have to call user detail endpoint to save user object in current session via WSSessionManager</li>
-</ol>
+<hr />
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kt">WSSessionManager</span><span class="o">.</span><span class="n">sessionManager</span><span class="o">.</span><span class="nf">setCurrentUser</span><span class="p">(</span><span class="n">userObject</span><span class="p">)</span></code></pre></figure>
+<ul>
+  <li>After running above instructions and command step by step <code class="highlighter-rouge">Unable to resolve module</code> error gone but a new error comes to over my face <code class="highlighter-rouge">as below</code></li>
+</ul>
 
-<ol>
-  <li>To get the active current user just call <code class="highlighter-rouge">activeSession</code> class func of <code class="highlighter-rouge">WSSession</code> where it will fetch current active session object via singleton class of WSSessionManager and then call <code class="highlighter-rouge">currentUser</code> instance func</li>
-</ol>
+<hr />
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kt">WSSession</span><span class="o">.</span><span class="nf">activeSession</span><span class="p">()</span><span class="o">.</span><span class="nf">currentUser</span><span class="p">()</span></code></pre></figure>
+<p><code class="highlighter-rouge">Error Code:</code> #002 <br />
+<code class="highlighter-rouge">Error Title:</code>  bundling failed: Error: While resolving module <br />
+<code class="highlighter-rouge">Error Detail:</code> bundling failed: Error: While resolving module <code class="highlighter-rouge">react-native-vector-icons/MaterialCommunityIcons</code>, the Haste package <code class="highlighter-rouge">react-native-vector-icons</code> was found. However the module <code class="highlighter-rouge">MaterialCommunityIcons</code> could not be found within the package. Indeed, none of these files exist: <br />
+<code class="highlighter-rouge">Error Responsible:</code> System (As Happening to too many users but un-expected way as per error references) <br />
+<code class="highlighter-rouge">Error Level:</code> Critical (As per error references) <br />
+<code class="highlighter-rouge">Error Type:</code> Unexpected <br />
+<code class="highlighter-rouge">Error References:</code> https://github.com/oblador/react-native-vector-icons/issues/626 <br />
+<code class="highlighter-rouge">Solid Solution:</code> NA (Let me know if there is any) <br />
+<code class="highlighter-rouge">Workaround Solution:</code> https://github.com/oblador/react-native-vector-icons/issues/626#issuecomment-357405396 <br /></p>
 
-<ol>
-  <li>For logout call <code class="highlighter-rouge">logout</code> use as below which uses same way to get WSSession object as explained above:</li>
-</ol>
+<hr />
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kt">WSSession</span><span class="o">.</span><span class="nf">activeSession</span><span class="p">()</span><span class="o">.</span><span class="nf">logout</span><span class="p">()</span></code></pre></figure>
+<ul>
+  <li>Again workaround solution worked for me <code class="highlighter-rouge">as below</code></li>
+</ul>
 
-<h3> Setup base class and protocols for in-built view controllers and UI classes </h3>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nb">rm</span> ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json</code></pre></figure>
 
-<p>As we know swift is protocol-oriented programming (POP) rather than object-oriented programming(OOP) which gives him the ability to do more with protocol declaration.</p>
+<blockquote>
+  <p>As per error <a href="https://github.com/oblador/react-native-vector-icons/issues/626#issuecomment-357405396">workaround solution</a> reference</p>
+</blockquote>
 
-<p>We can:</p>
-<ol>
-  <li>Inherit protocols</li>
-  <li>Create extension</li>
-  <li>Even typecast it</li>
-</ol>
+<p>Finally, after figuring out above two error i.e <code class="highlighter-rouge">#001</code> and <code class="highlighter-rouge">#002</code> my forked cloned project worked fine on simulator.</p>
 
-<p>In Wreely I have used protocols for each view controller via <code class="highlighter-rouge">view</code> and <code class="highlighter-rouge">presenter</code> as both confirming to each other protocol and calling protocol methods whenever necessary.</p>
+<p>Well, for now, this is only I have done which took me honestly 2 hrs approximately for overall things. Now I have to change this working project string, unit calculations and few functionalities as per <a href="https://github.com/tirupati17/sip-calculator-swift">SIPCalculator</a> which seriously I don’t know how much time it will gonna take so again on my free time will try to do next changes related things as per this react-native project standard (which looks good) and will post my overall experience.</p>
 
-<p>Let me give you simple example of WSOTPView module which contains below files.</p>
-<ol>
-  <li>WSOTPProtocol.swift</li>
-  <li>WSOTPView.swift</li>
-  <li>WSOTPPresenter.swift</li>
-  <li>WSOTPCell.swift</li>
-</ol>
-
-<p>Check below WSOTPProtocol implementation where <code class="highlighter-rouge">WSOTPViewProtocol</code> and <code class="highlighter-rouge">WSOTPPresenterProtocol</code> initiated which will later adopt by WSOTPView and WSOTPPresenter respectively</p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/3f8bb367e096c83e9689155eccb49dee.js"> </script>
-
-<p>Once above protocol initiated now let’s see WSOTPView implementation which adopted WSOTPViewProtocol methods which will call by WSOTPPresenter whenever necessary.</p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/f64e0db0f1365c9ab249ca387948c984.js"> </script>
-
-<p>Same way you can see WSOTPPresenter implementation which adopted WSOTPPresenterProtocol methods which will call by WSOTPView as whenever necessary.</p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/7c43d2fa8100b5ee48a9c07eb3876669.js"> </script>
-
-<p>Along with the above view design pattern I have used storyboard for UI view and even for table view cells responsibility. Check below <code class="highlighter-rouge">WSOTPCell</code> implementation which is implemented using a storyboard outlet.</p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/073712b21117c2499a682b27f4b3a728.js"> </script>
-
-<p><code class="highlighter-rouge">WSOTPCell</code> inherited by <code class="highlighter-rouge">WSTableViewCell</code> which has below implementation</p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/6d229ced8d5623662bbc730b3ee56998.js"> </script>
-
-<p>Few below things still in progress which I’m working on it.</p>
-<ol>
-  <li>Integration of Core Data (As bit explained above but not yet implemented)</li>
-  <li>Uses of <code class="highlighter-rouge">DispatchQueue</code> queues in-app with proper <code class="highlighter-rouge">concurrent</code> and <code class="highlighter-rouge">serial</code> type based on task for the network, heavy batch operation &amp; database related things. (This is one of the ways to optimize large code base app)</li>
-  <li>Pagination (With and without persistent database along with network <code class="highlighter-rouge">per_page</code> &amp; <code class="highlighter-rouge">page_no</code> handler)</li>
-  <li>Reachability handler</li>
-  <li>Implement all possible helper protocols for stable and lesser code for UITableView, UICollectionView etc</li>
-</ol>
-
+<p>Thanks!!</p>
 
     
 

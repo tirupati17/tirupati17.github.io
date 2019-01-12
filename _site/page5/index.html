@@ -171,6 +171,10 @@
   
 
   
+    
+  
+
+  
 
 
   
@@ -216,6 +220,10 @@
     
       <a class="category-link "
           href="/category/projects.html">Projects</a>
+    
+  
+
+  
     
   
 
@@ -360,96 +368,96 @@
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2017/12/08/what-is-jekyll.html">
-        What is GitHub Pages, Jekyll, Poole, Hyde and Hydeout?
+      <a href="/2018/03/24/500-internal-server-error-apache-php.html">
+        Internal Server Error - Invalid command 'RewriteEngine' (Ubuntu Apache/PHP)
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">08 Dec 2017</span>
+  <span class="post-date">24 Mar 2018</span>
   <span class="post-categories">
     
   </span>
 </div>
 
     
-      <p>Hello, Hope all good!</p>
-
-<p>This is the first post on my personal blog and I want everyone to know how I setup this site using Jekyll and GitHub Pages. </p>
-
-<p>Please read below things step by step as per their reference source and get to know about this. Good Luck!!</p>
-
-<h4>What is GitHub Pages?</h4>
-
-<p>GitHub Pages is a static site hosting service.</p>
+      <p>What is Internal Server Error?</p>
 
 <blockquote>
-  <p>GitHub Pages is designed to host your personal, organization, or project pages directly from a GitHub repository.<br />
-You can create and publish GitHub Pages online using the Jekyll Theme Chooser.</p>
+  <p><b> It usually a server misconfiguration (check .htaccess file) or problem with your server side script. </b></p>
 </blockquote>
 
-<blockquote>
-  <p>GitHub Pages is a static site hosting service and doesn’t support server-side code such as, PHP, Ruby, or Python.</p>
-</blockquote>
+<p>First of all check for error log</p>
 
-<p><a href="https://help.github.com/articles/what-is-github-pages/">Reference</a></p>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">$   sudo vim /var/log/apache2/error.log </code></pre></figure>
 
-<h4>What is Jekyll?</h4>
-<p><a href="https://jekyllrb.com">Jekyll</a> is a simple, blog-aware, static site generator for personal, project, or organization sites. Written in Ruby by Tom Preston-Werner, GitHub’s co-founder, it is distributed under an open source license.</p>
+<p>If log file become empty then enable it via php.ini  </p>
 
-<blockquote>
-  <p>Instead of using databases, Jekyll takes the content, renders Markdown or Textile and Liquid templates, and produces a complete, static website ready to be served by Apache HTTP Server, Nginx or another web server.</p>
-</blockquote>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">For php7
+$ sudo vim /etc/php/7.0/apache2/php.ini 
 
-<blockquote>
-  <p>Jekyll is the engine behind <a href="https://pages.github.com/">GitHubPages</a>, a GitHub feature that allows users to host websites based on their GitHub repositories.</p>
-</blockquote>
+or
 
-<p><a href="https://en.wikipedia.org/wiki/Jekyll_(software)">Reference</a></p>
+For php5
+$ sudo vim /etc/php5/apache2/php.ini </code></pre></figure>
 
-<p>Few useful article’s related to Jekyll and GitHub Pages:<br />
-<a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/">Setting up your GitHub Pages site locally with Jekyll</a> <br />
-<a href="https://programminghistorian.org/lessons/building-static-sites-with-jekyll-github-pages">Building a static website with Jekyll and GitHub Pages</a></p>
+<p>Find display_errors, display_startup_errors , error_reporting  (Which look’s like below)</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">;display_errors
+;   Default Value: On
+;   Development Value: On
+;   Production Value: Off
+
+;display_startup_errors
+;   Default Value: Off
+;   Development Value: On
+;   Production Value: Off
+
+;error_reporting
+;   Default Value: E_ALL &amp; ~E_NOTICE &amp; ~E_STRICT &amp; ~E_DEPRECATED
+;   Development Value: E_ALL
+;   Production Value: E_ALL &amp; ~E_DEPRECATED &amp; ~E_STRICT</code></pre></figure>
+
+<p>Uncomment it via removing semicolons (After change it will look like below)</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">display_errors
+;   Default Value: On
+;   Development Value: On
+;   Production Value: Off
+
+display_startup_errors
+;   Default Value: Off
+;   Development Value: On
+;   Production Value: Off
+
+error_reporting
+;   Default Value: E_ALL &amp; ~E_NOTICE &amp; ~E_STRICT &amp; ~E_DEPRECATED
+;   Development Value: E_ALL
+;   Production Value: E_ALL &amp; ~E_DEPRECATED &amp; ~E_STRICT</code></pre></figure>
+
+<p>Restart apache via below command </p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">$ sudo service apache2 restart 
+
+or
+
+$ sudo /etc/init.d/apache2 restart </code></pre></figure>
+
+<p>Now check in error.log file for Internal Server related problem.</p>
 
 <hr />
 
-<h4>Meet Poole</h4>
-
-<p><a href="https://getpoole.com">Poole</a>  is the butler for Jekyll, the static site generator.</p>
+<p>If in error log you got module related problem like below:</p>
 
 <blockquote>
-  <p>It’s designed and developed by <a href="https://markdotto.com">@mdo</a> to provide a clear and concise foundational setup for any Jekyll site.<br />It does so by furnishing a full vanilla Jekyll install with example templates, pages, posts, and styles.</p>
+  <p>/var/www/html/.htaccess: Invalid command ‘RewriteEngine’, perhaps misspelled or defined by a module not included in the server configuration  </p>
 </blockquote>
 
-<p><a href="https://getpoole.com/">Reference</a></p>
+<p>Then perform below command for above error which enable rewrite module of apache2:</p>
 
-<hr />
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">$ sudo a2enmod rewrite &amp;&amp; sudo service apache2 restart</code></pre></figure>
 
-<h4>Hyde?</h4>
+<p>That’s it. You are done :)</p>
 
-<p><a href="https://github.com/poole/hyde">Hyde</a> is a brazen two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content. It’s based on Poole, the Jekyll butler.</p>
-
-<blockquote>
-  <p>Hyde is a theme built on top of Poole, which provides a fully furnished Jekyll setup—just download and start the Jekyll server.</p>
-</blockquote>
-
-<p><a href="https://github.com/poole/hyde">Reference</a></p>
-
-<hr />
-
-<h4>Finally Hydeout?</h4>
-
-<p><a href="https://github.com/fongandrew/hydeout">Hydeout</a> updates the original Hyde theme for Jekyll 3.x and adds new functionality.</p>
-
-<p>Hydeout is available as the <code class="highlighter-rouge">jekyll-theme-hydeout</code> Ruby Gem.<br /> Add <code class="highlighter-rouge">gem "jekyll-theme-hydeout", "~&gt; 3.4"</code> to your Gemfile and run <code class="highlighter-rouge">bundle install</code></p>
-
-<p>Hydeout uses pagination, so if you have an <code class="highlighter-rouge">index.md</code>, you’ll need to swap it with an <code class="highlighter-rouge">index.html</code> that uses the index layout:</p>
-
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">---
-layout: index
-title: Home
----</code></pre></figure>
-
-<p>Find out more by <a href="https://github.com/fongandrew/hydeout">visiting the project on GitHub</a>.</p>
 
     
 
@@ -464,6 +472,13 @@ title: Home
   
 
   
+<div class="pagination">
+  <a class="pagination-item older"
+     href="/page6">
+    Older
+  </a>
+</div>
+
 
 </div>
     </main>

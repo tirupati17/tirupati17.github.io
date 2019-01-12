@@ -11,7 +11,7 @@
 
   <title>
     
-      Tirupati Balan &middot; Personal Blog
+      Publish closed source framework using CocoaPods &middot; Tirupati Balan
     
   </title>
 
@@ -44,21 +44,26 @@
 </head>
 
 
-  <body class="index home">
+  <body class="post">
 
     <div id="sidebar">
   <header>
-    <h1 class="site-title">
+    <div class="site-title">
       <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
         
         Tirupati Balan
       </a>
-    </h1>
+    </div>
     <p class="lead">An iOS Developer and Internet Entrepreneur</p>
   </header>
   <nav id="sidebar-nav-links">
   
-    <a class="home-link  active"
+    <a class="home-link "
         href="/">Home</a>
   
   
@@ -275,7 +280,7 @@
 
   <!-- Optional additional links to insert in sidebar nav -->
 <!-- 
-<a class="home-link  active"
+<a class="home-link "
     href="/photography">Travels</a>
  -->
 </nav>
@@ -347,28 +352,19 @@
 
 
     <main class="container">
-      <div class="content">
-  
-
-
-  
-
-  
-  <article class="post-body">
-    <h2 class="post-title">
-      <a href="/2019/01/10/publish-closed-source-framework-cocoapods-ios.html">
-        Publish closed source framework using CocoaPods
-      </a>
-    </h2>
-    <div class="post-meta">
+      <header>
+  <h1 class="post-title">Publish closed source framework using CocoaPods</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
   <span class="post-date">10 Jan 2019</span>
   <span class="post-categories">
     
   </span>
 </div>
 
-    
-      <p>Well, I’m writing this article based on my own recent experience while I have to upload my closed source compiled framework on CocoaPods means there is no public repo URL except one .framework file along with a license.</p>
+  <div class="post-body">
+    <p>Well, I’m writing this article based on my own recent experience while I have to upload my closed source compiled framework on CocoaPods means there is no public repo URL except one .framework file along with a license.</p>
 
 <p>Below articles helped me a lot to finish uploading my closed source framework on CocoaPods.</p>
 
@@ -479,26 +475,87 @@ Cheers!!!!</p>
 
     
 
-    
-      
-      
-      
 
-      
-    
-  </article>
+
+<div class="post-tags">
   
+</div>
+  </div>
 
   
-<div class="pagination">
-  <a class="pagination-item older"
-     href="/page2">
-    Older
-  </a>
-</div>
+  <section class="comments">
+    <h2>Comments</h2>
+    
+  <div id="disqus_thread">
+    <button class="disqus-load" onClick="loadDisqusComments()">
+      Load Comments
+    </button>
+  </div>
+  <script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW
+  *  TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:s
+  *  https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  var disqus_config = function () {
+    this.page.url = "http://localhost:4000/2019/01/10/publish-closed-source-framework-cocoapods-ios.html";
+    this.page.identifier = "" ||
+                           "http://localhost:4000/2019/01/10/publish-closed-source-framework-cocoapods-ios.html";
+  }
+  function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://tirupatibalan.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.
+  </noscript>
 
 
+  </section>
+
+
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/2019/01/05/create-fat-framework.html">
+            Create a universal (fat) framework in iOS along with selected swift version and strip out unwanted architecture
+            <small>05 Jan 2019</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2019/01/01/my-first-react-native-experience.html">
+            My first react-native app experience via forking open source project
+            <small>01 Jan 2019</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2018/08/12/wreely-app-architecture.html">
+            How I architect Wreely - Community Platform swift based iPhone app
+            <small>12 Aug 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</section>
+
 </div>
+
     </main>
 
     

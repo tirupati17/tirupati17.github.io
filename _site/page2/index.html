@@ -171,6 +171,10 @@
   
 
   
+    
+  
+
+  
 
 
   
@@ -216,6 +220,10 @@
     
       <a class="category-link "
           href="/category/projects.html">Projects</a>
+    
+  
+
+  
     
   
 
@@ -360,143 +368,175 @@
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2019/01/01/my-first-react-native-experience.html">
-        My first react-native app experience via forking open source project
+      <a href="/2019/01/05/create-fat-framework.html">
+        Create a universal (fat) framework in iOS along with selected swift version and strip out unwanted architecture
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">01 Jan 2019</span>
+  <span class="post-date">05 Jan 2019</span>
   <span class="post-categories">
     
   </span>
 </div>
 
     
-      <p>Long back ago I had built <a href="https://github.com/tirupati17/sip-calculator-swift">SIPCalculator</a> for iOS using simple swift language based on Apple MVC architecture and somewhere always wanted to build similar for Android.</p>
+      <p>Recently, I came into the framework development and I’ve learned or say went through lots of things during development like dependency free framework, swift version compatible issue, active architecture build problem, create private framework with cocoapod, method swizzling, threading etc etc</p>
 
-<p>Now I have found similar open source project in react-native i.e <a href="https://github.com/filippofilip95/gas-oil-mixture-mobile">gas-oil-mixture-mobile</a> on GitHub which somewhere looks like <a href="https://github.com/tirupati17/sip-calculator-swift">SIPCalculator</a> requirement and I will try to rebuild my SIPCalculator based on this <a href="https://github.com/filippofilip95/gas-oil-mixture-mobile">gas-oil-mixture-mobile</a> code base only.</p>
+<p>In this article, I’ll try to explain how I went through multiple articles for fat framework creation along with multiple swift version compatibility issues and later how I figured out device architecture problem during upload.</p>
 
-<p>So a few steps I have performed to first build this open source project (As a beginner rect-native developer)</p>
+<h3>What is fat or universal framework?</h3>
 
-<hr />
-<p>NOTE: First of all even before forking actual project I have installed basic things for developing any react native app via official FB react-native <a href="https://facebook.github.io/react-native/docs/getting-started.html">reference</a></p>
-
-<p>Below 3 commands is basically most important before starting any react-native app i.e</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>brew <span class="nb">install </span>node
-<span class="nv">$ </span>brew <span class="nb">install </span>watchman <span class="o">(</span>Optional but recommended by Facebook to keep track of file changes<span class="o">)</span>
-<span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">-g</span> react-native-cli</code></pre></figure>
-
-<p>Also tried to create test App as per init command</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>react-native init TestProject</code></pre></figure>
-
-<p>After init cd to created project i.e cd /TestProject and performed most important run-ios command as below</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>react-native run-ios </code></pre></figure>
-
-<p>As I’m an iOS developer so I already have Xcode in my system so above command works fine and after few terminal text output my simulator got open and I easily saw my first react native app i.e TestProject on my iOS simulator</p>
-
-<hr />
-
-<p>Now I’ve to build cloned react-native project which I have forked from actual repo so let’s discuss step by step</p>
-
+<p>In framework development, when we build our framework it will create two versions of .framework file as below</p>
 <ul>
-  <li>I forked it from <a href="https://github.com/filippofilip95/gas-oil-mixture-mobile">gas-oil-mixture-mobile</a></li>
-  <li>Now I cloned it using my own version of <a href="https://github.com/tirupati17/gas-oil-mixture-mobile">gas-oil-mixture-mobile</a> GitHub project URL after fork</li>
-  <li>Jumped to cloned directory i.e <code class="highlighter-rouge">cd /gas-oil-mixture-mobile</code></li>
-  <li>I did  <code class="highlighter-rouge">yarn install</code> on my terminal out of two available option as per readme instructions of <a href="https://github.com/filippofilip95/gas-oil-mixture-mobile">gas-oil-mixture-mobile</a> i.e <code class="highlighter-rouge">$ yarn install or $ npm i</code></li>
+  <li>For Device i.e armv7, armv7s, arm64 (<code class="highlighter-rouge">In Debug-iphoneos dir</code>)</li>
+  <li>For Simulator i.e x86_64, i386 (<code class="highlighter-rouge">In Debug-iphonesimulator dir</code>)</li>
 </ul>
 
-<blockquote>
-  <p>Install yarn if you don’t have it <code class="highlighter-rouge">brew install yarn</code> <a href="https://yarnpkg.com/lang/en/docs/install/#mac-stable">As per official reference site</a></p>
-</blockquote>
-
-<ul>
-  <li>Now <code class="highlighter-rouge">yarn</code> installed in my system and have performed <code class="highlighter-rouge">yarn start</code> command on my terminal</li>
-  <li>Got <code class="highlighter-rouge">Loading dependency graph, done.</code> message on the terminal (Looks like everything works fine) and suddenly faced an error on the simulator as below</li>
-</ul>
+<p>After combining above two versions of the framework the resulting framework is called <code class="highlighter-rouge">fat</code> or <code class="highlighter-rouge">universal</code> or <code class="highlighter-rouge">universal static</code> framework or library.</p>
 
 <blockquote>
-  <p>NOTE: Nowadays I’m doing below error parameter detailing for myself only to keep track of error complexity.</p>
+  <p>NOTE: x86_64, i386 are not valid device architecture, means it will gonna fail during build upload or build validation process.</p>
 </blockquote>
 
-<hr />
-
-<p><code class="highlighter-rouge">Error Code:</code> #001 <br />
-<code class="highlighter-rouge">Error Title:</code> bundling failed: Error: Unable to resolve module <br />
-<code class="highlighter-rouge">Error Detail:</code> bundling failed: Error: Unable to resolve module i.e /node_modules/react-native/Libraries/Animated/src/AnimatedImplementation.js file not exist <br />
-<code class="highlighter-rouge">Error Responsible:</code> System (As Happening to too many users but un-expected way as per error references) <br />
-<code class="highlighter-rouge">Error Level:</code> Critical (As per error references) <br />
-<code class="highlighter-rouge">Error Type:</code> Unexpected <br />
-<code class="highlighter-rouge">Error References:</code> https://github.com/facebook/react-native/issues/11257 <br />
-<code class="highlighter-rouge">Solid Solution:</code> NA (Let me know if there is any) <br />
-<code class="highlighter-rouge">Workaround Solution:</code> https://github.com/facebook/react-native/issues/11498 <br /></p>
-
-<hr />
-
-<ul>
-  <li>Seriously this error stopped me to continue react-native development for a while (But anyhow I had taken few minute breaks and started to solve this error again and workaround solution worked for me <code class="highlighter-rouge">as below</code></li>
-</ul>
-
-<blockquote>
-  <p>As per error <a href="https://github.com/facebook/react-native/issues/11498">workaround solution</a> reference</p>
-</blockquote>
-
-<hr />
+<p>Step to create a fat framework as below <a href="https://stackoverflow.com/questions/24039470/xcode-6-ios-creating-a-cocoa-touch-framework-architectures-issues/26691080#26691080">Reference</a></p>
 
 <ol>
-  <li>Click “Reset content and settings…” in the simulator’s drop-down menu and confirm</li>
-  <li>Close the simulator after it reloads</li>
-  <li>Close the terminal window running watchman</li>
-  <li>Run the following commands within terminal inside of your project’s directory:</li>
+  <li>Create a new (Aggregate) target in your framework’s project (<code class="highlighter-rouge">In Xcode 7 and 8, click File&gt;New&gt;Target... and there select "Other" group to select Aggregate target</code>)</li>
+  <li>Under “Build Phases” select “Add Run Script” and copy the contents of below script</li>
+  <li>Select the Aggregate target in the Scheme Selection drop down</li>
+  <li>Build the target for the aggregate scheme</li>
 </ol>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>watchman watch-del-all
-<span class="nv">$ </span><span class="nb">rm</span> <span class="nt">-rf</span> ./node_modules
-<span class="nv">$ </span>npm cache clean
-<span class="nv">$ </span> yarn cache clean
-<span class="nv">$ </span><span class="nb">rm</span> <span class="nt">-rf</span> <span class="nv">$TMPDIR</span>/react-<span class="k">*</span>
-<span class="nv">$ </span>yarn <span class="nb">install</span>
-<span class="nv">$ </span>npm cache clean
-<span class="nv">$ </span>yarn cache clean
-<span class="nv">$ </span>yarn add uuid</code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c"># 1</span>
+<span class="c"># Set bash script to exit immediately if any commands fail.</span>
+<span class="nb">set</span> <span class="nt">-e</span>
+<span class="c"># 2</span>
+<span class="c"># Setup some constants for use later on.</span>
+<span class="nv">FRAMEWORK_NAME</span><span class="o">=</span><span class="s2">"your_framework_name_here"</span>
+<span class="nv">OUTPUT_DIR</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">SRCROOT</span><span class="k">}</span><span class="s2">/build"</span>
+<span class="c"># 3</span>
+<span class="c"># If remnants from a previous build exist, delete them.</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-d</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+</span><span class="nb">rm</span> <span class="nt">-rf</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">"</span>
+<span class="k">fi</span>
+<span class="c"># 4</span>
+<span class="c"># Build the framework for device and for simulator (using</span>
+<span class="c"># all needed architectures).</span>
+
+xcodebuild <span class="nt">-project</span> <span class="s2">"</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.xcodeproj"</span> <span class="nt">-scheme</span> <span class="s2">"</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">"</span> <span class="nt">-configuration</span> Release <span class="nt">-arch</span> arm64 <span class="nt">-arch</span> armv7 <span class="nt">-arch</span> armv7s <span class="nv">only_active_arch</span><span class="o">=</span>no <span class="nv">defines_module</span><span class="o">=</span><span class="nb">yes</span> <span class="nt">-sdk</span> <span class="s2">"iphoneos"</span> <span class="nt">-derivedDataPath</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">"</span>
+xcodebuild <span class="nt">-project</span> <span class="s2">"</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.xcodeproj"</span> <span class="nt">-scheme</span> <span class="s2">"</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">"</span> <span class="nt">-configuration</span> Release <span class="nt">-arch</span> x86_64 <span class="nt">-arch</span> i386 <span class="nv">only_active_arch</span><span class="o">=</span>no <span class="nv">defines_module</span><span class="o">=</span><span class="nb">yes</span> <span class="nt">-sdk</span> <span class="s2">"iphonesimulator"</span> <span class="nt">-derivedDataPath</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">"</span>
+
+<span class="c"># 5</span>
+<span class="c"># Remove .framework file if exists from previous run.</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-d</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+</span><span class="nb">rm</span> <span class="nt">-rf</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework"</span>
+<span class="k">fi</span>
+<span class="c"># 6</span>
+<span class="c"># Copy the device version of framework.</span>
+<span class="nb">cp</span> <span class="nt">-r</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/Build/Products/Release-iphoneos/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework"</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework"</span>
+<span class="c"># 7</span>
+<span class="c"># Replace the framework executable within the framework with</span>
+<span class="c"># a new version created by merging the device and simulator</span>
+<span class="c"># frameworks' executables with lipo.</span>
+lipo <span class="nt">-create</span> <span class="nt">-output</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">"</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/Build/Products/Release-iphoneos/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">"</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/Build/Products/Release-iphonesimulator/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">"</span>
+<span class="c"># 8</span>
+<span class="c"># Copy the Swift module mappings for the simulator into the</span>
+<span class="c"># framework. The device mappings already exist from step 6.</span>
+<span class="nb">cp</span> <span class="nt">-r</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/Build/Products/Release-iphonesimulator/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework/Modules/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.swiftmodule/"</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework/Modules/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.swiftmodule"</span></code></pre></figure>
+
+<p>Now as per above script final .framework file is valid for all available architecture i.e x86_64, i386, armv7, armv7s, arm64</p>
+
+<p>You can check framework valid architecture via running below command on terminal</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>lipo <span class="nt">-info</span> path_to_framework/framework_name.framework/framework_name</code></pre></figure>
+
+<p>The output you will see:</p>
+
+<p><code class="highlighter-rouge">Architecture in the fat file: framework_name are: x86_64 i386 armv7 armv7s arm64</code></p>
+
+<p>Means your .framework will be available for both simulator as well as device architecture!!</p>
 
 <hr />
+
+<p>Secondly, now I’m facing swift compatibility issues for the above-created framework as my framework based on swift 4.2 only</p>
+
+<p>Below is the conditional #if statement I have used in some part of code <a href="https://www.hackingwithswift.com/example-code/language/how-to-check-the-swift-version-at-compile-time">Reference</a></p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#if swift(&gt;=4.2)</span>
+//condition here
+<span class="c">#else</span>
+//condition here
+<span class="c">#endif</span></code></pre></figure>
+
+<p>Now to make it available for multiple swift version you have to build using a different command like Toolchain through Xcode</p>
+
+<ol>
+  <li>First, download and install swift Toolchain via below link</li>
+</ol>
 
 <ul>
-  <li>After running above instructions and command step by step <code class="highlighter-rouge">Unable to resolve module</code> error gone but a new error comes to over my face <code class="highlighter-rouge">as below</code></li>
+  <li><a href="https://swift.org/builds/swift-4.0-release/xcode/swift-4.0-RELEASE/swift-4.0-RELEASE-osx.pkg">Swift 4.0</a></li>
+  <li><a href="https://swift.org/builds/swift-4.1-release/xcode/swift-4.1-RELEASE/swift-4.1-RELEASE-osx.pkg">Swift 4.1</a></li>
+  <li><a href="https://swift.org/builds/swift-4.2-release/xcode/swift-4.2-RELEASE/swift-4.2-RELEASE-osx.pkg">Swift 4.2</a></li>
 </ul>
 
+<ol>
+  <li>
+    <p>After above package installation jump to <code class="highlighter-rouge">Xcode-&gt;Preference-&gt;Component-&gt;Toolchain</code> and select your swift version</p>
+  </li>
+  <li>
+    <p>Also change the swift version in Build Settings same as what you selected in Toolchain</p>
+  </li>
+</ol>
+
+<p>Finally, build it using manually created fat aggregate target and check your ‘build’ output directory as per our above fat framework script, you will see .framework file for all architecture along with selected swift version.</p>
+
 <hr />
-
-<p><code class="highlighter-rouge">Error Code:</code> #002 <br />
-<code class="highlighter-rouge">Error Title:</code>  bundling failed: Error: While resolving module <br />
-<code class="highlighter-rouge">Error Detail:</code> bundling failed: Error: While resolving module <code class="highlighter-rouge">react-native-vector-icons/MaterialCommunityIcons</code>, the Haste package <code class="highlighter-rouge">react-native-vector-icons</code> was found. However the module <code class="highlighter-rouge">MaterialCommunityIcons</code> could not be found within the package. Indeed, none of these files exist: <br />
-<code class="highlighter-rouge">Error Responsible:</code> System (As Happening to too many users but un-expected way as per error references) <br />
-<code class="highlighter-rouge">Error Level:</code> Critical (As per error references) <br />
-<code class="highlighter-rouge">Error Type:</code> Unexpected <br />
-<code class="highlighter-rouge">Error References:</code> https://github.com/oblador/react-native-vector-icons/issues/626 <br />
-<code class="highlighter-rouge">Solid Solution:</code> NA (Let me know if there is any) <br />
-<code class="highlighter-rouge">Workaround Solution:</code> https://github.com/oblador/react-native-vector-icons/issues/626#issuecomment-357405396 <br /></p>
-
-<hr />
-
-<ul>
-  <li>Again workaround solution worked for me <code class="highlighter-rouge">as below</code></li>
-</ul>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nb">rm</span> ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json</code></pre></figure>
 
 <blockquote>
-  <p>As per error <a href="https://github.com/oblador/react-native-vector-icons/issues/626#issuecomment-357405396">workaround solution</a> reference</p>
+  <p>NOTE: If you are not using cocoapod or carthage for your framework as dependency platform then only most of the time you will face kind of below issue.</p>
 </blockquote>
 
-<p>Finally, after figuring out above two error i.e <code class="highlighter-rouge">#001</code> and <code class="highlighter-rouge">#002</code> my forked cloned project worked fine on simulator.</p>
+<p>Now we have to make it available for device architecture only otherwise you will face such <a href="https://stackoverflow.com/questions/30547283/submit-to-app-store-issues-unsupported-architecture-x86/30866648">issue</a> on host app during app store upload.</p>
 
-<p>Well, for now, this is only I have done which took me honestly 2 hrs approximately for overall things. Now I have to change this working project string, unit calculations and few functionalities as per <a href="https://github.com/tirupati17/sip-calculator-swift">SIPCalculator</a> which seriously I don’t know how much time it will gonna take so again on my free time will try to do next changes related things as per this react-native project standard (which looks good) and will post my overall experience.</p>
+<p>Because Apple won’t allow x86_64, i386 architecture on app store build.</p>
 
-<p>Thanks!!</p>
+<p>So for wrapping out x86_64, i386 architecture from framework on host app (App in which our fat framework is in use) use below script <a href="http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/">Reference</a></p>
+
+<blockquote>
+  <p>Under “Build Phases” select “Add Run Script” and copy the contents of below script</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">APP_PATH</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">TARGET_BUILD_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">WRAPPER_NAME</span><span class="k">}</span><span class="s2">"</span>
+
+<span class="c"># This script loops through the frameworks embedded in the application and</span>
+<span class="c"># removes unused architectures.</span>
+find <span class="s2">"</span><span class="nv">$APP_PATH</span><span class="s2">"</span> <span class="nt">-name</span> <span class="s1">'*.framework'</span> <span class="nt">-type</span> d | <span class="k">while </span><span class="nb">read</span> <span class="nt">-r</span> FRAMEWORK
+<span class="k">do
+    </span><span class="nv">FRAMEWORK_EXECUTABLE_NAME</span><span class="o">=</span><span class="k">$(</span>defaults <span class="nb">read</span> <span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/Info.plist"</span> CFBundleExecutable<span class="k">)</span>
+    <span class="nv">FRAMEWORK_EXECUTABLE_PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/</span><span class="nv">$FRAMEWORK_EXECUTABLE_NAME</span><span class="s2">"</span>
+    <span class="nb">echo</span> <span class="s2">"Executable is </span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
+
+    <span class="nv">EXTRACTED_ARCHS</span><span class="o">=()</span>
+
+    <span class="k">for </span>ARCH <span class="k">in</span> <span class="nv">$ARCHS</span>
+    <span class="k">do
+        </span><span class="nb">echo</span> <span class="s2">"Extracting </span><span class="nv">$ARCH</span><span class="s2"> from </span><span class="nv">$FRAMEWORK_EXECUTABLE_NAME</span><span class="s2">"</span>
+        lipo <span class="nt">-extract</span> <span class="s2">"</span><span class="nv">$ARCH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span> <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span>
+        EXTRACTED_ARCHS+<span class="o">=(</span><span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span><span class="o">)</span>
+    <span class="k">done
+
+    </span><span class="nb">echo</span> <span class="s2">"Merging extracted architectures: </span><span class="k">${</span><span class="nv">ARCHS</span><span class="k">}</span><span class="s2">"</span>
+    lipo <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="nt">-create</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
+    <span class="nb">rm</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
+
+    <span class="nb">echo</span> <span class="s2">"Replacing original executable with thinned version"</span>
+    <span class="nb">rm</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
+    <span class="nb">mv</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
+
+<span class="k">done</span></code></pre></figure>
+
+<p>Once you add above script it will wrap out all invalid architecture via looping through all imported frameworks and host app won’t face architecture related issue during their final upload on the store.</p>
 
     
 
