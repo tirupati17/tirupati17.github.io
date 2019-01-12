@@ -87,7 +87,7 @@ pod trunk register you@youremail.com ‘Your organization name'
 
 >  You can list your sessions by running `pod trunk me`
 
-- Now finally follow below the last command to push your `.podspec` on CocoaPods server [Reference](https://guides.cocoapods.org/making/getting-setup-with-trunk.html#deploying-a-library)
+- Now finally follow below last command to push your `.podspec` on CocoaPods server [Reference](https://guides.cocoapods.org/making/getting-setup-with-trunk.html#deploying-a-library)
 
 {% highlight shell %}
 pod trunk push MyFramework.podspec
@@ -101,5 +101,5 @@ pod 'MyFramework', '1.0.0'
 
 That's it!!!!! 
 
-You are done!!!</br>
+You are done!!!<br/>
 Cheers!!!!
