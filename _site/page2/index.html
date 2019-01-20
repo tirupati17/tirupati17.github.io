@@ -175,6 +175,10 @@
   
 
   
+    
+  
+
+  
 
 
   
@@ -220,6 +224,10 @@
     
       <a class="category-link "
           href="/category/projects.html">Projects</a>
+    
+  
+
+  
     
   
 
@@ -368,175 +376,126 @@
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2019/01/05/create-fat-framework.html">
-        Create a universal (fat) framework in iOS along with selected swift version and strip out unwanted architecture
+      <a href="/2019/01/10/publish-closed-source-framework-cocoapods-ios.html">
+        Publish closed source framework using CocoaPods
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">05 Jan 2019</span>
+  <span class="post-date">10 Jan 2019</span>
   <span class="post-categories">
     
   </span>
 </div>
 
     
-      <p>Recently, I came into the framework development and I’ve learned or say went through lots of things during development like dependency free framework, swift version compatible issue, active architecture build problem, create private framework with cocoapod, method swizzling, threading etc etc</p>
+      <p>Well, I’m writing this article based on my own recent experience while I have to upload my closed source compiled framework on CocoaPods means there is no public repo URL except one .framework file along with a license.</p>
 
-<p>In this article, I’ll try to explain how I went through multiple articles for fat framework creation along with multiple swift version compatibility issues and later how I figured out device architecture problem during upload.</p>
+<p>Below articles helped me a lot to finish uploading my closed source framework on CocoaPods.</p>
 
-<h3>What is fat or universal framework?</h3>
-
-<p>In framework development, when we build our framework it will create two versions of .framework file as below</p>
 <ul>
-  <li>For Device i.e armv7, armv7s, arm64 (<code class="highlighter-rouge">In Debug-iphoneos dir</code>)</li>
-  <li>For Simulator i.e x86_64, i386 (<code class="highlighter-rouge">In Debug-iphonesimulator dir</code>)</li>
+  <li><a href="https://guides.cocoapods.org/making/getting-setup-with-trunk.html">Getting setup with trunk</a> - <code class="highlighter-rouge">Official reference</code></li>
+  <li><a href="https://guides.cocoapods.org/making/private-cocoapods.html">Private cocoapods</a> - <code class="highlighter-rouge">Official reference</code></li>
+  <li><a href="https://eladnava.com/publish-a-universal-binary-ios-framework-in-swift-using-cocoapods/">Eladnava</a> - <code class="highlighter-rouge">Third party reference</code></li>
+  <li><a href="https://www.telerik.com/blogs/how-to-use-a-third-party-framework-in-a-private-cocoapod">Telerik</a> - <code class="highlighter-rouge">Third party reference</code></li>
 </ul>
 
-<p>After combining above two versions of the framework the resulting framework is called <code class="highlighter-rouge">fat</code> or <code class="highlighter-rouge">universal</code> or <code class="highlighter-rouge">universal static</code> framework or library.</p>
+<p>After going through all above articles I have still faced few issues like below</p>
 
-<blockquote>
-  <p>NOTE: x86_64, i386 are not valid device architecture, means it will gonna fail during build upload or build validation process.</p>
-</blockquote>
+<ul>
+  <li>Unexpected version directory</li>
+  <li>Wrong <code class="highlighter-rouge">.source file</code> error</li>
+  <li>Invalid <code class="highlighter-rouge">.public_header_files</code></li>
+  <li>Not validating <code class="highlighter-rouge">.homepage</code> url</li>
+  <li>Specification does not validate</li>
+</ul>
 
-<p>Step to create a fat framework as below <a href="https://stackoverflow.com/questions/24039470/xcode-6-ios-creating-a-cocoa-touch-framework-architectures-issues/26691080#26691080">Reference</a></p>
-
-<ol>
-  <li>Create a new (Aggregate) target in your framework’s project (<code class="highlighter-rouge">In Xcode 7 and 8, click File&gt;New&gt;Target... and there select "Other" group to select Aggregate target</code>)</li>
-  <li>Under “Build Phases” select “Add Run Script” and copy the contents of below script</li>
-  <li>Select the Aggregate target in the Scheme Selection drop down</li>
-  <li>Build the target for the aggregate scheme</li>
-</ol>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c"># 1</span>
-<span class="c"># Set bash script to exit immediately if any commands fail.</span>
-<span class="nb">set</span> <span class="nt">-e</span>
-<span class="c"># 2</span>
-<span class="c"># Setup some constants for use later on.</span>
-<span class="nv">FRAMEWORK_NAME</span><span class="o">=</span><span class="s2">"your_framework_name_here"</span>
-<span class="nv">OUTPUT_DIR</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">SRCROOT</span><span class="k">}</span><span class="s2">/build"</span>
-<span class="c"># 3</span>
-<span class="c"># If remnants from a previous build exist, delete them.</span>
-<span class="k">if</span> <span class="o">[</span> <span class="nt">-d</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
-</span><span class="nb">rm</span> <span class="nt">-rf</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">"</span>
-<span class="k">fi</span>
-<span class="c"># 4</span>
-<span class="c"># Build the framework for device and for simulator (using</span>
-<span class="c"># all needed architectures).</span>
-
-xcodebuild <span class="nt">-project</span> <span class="s2">"</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.xcodeproj"</span> <span class="nt">-scheme</span> <span class="s2">"</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">"</span> <span class="nt">-configuration</span> Release <span class="nt">-arch</span> arm64 <span class="nt">-arch</span> armv7 <span class="nt">-arch</span> armv7s <span class="nv">only_active_arch</span><span class="o">=</span>no <span class="nv">defines_module</span><span class="o">=</span><span class="nb">yes</span> <span class="nt">-sdk</span> <span class="s2">"iphoneos"</span> <span class="nt">-derivedDataPath</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">"</span>
-xcodebuild <span class="nt">-project</span> <span class="s2">"</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.xcodeproj"</span> <span class="nt">-scheme</span> <span class="s2">"</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">"</span> <span class="nt">-configuration</span> Release <span class="nt">-arch</span> x86_64 <span class="nt">-arch</span> i386 <span class="nv">only_active_arch</span><span class="o">=</span>no <span class="nv">defines_module</span><span class="o">=</span><span class="nb">yes</span> <span class="nt">-sdk</span> <span class="s2">"iphonesimulator"</span> <span class="nt">-derivedDataPath</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">"</span>
-
-<span class="c"># 5</span>
-<span class="c"># Remove .framework file if exists from previous run.</span>
-<span class="k">if</span> <span class="o">[</span> <span class="nt">-d</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
-</span><span class="nb">rm</span> <span class="nt">-rf</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework"</span>
-<span class="k">fi</span>
-<span class="c"># 6</span>
-<span class="c"># Copy the device version of framework.</span>
-<span class="nb">cp</span> <span class="nt">-r</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/Build/Products/Release-iphoneos/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework"</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework"</span>
-<span class="c"># 7</span>
-<span class="c"># Replace the framework executable within the framework with</span>
-<span class="c"># a new version created by merging the device and simulator</span>
-<span class="c"># frameworks' executables with lipo.</span>
-lipo <span class="nt">-create</span> <span class="nt">-output</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">"</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/Build/Products/Release-iphoneos/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">"</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/Build/Products/Release-iphonesimulator/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">"</span>
-<span class="c"># 8</span>
-<span class="c"># Copy the Swift module mappings for the simulator into the</span>
-<span class="c"># framework. The device mappings already exist from step 6.</span>
-<span class="nb">cp</span> <span class="nt">-r</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/Build/Products/Release-iphonesimulator/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework/Modules/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.swiftmodule/"</span> <span class="s2">"</span><span class="k">${</span><span class="nv">OUTPUT_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.framework/Modules/</span><span class="k">${</span><span class="nv">FRAMEWORK_NAME</span><span class="k">}</span><span class="s2">.swiftmodule"</span></code></pre></figure>
-
-<p>Now as per above script final .framework file is valid for all available architecture i.e x86_64, i386, armv7, armv7s, arm64</p>
-
-<p>You can check framework valid architecture via running below command on terminal</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>lipo <span class="nt">-info</span> path_to_framework/framework_name.framework/framework_name</code></pre></figure>
-
-<p>The output you will see:</p>
-
-<p><code class="highlighter-rouge">Architecture in the fat file: framework_name are: x86_64 i386 armv7 armv7s arm64</code></p>
-
-<p>Means your .framework will be available for both simulator as well as device architecture!!</p>
+<p>and so on but one thing I have realized all problems are related to .podspec file only which I’m facing whenever I’m validating spec file through pod lint command i.e  <code class="highlighter-rouge">pod spec lint</code></p>
 
 <hr />
 
-<p>Secondly, now I’m facing swift compatibility issues for the above-created framework as my framework based on swift 4.2 only</p>
-
-<p>Below is the conditional #if statement I have used in some part of code <a href="https://www.hackingwithswift.com/example-code/language/how-to-check-the-swift-version-at-compile-time">Reference</a></p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#if swift(&gt;=4.2)</span>
-//condition here
-<span class="c">#else</span>
-//condition here
-<span class="c">#endif</span></code></pre></figure>
-
-<p>Now to make it available for multiple swift version you have to build using a different command like Toolchain through Xcode</p>
-
-<ol>
-  <li>First, download and install swift Toolchain via below link</li>
-</ol>
+<p>Let’s discuss step by step how I have created perfect working podspec file and uploaded my .framework successfully</p>
 
 <ul>
-  <li><a href="https://swift.org/builds/swift-4.0-release/xcode/swift-4.0-RELEASE/swift-4.0-RELEASE-osx.pkg">Swift 4.0</a></li>
-  <li><a href="https://swift.org/builds/swift-4.1-release/xcode/swift-4.1-RELEASE/swift-4.1-RELEASE-osx.pkg">Swift 4.1</a></li>
-  <li><a href="https://swift.org/builds/swift-4.2-release/xcode/swift-4.2-RELEASE/swift-4.2-RELEASE-osx.pkg">Swift 4.2</a></li>
+  <li>
+    <p>If possible go through <a href="https://www.tirupatibalan.com/2019/01/05/create-fat-framework.html">this article</a> where I have explained how one could create a universal framework.</p>
+  </li>
+  <li>
+    <p>Once you have done with framework create process (<code class="highlighter-rouge">as per point 1</code>) you have to create <code class="highlighter-rouge">MyFramework.podspec</code> file in your project directory.</p>
+  </li>
 </ul>
 
-<ol>
-  <li>
-    <p>After above package installation jump to <code class="highlighter-rouge">Xcode-&gt;Preference-&gt;Component-&gt;Toolchain</code> and select your swift version</p>
-  </li>
-  <li>
-    <p>Also change the swift version in Build Settings same as what you selected in Toolchain</p>
-  </li>
-</ol>
+<p>Paste the below content inside it:</p>
 
-<p>Finally, build it using manually created fat aggregate target and check your ‘build’ output directory as per our above fat framework script, you will see .framework file for all architecture along with selected swift version.</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Pod</span><span class="o">::</span><span class="no">Spec</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span>  
+    <span class="n">s</span><span class="p">.</span><span class="nf">name</span>                    <span class="o">=</span> <span class="s1">'MyFramework'</span>
+    <span class="n">s</span><span class="p">.</span><span class="nf">version</span>                 <span class="o">=</span> <span class="s1">'1.0.0'</span>
+    <span class="n">s</span><span class="p">.</span><span class="nf">summary</span>                 <span class="o">=</span> <span class="s1">'MyFramework summary.'</span>
+    <span class="n">s</span><span class="p">.</span><span class="nf">homepage</span>                <span class="o">=</span> <span class="s1">'https://www.example.com/'</span>
 
-<hr />
+    <span class="n">s</span><span class="p">.</span><span class="nf">author</span>                  <span class="o">=</span> <span class="p">{</span> <span class="s1">'MyFramework'</span> <span class="o">=&gt;</span> <span class="s1">'hello@example.com'</span> <span class="p">}</span>
+    <span class="n">s</span><span class="p">.</span><span class="nf">license</span>                 <span class="o">=</span> <span class="p">{</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s1">'Apache-2.0'</span><span class="p">,</span> <span class="ss">:file</span> <span class="o">=&gt;</span> <span class="s1">'LICENSE'</span> <span class="p">}</span>
 
-<blockquote>
-  <p>NOTE: If you are not using cocoapod or carthage for your framework as dependency platform then only most of the time you will face kind of below issue.</p>
-</blockquote>
+    <span class="n">s</span><span class="p">.</span><span class="nf">platform</span>                <span class="o">=</span> <span class="ss">:ios</span>
+    <span class="n">s</span><span class="p">.</span><span class="nf">source</span>                  <span class="o">=</span> <span class="p">{</span> <span class="ss">:http</span> <span class="o">=&gt;</span> <span class="s1">'https://example.com/download/ios_sdk/1.0.1/MyFramework.zip'</span> <span class="p">}</span>
 
-<p>Now we have to make it available for device architecture only otherwise you will face such <a href="https://stackoverflow.com/questions/30547283/submit-to-app-store-issues-unsupported-architecture-x86/30866648">issue</a> on host app during app store upload.</p>
+    <span class="n">s</span><span class="p">.</span><span class="nf">ios</span><span class="p">.</span><span class="nf">deployment_target</span>   <span class="o">=</span> <span class="s1">'9.0'</span>
+    <span class="n">s</span><span class="p">.</span><span class="nf">ios</span><span class="p">.</span><span class="nf">vendored_frameworks</span> <span class="o">=</span> <span class="s1">'MyFramework.framework'</span>
+<span class="k">end</span> </code></pre></figure>
 
-<p>Because Apple won’t allow x86_64, i386 architecture on app store build.</p>
-
-<p>So for wrapping out x86_64, i386 architecture from framework on host app (App in which our fat framework is in use) use below script <a href="http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/">Reference</a></p>
+<p>If above spec file works out for you and if it passed <code class="highlighter-rouge">pod spec lint</code> command on your terminal then think 90% of your upload headache passed out.</p>
 
 <blockquote>
-  <p>Under “Build Phases” select “Add Run Script” and copy the contents of below script</p>
+  <p>During <code class="highlighter-rouge">.podspec</code> validation I have faced validation of <code class="highlighter-rouge">.homepage</code> parameter <a href="https://github.com/CocoaPods/CocoaPods/issues/2795">Error reference</a> so anyhow instead solving it I used <code class="highlighter-rouge">--allow-warnings</code>  in pod lint validation command as below</p>
 </blockquote>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">APP_PATH</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">TARGET_BUILD_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">WRAPPER_NAME</span><span class="k">}</span><span class="s2">"</span>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">pod spec lint --allow-warnings</code></pre></figure>
 
-<span class="c"># This script loops through the frameworks embedded in the application and</span>
-<span class="c"># removes unused architectures.</span>
-find <span class="s2">"</span><span class="nv">$APP_PATH</span><span class="s2">"</span> <span class="nt">-name</span> <span class="s1">'*.framework'</span> <span class="nt">-type</span> d | <span class="k">while </span><span class="nb">read</span> <span class="nt">-r</span> FRAMEWORK
-<span class="k">do
-    </span><span class="nv">FRAMEWORK_EXECUTABLE_NAME</span><span class="o">=</span><span class="k">$(</span>defaults <span class="nb">read</span> <span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/Info.plist"</span> CFBundleExecutable<span class="k">)</span>
-    <span class="nv">FRAMEWORK_EXECUTABLE_PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/</span><span class="nv">$FRAMEWORK_EXECUTABLE_NAME</span><span class="s2">"</span>
-    <span class="nb">echo</span> <span class="s2">"Executable is </span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
+<ul>
+  <li>Now create a zip archive of your <code class="highlighter-rouge">MyFramework.framework</code> and <code class="highlighter-rouge">LICENSE</code> through zip command as below</li>
+</ul>
 
-    <span class="nv">EXTRACTED_ARCHS</span><span class="o">=()</span>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">zip <span class="nt">-r</span> MyFramework.zip LICENSE MyFramework.framework </code></pre></figure>
 
-    <span class="k">for </span>ARCH <span class="k">in</span> <span class="nv">$ARCHS</span>
-    <span class="k">do
-        </span><span class="nb">echo</span> <span class="s2">"Extracting </span><span class="nv">$ARCH</span><span class="s2"> from </span><span class="nv">$FRAMEWORK_EXECUTABLE_NAME</span><span class="s2">"</span>
-        lipo <span class="nt">-extract</span> <span class="s2">"</span><span class="nv">$ARCH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span> <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span>
-        EXTRACTED_ARCHS+<span class="o">=(</span><span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span><span class="o">)</span>
-    <span class="k">done
+<blockquote>
+  <p>For licence file content follow <a href="https://raw.githubusercontent.com/eladnava/mailgen/master/LICENSE">this</a> special thanks to <a href="https://github.com/eladnava">eladnava</a></p>
+</blockquote>
 
-    </span><span class="nb">echo</span> <span class="s2">"Merging extracted architectures: </span><span class="k">${</span><span class="nv">ARCHS</span><span class="k">}</span><span class="s2">"</span>
-    lipo <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="nt">-create</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
-    <span class="nb">rm</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
+<ul>
+  <li>Upload your MyFramework.zip file on your server and copy the path of uploaded zip file like below which will in use for <code class="highlighter-rouge">s.source</code> parameter</li>
+</ul>
 
-    <span class="nb">echo</span> <span class="s2">"Replacing original executable with thinned version"</span>
-    <span class="nb">rm</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
-    <span class="nb">mv</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">example</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">ios_sdk</span><span class="o">/</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="no">MyFramework</span><span class="p">.</span><span class="nf">zip</span></code></pre></figure>
 
-<span class="k">done</span></code></pre></figure>
+<blockquote>
+  <p>I have used <a href="https://firebase.google.com/docs/hosting/">Firebase Private Hosting</a> for .zip file upload and <a href="https://dillinger.io/">Dillinger</a> for my installation documentation especially for a client where you can easily create styled HTML, pdf file using simple markdown language.</p>
+</blockquote>
 
-<p>Once you add above script it will wrap out all invalid architecture via looping through all imported frameworks and host app won’t face architecture related issue during their final upload on the store.</p>
+<ul>
+  <li>For publishing your <code class="highlighter-rouge">.podspec</code> file you have to authenticate and use CocoaPods API service i.e <a href="https://guides.cocoapods.org/making/getting-setup-with-trunk.html">CocoaPods Trunk</a></li>
+</ul>
+
+<p>Follow below command to register yourself <a href="https://guides.cocoapods.org/making/getting-setup-with-trunk.html#getting-started">Reference</a></p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">pod trunk register you@youremail.com ‘Your organization name<span class="s1">' </span></code></pre></figure>
+
+<blockquote>
+  <p>You can list your sessions by running <code class="highlighter-rouge">pod trunk me</code></p>
+</blockquote>
+
+<ul>
+  <li>Now finally follow below last command to push your <code class="highlighter-rouge">.podspec</code> on CocoaPods server <a href="https://guides.cocoapods.org/making/getting-setup-with-trunk.html#deploying-a-library">Reference</a></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">pod trunk push MyFramework.podspec</code></pre></figure>
+
+<p>After following all above step successfully I’m sure now you are ready to test your pod installation through any test project, Just add below line in your <code class="highlighter-rouge">.podfile</code> and run <code class="highlighter-rouge">pod install</code> command</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">pod</span> <span class="s1">'MyFramework'</span><span class="p">,</span> <span class="s1">'1.0.0'</span>  </code></pre></figure>
+
+<p>That’s it!!!!!</p>
+
+<p>You are done!!!<br />
+Cheers!!!!</p>
 
     
 

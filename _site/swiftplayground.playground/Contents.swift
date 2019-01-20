@@ -1,45 +1,25 @@
 //: Playground - noun: a place where people can play
 
-import UIKit
+import Foundation
 
 var str = "Hello, playground"
 print(str)
 
-protocol Wework {
-    //stored properties
-    var isFreeMember : Bool { get set }
-    //computed properties
-//    var isGreenZone : Bool {
-//        return true
-//    }
-    //type properties
-}
-
-struct ThirteenthFlour : Wework {
-    //stored properties
-    var isFreeMember: Bool
-    //computed properties
-    var isGreenZone: Bool {
-        return true
+class Car {
+    var name: String = "Ferrari" // Stored properties
+    var isAvailable: Bool { //Computed properties
+        return false
     }
-    //type properties
+    init(name: String) {
+        self.name = name
+    }
 }
 
-let thirteenthFloor = ThirteenthFlour(isFreeMember: true)
-print(thirteenthFloor.isGreenZone)
+var car = Car(name: "Ford")
+print(car.name)
 
-class FourteenthFloor {
-    //stored properties
-    
-    //computed properties
-    
-    //type properties
-}
+var numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+numberOfLegs["bird"] = 2
 
-enum TwelfthFloor {
-    //stored properties
-    
-    //computed properties
-    
-    //type properties
-}
+print(numberOfLegs)
+
