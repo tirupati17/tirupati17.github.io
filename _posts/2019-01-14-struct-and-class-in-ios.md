@@ -10,7 +10,7 @@ In Swift, **Structure** and **Classes** works out somewhere likewise but they ha
 > In this article we will gonna explore those variations and differences which make them different from each other along with possible code example. 
 
 
-**NOTE: For a quick compilation of below code, I've used [online.swiftplayground.run](http://online.swiftplayground.run/)  online swift playground. Owned and maintained by [Marcin Krzyzanowski](https://github.com/krzyzanowskim)**
+**NOTE: For a quick compilation of below code, I've used [Ideone](https://ideone.com/) online compiler and debugging tool**
 
 <h2>So, what is struct and class?</h2>
 
@@ -224,25 +224,23 @@ print("\(car.name) \(car.model) model usd price is \(car.priceInUsd())") //Outpu
 class Car { //Base class
     var name: String = "Ferrari" // Stored properties
     var isAvailable: Bool { //Computed properties
-        return false    
+    	get {
+    		return true
+    	}
+    	set(value) {
+    		self.isAvailable = value
+    	}
     }
     init(name: String) {
         self.name = name
     }
-    func makeItAvailable() {
-        self.isAvailable = true
-    }
 }
 
-class AverageSpeed : Car { //AverageSpeed subclass which inherits from Car as its superclass
+class AverageSpeed : Car { //average speed is now subclass which inherits from Car as its superclass
     var speed: String 
-    override var isAvailable: Bool //Override properties
     init(speed: String) {
         self.speed = speed
         super.init(name: "Ferrari") //'super.init' should called on all paths before returning from initializer
-    }
-    override func makeItUnAvailable() {  //Override method
-        self.isAvailable = false
     }
 }
 var averageSpeed = AverageSpeed(speed:"23")
@@ -251,6 +249,7 @@ averageSpeed.name = "Ford"
 
 print(averageSpeed.isAvailable ? "Car is available." : "Car is unavailable.")
 print("\(averageSpeed.name) average speed is \(averageSpeed.speed)") //Output : `Ferrari average speed is 20 k/h`
+
 {% endhighlight %}
 
 - <h3>Type casting</h3> 
@@ -324,7 +323,7 @@ struct Car {
         height += deltaHeight
     }
 
-    func getCarDimensions(){
+    func getCarDimensions() -> Double {
         return width * height
     }
 }

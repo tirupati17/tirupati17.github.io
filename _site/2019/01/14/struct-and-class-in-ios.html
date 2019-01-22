@@ -378,7 +378,7 @@
   <p>In this article we will gonna explore those variations and differences which make them different from each other along with possible code example.</p>
 </blockquote>
 
-<p><strong>NOTE: For a quick compilation of below code, I’ve used <a href="http://online.swiftplayground.run/">online.swiftplayground.run</a>  online swift playground. Owned and maintained by <a href="https://github.com/krzyzanowskim">Marcin Krzyzanowski</a></strong></p>
+<p><strong>NOTE: For a quick compilation for below code, I’ve used <a href="https://ideone.com/">Ideone</a> online compiler and debugging tool</strong></p>
 
 <h2>So, what is struct and class?</h2>
 
@@ -622,25 +622,23 @@ Any type that satisfies the requirements of a protocol is said to conform to tha
 <figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">Car</span> <span class="p">{</span> <span class="c1">//Base class</span>
     <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Ferrari"</span> <span class="c1">// Stored properties</span>
     <span class="k">var</span> <span class="nv">isAvailable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="c1">//Computed properties</span>
-        <span class="k">return</span> <span class="kc">false</span>    
+    	<span class="k">get</span> <span class="p">{</span>
+    		<span class="k">return</span> <span class="kc">true</span>
+    	<span class="p">}</span>
+    	<span class="nf">set</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+    		<span class="k">self</span><span class="o">.</span><span class="n">isAvailable</span> <span class="o">=</span> <span class="n">value</span>
+    	<span class="p">}</span>
     <span class="p">}</span>
     <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
     <span class="p">}</span>
-    <span class="kd">func</span> <span class="nf">makeItAvailable</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">self</span><span class="o">.</span><span class="n">isAvailable</span> <span class="o">=</span> <span class="kc">true</span>
-    <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">class</span> <span class="kt">AverageSpeed</span> <span class="p">:</span> <span class="kt">Car</span> <span class="p">{</span> <span class="c1">//AverageSpeed subclass which inherits from Car as its superclass</span>
+<span class="kd">class</span> <span class="kt">AverageSpeed</span> <span class="p">:</span> <span class="kt">Car</span> <span class="p">{</span> <span class="c1">//average speed is now subclass which inherits from Car as its superclass</span>
     <span class="k">var</span> <span class="nv">speed</span><span class="p">:</span> <span class="kt">String</span> 
-    <span class="k">override</span> <span class="k">var</span> <span class="nv">isAvailable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="c1">//Override properties</span>
     <span class="nf">init</span><span class="p">(</span><span class="nv">speed</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span>
         <span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Ferrari"</span><span class="p">)</span> <span class="c1">//'super.init' should called on all paths before returning from initializer</span>
-    <span class="p">}</span>
-    <span class="k">override</span> <span class="kd">func</span> <span class="nf">makeItUnAvailable</span><span class="p">()</span> <span class="p">{</span>  <span class="c1">//Override method</span>
-        <span class="k">self</span><span class="o">.</span><span class="n">isAvailable</span> <span class="o">=</span> <span class="kc">false</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="k">var</span> <span class="nv">averageSpeed</span> <span class="o">=</span> <span class="kt">AverageSpeed</span><span class="p">(</span><span class="nv">speed</span><span class="p">:</span><span class="s">"23"</span><span class="p">)</span>
@@ -732,7 +730,7 @@ Any type that satisfies the requirements of a protocol is said to conform to tha
         <span class="n">height</span> <span class="o">+=</span> <span class="n">deltaHeight</span>
     <span class="p">}</span>
 
-    <span class="kd">func</span> <span class="nf">getCarDimensions</span><span class="p">(){</span>
+    <span class="kd">func</span> <span class="nf">getCarDimensions</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Double</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
     <span class="p">}</span>
 <span class="p">}</span>
