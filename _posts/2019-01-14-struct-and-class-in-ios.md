@@ -18,6 +18,7 @@ In Swift, **Structure** and **Classes** works out somewhere likewise but they ha
 
 <small>See below for an example</small>
 
+<small>[Edit Online](https://ideone.com/mduYlK)</small>
 {% highlight swift %}
 struct Car {
     var name: String 
@@ -43,6 +44,7 @@ print(ferrari.name) // Output: Ferrari
 
 <small>See below for an example</small>
 
+<small>[Edit Online](https://ideone.com/neZBFa)</small>
 {% highlight swift %}
 class Car {
     var name: String
@@ -52,7 +54,8 @@ class Car {
     init(name: String, model: String, color: String) { // In Class, we need to implement `init` which is a constructor but in struct, it is not necessary 
         self.name = name
         self.model = model
-        self.color = 
+        self.color = color
+    }
 }
 
 let ford = Car(name:"Ford", model:"2010", color:"Red")

@@ -378,13 +378,15 @@
   <p>In this article we will gonna explore those variations and differences which make them different from each other along with possible code example.</p>
 </blockquote>
 
-<p><strong>NOTE: For a quick compilation for below code, I’ve used <a href="https://ideone.com/">Ideone</a> online compiler and debugging tool</strong></p>
+<p><strong>NOTE: For a quick compilation of below code, I’ve used <a href="https://ideone.com/">Ideone</a> online compiler and debugging tool</strong></p>
 
 <h2>So, what is struct and class?</h2>
 
 <p><strong>Structures</strong> (enum and tuple) are <code class="highlighter-rouge">value types</code>, means each instance keeps a unique copy of its data.</p>
 
 <p><small>See below for an example</small></p>
+
+<p><small><a href="https://ideone.com/mduYlK">Edit Online</a></small></p>
 
 <figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="kt">Car</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> 
@@ -409,6 +411,8 @@
 
 <p><small>See below for an example</small></p>
 
+<p><small><a href="https://ideone.com/neZBFa">Edit Online</a></small></p>
+
 <figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">Car</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
     <span class="k">let</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">String</span>
@@ -417,7 +421,8 @@
     <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// In Class, we need to implement `init` which is a constructor but in struct, it is not necessary </span>
         <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="k">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
-        <span class="k">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> 
+        <span class="k">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="k">let</span> <span class="nv">ford</span> <span class="o">=</span> <span class="kt">Car</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span><span class="s">"Ford"</span><span class="p">,</span> <span class="nv">model</span><span class="p">:</span><span class="s">"2010"</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span><span class="s">"Red"</span><span class="p">)</span>
