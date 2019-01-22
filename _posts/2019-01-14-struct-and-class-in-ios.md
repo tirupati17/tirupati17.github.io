@@ -2,6 +2,15 @@
 layout: post
 comments: true
 title: Struct and Class in iOS using Swift
+categories: 
+    - Swift
+tags: 
+    - Types
+    - Struct
+    - Class
+    - Method
+    - Inheritance
+    - Mutating
 excerpt_separator:  <!--more-->
 ---
 
