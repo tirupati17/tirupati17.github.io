@@ -11,7 +11,7 @@
 
   <title>
     
-      Pondy, 2015 Feb &middot; Tirupati Balan
+      Tirupati Balan &middot; Personal Blog
     
   </title>
 
@@ -39,29 +39,16 @@
   <!-- Optional footer content -->
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-
-
-<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-
-<!-- Actual includes needed for the gallery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.19/js/lightgallery-all.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.19/css/lightgallery.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.0/isotope.pkgd.min.js"></script>
-<link rel="stylesheet" href="http://localhost:4000/css/gallery.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js"></script>
 
 </head>
 
 
-  <body class="gallery">
+  <body class="index">
 
     <div id="sidebar">
   <header>
-    <div class="site-title">
+    <h1 class="site-title">
       <a href="/">
         
           <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
@@ -71,7 +58,7 @@
         
         Tirupati Balan
       </a>
-    </div>
+    </h1>
     <p class="lead">An iOS Developer and Internet Entrepreneur</p>
   </header>
   <nav id="sidebar-nav-links">
@@ -381,84 +368,128 @@
 
 
     <main class="container">
-      <h1 class="gallery-title">Pondy, 2015 Feb</h1>
-
-<p><a href="/travels">Back to travels</a></p>
-
-<p>All images licensed under [CC-BY-NC-SA <a href="https://creativecommons.org/licenses/by-nc-sa/4.0">license</a> ]</p>
-
-<div id="image-gallery" class="image-gallery">
-  <div id="gallery-sizer" class="gallery-sizer"></div>
+      <div class="content">
   
-  <div class="image-wrapper">
-    <a href="http://localhost:4000/assets/photography/pondy/2015/pondy_2015_01.jpg" data-responsive=" http://localhost:4000/assets/photography/pondy/2015/pondy_2015_01.jpg pondy_2015_01" class="image">
-      <img alt="" src="http://localhost:4000/assets/photography/pondy/2015/pondy_2015_01.jpg" />
-    </a>
-  </div>
-  
-  <div class="image-wrapper">
-    <a href="http://localhost:4000/assets/photography/pondy/2015/pondy-2015-02.jpg" data-responsive=" http://localhost:4000/assets/photography/pondy/2015/pondy-2015-02.jpg 02" class="image">
-      <img alt="" src="http://localhost:4000/assets/photography/pondy/2015/pondy-2015-02.jpg" />
-    </a>
-  </div>
-  
-  <div class="image-wrapper">
-    <a href="http://localhost:4000/assets/photography/pondy/2015/pondy-2015-03.jpg" data-responsive=" http://localhost:4000/assets/photography/pondy/2015/pondy-2015-03.jpg 03" class="image">
-      <img alt="" src="http://localhost:4000/assets/photography/pondy/2015/pondy-2015-03.jpg" />
-    </a>
-  </div>
-  
-  <div class="image-wrapper">
-    <a href="http://localhost:4000/assets/photography/pondy/2015/pondy-2015-04.jpg" data-responsive=" http://localhost:4000/assets/photography/pondy/2015/pondy-2015-04.jpg 04" class="image">
-      <img alt="" src="http://localhost:4000/assets/photography/pondy/2015/pondy-2015-04.jpg" />
-    </a>
-  </div>
-  
-  <div class="image-wrapper">
-    <a href="http://localhost:4000/assets/photography/pondy/2015/pondy-2015-05.jpg" data-responsive=" http://localhost:4000/assets/photography/pondy/2015/pondy-2015-05.jpg 05" class="image">
-      <img alt="" src="http://localhost:4000/assets/photography/pondy/2015/pondy-2015-05.jpg" />
-    </a>
-  </div>
-  
-  <div class="image-wrapper">
-    <a href="http://localhost:4000/assets/photography/pondy/2015/pondy-2015-06.jpg" data-responsive=" http://localhost:4000/assets/photography/pondy/2015/pondy-2015-06.jpg 06" class="image">
-      <img alt="" src="http://localhost:4000/assets/photography/pondy/2015/pondy-2015-06.jpg" />
-    </a>
-  </div>
-  
-  <div class="image-wrapper">
-    <a href="http://localhost:4000/assets/photography/pondy/2015/pondy-2015-07.jpg" data-responsive=" http://localhost:4000/assets/photography/pondy/2015/pondy-2015-07.jpg 07" class="image">
-      <img alt="" src="http://localhost:4000/assets/photography/pondy/2015/pondy-2015-07.jpg" />
-    </a>
-  </div>
-  
+<div class="pagination">
+  <a class="pagination-item newer"
+     href="/page7">
+    Newer
+  </a>
 </div>
 
-<script>
-$(document).ready(function() {
-  var $gallery = $("#image-gallery").lightGallery({
-    thumbnail: false,
-    selector: '.image'
-  });
-});
-
-// init isotope
-var $grid = $('#image-gallery').isotope({
-  percentPosition: true,
-  columnWidth: '#gallery-sizer',
-  itemSelector: '.image-wrapper',
-  layoutMode: "masonry"
-});
-
-// layout Isotope after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry();
-});
-
-</script>
 
 
+  
 
+  
+  <article class="post-body">
+    <h2 class="post-title">
+      <a href="/2017/12/08/what-is-jekyll.html">
+        What is GitHub Pages, Jekyll, Poole, Hyde and Hydeout?
+      </a>
+    </h2>
+    <div class="post-meta">
+  <span class="post-date">08 Dec 2017</span>
+  <span class="post-categories">
+    
+  </span>
+</div>
+
+    
+      <p>Hello, Hope all good!</p>
+
+<p>This is the first post on my personal blog and I want everyone to know how I setup this site using Jekyll and GitHub Pages. </p>
+
+<p>Please read below things step by step as per their reference source and get to know about this. Good Luck!!</p>
+
+<h4>What is GitHub Pages?</h4>
+
+<p>GitHub Pages is a static site hosting service.</p>
+
+<blockquote>
+  <p>GitHub Pages is designed to host your personal, organization, or project pages directly from a GitHub repository.<br />
+You can create and publish GitHub Pages online using the Jekyll Theme Chooser.</p>
+</blockquote>
+
+<blockquote>
+  <p>GitHub Pages is a static site hosting service and doesn’t support server-side code such as, PHP, Ruby, or Python.</p>
+</blockquote>
+
+<p><a href="https://help.github.com/articles/what-is-github-pages/">Reference</a></p>
+
+<h4>What is Jekyll?</h4>
+<p><a href="https://jekyllrb.com">Jekyll</a> is a simple, blog-aware, static site generator for personal, project, or organization sites. Written in Ruby by Tom Preston-Werner, GitHub’s co-founder, it is distributed under an open source license.</p>
+
+<blockquote>
+  <p>Instead of using databases, Jekyll takes the content, renders Markdown or Textile and Liquid templates, and produces a complete, static website ready to be served by Apache HTTP Server, Nginx or another web server.</p>
+</blockquote>
+
+<blockquote>
+  <p>Jekyll is the engine behind <a href="https://pages.github.com/">GitHubPages</a>, a GitHub feature that allows users to host websites based on their GitHub repositories.</p>
+</blockquote>
+
+<p><a href="https://en.wikipedia.org/wiki/Jekyll_(software)">Reference</a></p>
+
+<p>Few useful article’s related to Jekyll and GitHub Pages:<br />
+<a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/">Setting up your GitHub Pages site locally with Jekyll</a> <br />
+<a href="https://programminghistorian.org/lessons/building-static-sites-with-jekyll-github-pages">Building a static website with Jekyll and GitHub Pages</a></p>
+
+<hr />
+
+<h4>Meet Poole</h4>
+
+<p><a href="https://getpoole.com">Poole</a>  is the butler for Jekyll, the static site generator.</p>
+
+<blockquote>
+  <p>It’s designed and developed by <a href="https://markdotto.com">@mdo</a> to provide a clear and concise foundational setup for any Jekyll site.<br />It does so by furnishing a full vanilla Jekyll install with example templates, pages, posts, and styles.</p>
+</blockquote>
+
+<p><a href="https://getpoole.com/">Reference</a></p>
+
+<hr />
+
+<h4>Hyde?</h4>
+
+<p><a href="https://github.com/poole/hyde">Hyde</a> is a brazen two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content. It’s based on Poole, the Jekyll butler.</p>
+
+<blockquote>
+  <p>Hyde is a theme built on top of Poole, which provides a fully furnished Jekyll setup—just download and start the Jekyll server.</p>
+</blockquote>
+
+<p><a href="https://github.com/poole/hyde">Reference</a></p>
+
+<hr />
+
+<h4>Finally Hydeout?</h4>
+
+<p><a href="https://github.com/fongandrew/hydeout">Hydeout</a> updates the original Hyde theme for Jekyll 3.x and adds new functionality.</p>
+
+<p>Hydeout is available as the <code class="highlighter-rouge">jekyll-theme-hydeout</code> Ruby Gem.<br /> Add <code class="highlighter-rouge">gem "jekyll-theme-hydeout", "~&gt; 3.4"</code> to your Gemfile and run <code class="highlighter-rouge">bundle install</code></p>
+
+<p>Hydeout uses pagination, so if you have an <code class="highlighter-rouge">index.md</code>, you’ll need to swap it with an <code class="highlighter-rouge">index.html</code> that uses the index layout:</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">---
+layout: index
+title: Home
+---</code></pre></figure>
+
+<p>Find out more by <a href="https://github.com/fongandrew/hydeout">visiting the project on GitHub</a>.</p>
+
+    
+
+    
+      
+      
+      
+
+      
+    
+  </article>
+  
+
+  
+
+</div>
     </main>
 
     

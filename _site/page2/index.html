@@ -179,6 +179,10 @@
   
 
   
+    
+  
+
+  
 
 
   
@@ -224,6 +228,10 @@
     
       <a class="category-link "
           href="/category/projects.html">Projects</a>
+    
+  
+
+  
     
   
 
@@ -376,126 +384,407 @@
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/2019/01/10/publish-closed-source-framework-cocoapods-ios.html">
-        Publish closed source framework using CocoaPods
+      <a href="/2019/01/14/struct-and-class-in-ios.html">
+        Struct and Class in iOS using Swift
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">10 Jan 2019</span>
+  <span class="post-date">14 Jan 2019</span>
   <span class="post-categories">
     
   </span>
 </div>
 
     
-      <p>Well, I’m writing this article based on my own recent experience while I have to upload my closed source compiled framework on CocoaPods means there is no public repo URL except one .framework file along with a license.</p>
+      <p>In Swift, <strong>Structure</strong> and <strong>Classes</strong> works out somewhere likewise but they have a few unique key variations which make them distinct from each other and they have diverse use cases.</p>
 
-<p>Below articles helped me a lot to finish uploading my closed source framework on CocoaPods.</p>
+<blockquote>
+  <p>In this article we will gonna explore those variations and differences which make them different from each other along with possible code example.</p>
+</blockquote>
 
-<ul>
-  <li><a href="https://guides.cocoapods.org/making/getting-setup-with-trunk.html">Getting setup with trunk</a> - <code class="highlighter-rouge">Official reference</code></li>
-  <li><a href="https://guides.cocoapods.org/making/private-cocoapods.html">Private cocoapods</a> - <code class="highlighter-rouge">Official reference</code></li>
-  <li><a href="https://eladnava.com/publish-a-universal-binary-ios-framework-in-swift-using-cocoapods/">Eladnava</a> - <code class="highlighter-rouge">Third party reference</code></li>
-  <li><a href="https://www.telerik.com/blogs/how-to-use-a-third-party-framework-in-a-private-cocoapod">Telerik</a> - <code class="highlighter-rouge">Third party reference</code></li>
-</ul>
+<p><strong>NOTE: For a quick compilation of below code, I’ve used <a href="https://ideone.com/">Ideone</a> online compiler and debugging tool</strong></p>
 
-<p>After going through all above articles I have still faced few issues like below</p>
+<h2>So, what is struct and class?</h2>
 
-<ul>
-  <li>Unexpected version directory</li>
-  <li>Wrong <code class="highlighter-rouge">.source file</code> error</li>
-  <li>Invalid <code class="highlighter-rouge">.public_header_files</code></li>
-  <li>Not validating <code class="highlighter-rouge">.homepage</code> url</li>
-  <li>Specification does not validate</li>
-</ul>
+<p><strong>Structures</strong> (enum and tuple) are <code class="highlighter-rouge">value types</code>, means each instance keeps a unique copy of its data.</p>
 
-<p>and so on but one thing I have realized all problems are related to .podspec file only which I’m facing whenever I’m validating spec file through pod lint command i.e  <code class="highlighter-rouge">pod spec lint</code></p>
+<p><small>See below for an example</small></p>
+
+<p><small><a href="https://ideone.com/mduYlK">Edit Online</a></small></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="kt">Car</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> 
+    <span class="k">let</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">}</span>
+
+<span class="c1">// We declared `ford` instance using `let` (immutable now) i.e we are not gonna change its content</span>
+<span class="k">let</span> <span class="nv">ford</span> <span class="o">=</span> <span class="kt">Car</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Ford"</span><span class="p">,</span> <span class="nv">model</span><span class="p">:</span> <span class="s">"2010"</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="s">"Red"</span><span class="p">)</span>
+
+<span class="c1">// Ford instance being copied by ferrari i.e ferrari and ford have two different copies </span>
+<span class="c1">// We declared `ferrari` instance using `var` (mutable now). In Struct, it always behaves like immutability so we have to declare his instance (i.e ferrari) and variable (i.e name) using `var` only to get mutable behavior </span>
+ 
+<span class="k">var</span> <span class="nv">ferrari</span> <span class="o">=</span> <span class="n">ford</span>
+
+<span class="n">ferrari</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Ferrari"</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">ford</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// Output: Ford</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">ferrari</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// Output: Ferrari</span></code></pre></figure>
+
+<p><strong>Classes</strong> are  <code class="highlighter-rouge">reference types</code>, means instance share a single copy of its data.</p>
+
+<p><small>See below for an example</small></p>
+
+<p><small><a href="https://ideone.com/neZBFa">Edit Online</a></small></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">Car</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">String</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// In Class, we need to implement `init` which is a constructor but in struct, it is not necessary </span>
+        <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">ford</span> <span class="o">=</span> <span class="kt">Car</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span><span class="s">"Ford"</span><span class="p">,</span> <span class="nv">model</span><span class="p">:</span><span class="s">"2010"</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span><span class="s">"Red"</span><span class="p">)</span>
+
+<span class="c1">// Ford instance share his reference to Ferrari i.e Ferrari and Ford both having same copy of data i.e pointing to the same reference </span>
+<span class="c1">// We declared `ferrari` instance using `let` (immutable now). In class, we can always change it's variable (But variable should be declared as `var` then only it is possible)</span>
+
+<span class="k">let</span> <span class="nv">ferrari</span> <span class="o">=</span> <span class="n">ford</span> 
+
+<span class="n">ferrari</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Ferrari"</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">ford</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// Output : Ferrari (Because ford referring to same reference point which ferrari has)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">ferrari</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// Output : Ferrari</span></code></pre></figure>
 
 <hr />
 
-<p>Let’s discuss step by step how I have created perfect working podspec file and uploaded my .framework successfully</p>
+<h2>Let's discuss common and uncommon things in struct and class</h2>
+
+<p><strong>Common things as below:</strong></p>
 
 <ul>
   <li>
-    <p>If possible go through <a href="https://www.tirupatibalan.com/2019/01/05/create-fat-framework.html">this article</a> where I have explained how one could create a universal framework.</p>
+    <h3>Properties to store values</h3>
+    <p>Properties associate values with a particular class, structure, or enumeration.
+  Properties basically have two types</p>
+    <ul>
+      <li>
+        <p><strong>Stored properties</strong></p>
+
+        <p>Stored properties store constant and variable values as part of an instance and are provided only by classes and structures</p>
+
+        <p>A lazy stored property is a property whose initial value is not calculated until the first time it is used. You indicate a lazy stored property by writing the lazy modifier before its declaration.</p>
+      </li>
+      <li>
+        <p><strong>Computed properties</strong></p>
+
+        <p>Computed properties calculate (rather than store) value and are provided by classes, structures, and enumerations</p>
+
+        <p>A computed property with a getter but no setter is known as a read-only computed property. A read-only computed property always returns a value, and can be accessed through dot syntax, but cannot be set to a different value</p>
+      </li>
+    </ul>
   </li>
   <li>
-    <p>Once you have done with framework create process (<code class="highlighter-rouge">as per point 1</code>) you have to create <code class="highlighter-rouge">MyFramework.podspec</code> file in your project directory.</p>
+    <h3>Method or function for functionality</h3>
+    <p>Methods are functions that are associated with a particular type. Classes, structures, and enumerations can all define instance methods, which encapsulate specific tasks and functionality for working with an instance of a given type.</p>
+
+    <blockquote>
+      <p>In Objective-C, classes are the only types that can define methods.<br />
+In Swift, you can choose whether to define a class, structure, or enumeration, and still have the flexibility to define methods on the type you create.</p>
+    </blockquote>
+
+    <blockquote>
+      <p>You can also define methods that are called on the type itself. These kinds of methods are called <code class="highlighter-rouge">type methods</code>.</p>
+    </blockquote>
   </li>
 </ul>
 
-<p>Paste the below content inside it:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Pod</span><span class="o">::</span><span class="no">Spec</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span>  
-    <span class="n">s</span><span class="p">.</span><span class="nf">name</span>                    <span class="o">=</span> <span class="s1">'MyFramework'</span>
-    <span class="n">s</span><span class="p">.</span><span class="nf">version</span>                 <span class="o">=</span> <span class="s1">'1.0.0'</span>
-    <span class="n">s</span><span class="p">.</span><span class="nf">summary</span>                 <span class="o">=</span> <span class="s1">'MyFramework summary.'</span>
-    <span class="n">s</span><span class="p">.</span><span class="nf">homepage</span>                <span class="o">=</span> <span class="s1">'https://www.example.com/'</span>
-
-    <span class="n">s</span><span class="p">.</span><span class="nf">author</span>                  <span class="o">=</span> <span class="p">{</span> <span class="s1">'MyFramework'</span> <span class="o">=&gt;</span> <span class="s1">'hello@example.com'</span> <span class="p">}</span>
-    <span class="n">s</span><span class="p">.</span><span class="nf">license</span>                 <span class="o">=</span> <span class="p">{</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s1">'Apache-2.0'</span><span class="p">,</span> <span class="ss">:file</span> <span class="o">=&gt;</span> <span class="s1">'LICENSE'</span> <span class="p">}</span>
-
-    <span class="n">s</span><span class="p">.</span><span class="nf">platform</span>                <span class="o">=</span> <span class="ss">:ios</span>
-    <span class="n">s</span><span class="p">.</span><span class="nf">source</span>                  <span class="o">=</span> <span class="p">{</span> <span class="ss">:http</span> <span class="o">=&gt;</span> <span class="s1">'https://example.com/download/ios_sdk/1.0.1/MyFramework.zip'</span> <span class="p">}</span>
-
-    <span class="n">s</span><span class="p">.</span><span class="nf">ios</span><span class="p">.</span><span class="nf">deployment_target</span>   <span class="o">=</span> <span class="s1">'9.0'</span>
-    <span class="n">s</span><span class="p">.</span><span class="nf">ios</span><span class="p">.</span><span class="nf">vendored_frameworks</span> <span class="o">=</span> <span class="s1">'MyFramework.framework'</span>
-<span class="k">end</span> </code></pre></figure>
-
-<p>If above spec file works out for you and if it passed <code class="highlighter-rouge">pod spec lint</code> command on your terminal then think 90% of your upload headache passed out.</p>
-
-<blockquote>
-  <p>During <code class="highlighter-rouge">.podspec</code> validation I have faced validation of <code class="highlighter-rouge">.homepage</code> parameter <a href="https://github.com/CocoaPods/CocoaPods/issues/2795">Error reference</a> so anyhow instead solving it I used <code class="highlighter-rouge">--allow-warnings</code>  in pod lint validation command as below</p>
-</blockquote>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">pod spec lint --allow-warnings</code></pre></figure>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">SomeClass</span> <span class="p">{</span>
+    <span class="kd">class</span> <span class="kd">func</span> <span class="nf">someTypeMethod</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// type method implementation goes here</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">SomeClass</span><span class="o">.</span><span class="nf">someTypeMethod</span><span class="p">()</span></code></pre></figure>
 
 <ul>
-  <li>Now create a zip archive of your <code class="highlighter-rouge">MyFramework.framework</code> and <code class="highlighter-rouge">LICENSE</code> through zip command as below</li>
+  <li>
+    <h3>Subscripts to access values using subscript syntax</h3>
+    <p>Classes, structures, and enumerations can define subscripts, which are shortcuts for accessing the member elements of a collection, list, or sequence.</p>
+
+    <p><small>See below for an example</small></p>
+  </li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">zip <span class="nt">-r</span> MyFramework.zip LICENSE MyFramework.framework </code></pre></figure>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">Car</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">price</span><span class="p">:</span> <span class="kt">Int</span>
+    <span class="nf">subscript</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">price</span> <span class="o">*</span> <span class="n">index</span>
+    <span class="p">}</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">price</span><span class="p">:</span><span class="kt">Int</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="k">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">price</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">let</span> <span class="nv">car</span> <span class="o">=</span> <span class="kt">Car</span><span class="p">(</span><span class="nv">price</span><span class="p">:</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"Two car prices are </span><span class="se">\(</span><span class="n">car</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">//Output : Two car prices are 4000</span></code></pre></figure>
 
 <blockquote>
-  <p>For licence file content follow <a href="https://raw.githubusercontent.com/eladnava/mailgen/master/LICENSE">this</a> special thanks to <a href="https://github.com/eladnava">eladnava</a></p>
+  <p>Swift’s Dictionary type implements a subscript to set and retrieve the values stored in a Dictionary instance</p>
 </blockquote>
 
-<ul>
-  <li>Upload your MyFramework.zip file on your server and copy the path of uploaded zip file like below which will in use for <code class="highlighter-rouge">s.source</code> parameter</li>
-</ul>
+<p><small>See below for an example</small></p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">example</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">ios_sdk</span><span class="o">/</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="no">MyFramework</span><span class="p">.</span><span class="nf">zip</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="nv">numberOfLegs</span> <span class="o">=</span> <span class="p">[</span><span class="s">"spider"</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s">"ant"</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s">"cat"</span><span class="p">:</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">numberOfLegs</span><span class="p">[</span><span class="s">"bird"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
 
-<blockquote>
-  <p>I have used <a href="https://firebase.google.com/docs/hosting/">Firebase Private Hosting</a> for .zip file upload and <a href="https://dillinger.io/">Dillinger</a> for my installation documentation especially for a client where you can easily create styled HTML, pdf file using simple markdown language.</p>
-</blockquote>
+<span class="nf">print</span><span class="p">(</span><span class="n">numberOfLegs</span><span class="p">)</span> <span class="c1">//["ant": 6, "cat": 4, "bird": 2, "spider": 8]</span></code></pre></figure>
 
 <ul>
-  <li>For publishing your <code class="highlighter-rouge">.podspec</code> file you have to authenticate and use CocoaPods API service i.e <a href="https://guides.cocoapods.org/making/getting-setup-with-trunk.html">CocoaPods Trunk</a></li>
+  <li>
+    <h3>Initializers to setup initial state </h3>
+    <p>Initialization is the process of preparing an instance of a class, structure, or enumeration for use.</p>
+
+    <p>You implement this initialization process by defining initializers, which are like special methods that can be called to create a new instance of a particular type.</p>
+
+    <p>An initializer is like an instance method with no parameters, written using the init keyword:</p>
+  </li>
 </ul>
 
-<p>Follow below command to register yourself <a href="https://guides.cocoapods.org/making/getting-setup-with-trunk.html#getting-started">Reference</a></p>
+<p><small>See below for an example</small></p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">pod trunk register you@youremail.com ‘Your organization name<span class="s1">' </span></code></pre></figure>
-
-<blockquote>
-  <p>You can list your sessions by running <code class="highlighter-rouge">pod trunk me</code></p>
-</blockquote>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// perform initialization here</span>
+<span class="p">}</span></code></pre></figure>
 
 <ul>
-  <li>Now finally follow below last command to push your <code class="highlighter-rouge">.podspec</code> on CocoaPods server <a href="https://guides.cocoapods.org/making/getting-setup-with-trunk.html#deploying-a-library">Reference</a></li>
+  <li>
+    <h3>Extensions to expand default functionality </h3>
+    <p>Extensions add new functionality to an existing class, structure, enumeration, or protocol type.</p>
+
+    <p>This includes the ability to extend types for which you do not have access to the original source code (known as retroactive modeling).</p>
+
+    <blockquote>
+      <p>Unlike Objective-C categories, Swift extensions do not have names.</p>
+    </blockquote>
+
+    <p>Extensions can provide few below capabilities:</p>
+
+    <ul>
+      <li>Computed instance and type properties</li>
+      <li>Instance methods and type methods</li>
+      <li>Initializers</li>
+      <li>Subscripts</li>
+      <li>Nested types</li>
+      <li>Conform to a protocol</li>
+    </ul>
+  </li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">pod trunk push MyFramework.podspec</code></pre></figure>
+<p><small>See below for an example</small></p>
 
-<p>After following all above step successfully I’m sure now you are ready to test your pod installation through any test project, Just add below line in your <code class="highlighter-rouge">.podfile</code> and run <code class="highlighter-rouge">pod install</code> command</p>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="kt">Car</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">price</span><span class="p">:</span> <span class="kt">Int</span>
+    <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">}</span>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">pod</span> <span class="s1">'MyFramework'</span><span class="p">,</span> <span class="s1">'1.0.0'</span>  </code></pre></figure>
+<span class="kd">extension</span> <span class="kt">Car</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"2010"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">var</span> <span class="nv">car</span> <span class="o">=</span> <span class="kt">Car</span><span class="p">(</span><span class="nv">price</span><span class="p">:</span> <span class="mi">20000</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"Ferrari"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">car</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s"> </span><span class="se">\(</span><span class="n">car</span><span class="o">.</span><span class="n">model</span><span class="se">)</span><span class="s"> model price is </span><span class="se">\(</span><span class="n">car</span><span class="o">.</span><span class="n">price</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">//Output : `Ferrari 2010 model price is 20000`</span></code></pre></figure>
 
-<p>That’s it!!!!!</p>
+<ul>
+  <li>
+    <h3>Protocols to adapt the functionality of others </h3>
+    <p>A protocol defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality.</p>
 
-<p>You are done!!!<br />
-Cheers!!!!</p>
+    <blockquote>
+      <p>The protocol can then be adopted by a class, structure, or enumeration <br />
+Any type that satisfies the requirements of a protocol is said to conform to that protocol</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><small>See below for an example</small></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">protocol</span> <span class="kt">PriceProtocol</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">priceInUsd</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="kt">Car</span><span class="p">:</span> <span class="kt">PriceProtocol</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">price</span><span class="p">:</span> <span class="kt">Int</span>
+    <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+
+    <span class="kd">func</span> <span class="nf">priceInUsd</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+    <span class="nf">return</span> <span class="p">(</span><span class="k">self</span><span class="o">.</span><span class="n">price</span> <span class="o">*</span> <span class="mi">75</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">extension</span> <span class="kt">Car</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">model</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"2010"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">var</span> <span class="nv">car</span> <span class="o">=</span> <span class="kt">Car</span><span class="p">(</span><span class="nv">price</span><span class="p">:</span> <span class="mi">20000</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"Ferrari"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">car</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s"> </span><span class="se">\(</span><span class="n">car</span><span class="o">.</span><span class="n">model</span><span class="se">)</span><span class="s"> model usd price is </span><span class="se">\(</span><span class="n">car</span><span class="o">.</span><span class="nf">priceInUsd</span><span class="p">()</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">//Output : `Ferrari 2010 model usd price is 1500000`</span></code></pre></figure>
+
+<h2>Few things which class only have as below:</h2>
+
+<ul>
+  <li>
+    <h3>Inheritance</h3>
+
+    <p>A class can inherit methods, properties, and other characteristics from another class. When one class inherits from another, the inheriting class is known as a subclass, and the class it inherits from is known as its superclass.</p>
+
+    <p>Any class that does not inherit from another class is known as a base class.</p>
+  </li>
+</ul>
+
+<p><small>See below for an example</small></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">Car</span> <span class="p">{</span> <span class="c1">//Base class</span>
+    <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Ferrari"</span> <span class="c1">// Stored properties</span>
+    <span class="k">var</span> <span class="nv">isAvailable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="c1">//Computed properties</span>
+    	<span class="k">get</span> <span class="p">{</span>
+    		<span class="k">return</span> <span class="kc">true</span>
+    	<span class="p">}</span>
+    	<span class="nf">set</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+    		<span class="k">self</span><span class="o">.</span><span class="n">isAvailable</span> <span class="o">=</span> <span class="n">value</span>
+    	<span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="kt">AverageSpeed</span> <span class="p">:</span> <span class="kt">Car</span> <span class="p">{</span> <span class="c1">//average speed is now subclass which inherits from Car as its superclass</span>
+    <span class="k">var</span> <span class="nv">speed</span><span class="p">:</span> <span class="kt">String</span> 
+    <span class="nf">init</span><span class="p">(</span><span class="nv">speed</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Ferrari"</span><span class="p">)</span> <span class="c1">//'super.init' should called on all paths before returning from initializer</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">var</span> <span class="nv">averageSpeed</span> <span class="o">=</span> <span class="kt">AverageSpeed</span><span class="p">(</span><span class="nv">speed</span><span class="p">:</span><span class="s">"23"</span><span class="p">)</span>
+<span class="n">averageSpeed</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="s">"20 KH"</span>
+<span class="n">averageSpeed</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Ford"</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">averageSpeed</span><span class="o">.</span><span class="n">isAvailable</span> <span class="p">?</span> <span class="s">"Car is available."</span> <span class="p">:</span> <span class="s">"Car is unavailable."</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">averageSpeed</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s"> average speed is </span><span class="se">\(</span><span class="n">averageSpeed</span><span class="o">.</span><span class="n">speed</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">//Output : `Ferrari average speed is 20 k/h`</span></code></pre></figure>
+
+<ul>
+  <li>
+    <h3>Type casting</h3>
+    <p>Type casting is a way to check the type of an instance or to treat that instance as a different superclass or subclass from somewhere else in its own class hierarchy.</p>
+
+    <p>Type casting in Swift is implemented with below two operators i.e</p>
+
+    <ul>
+      <li><strong>Type check operator <code class="highlighter-rouge">is</code></strong></li>
+      <li><strong>Type cast operator <code class="highlighter-rouge">as? or as!</code></strong></li>
+    </ul>
+  </li>
+</ul>
+
+<p><small>See below for an example - Type check</small></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="nv">movieCount</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">var</span> <span class="nv">songCount</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="k">in</span> <span class="n">library</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">item</span> <span class="k">is</span> <span class="kt">Movie</span> <span class="p">{</span>
+        <span class="n">movieCount</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">item</span> <span class="k">is</span> <span class="kt">Song</span> <span class="p">{</span>
+        <span class="n">songCount</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"Media library contains </span><span class="se">\(</span><span class="n">movieCount</span><span class="se">)</span><span class="s"> movies and </span><span class="se">\(</span><span class="n">songCount</span><span class="se">)</span><span class="s"> songs"</span><span class="p">)</span></code></pre></figure>
+
+<p><small>See below for an example - Type cast</small></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">for</span> <span class="n">item</span> <span class="k">in</span> <span class="n">library</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">movie</span> <span class="o">=</span> <span class="n">item</span> <span class="k">as?</span> <span class="kt">Movie</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Movie: </span><span class="se">\(</span><span class="n">movie</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s">, dir. </span><span class="se">\(</span><span class="n">movie</span><span class="o">.</span><span class="n">director</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="k">let</span> <span class="nv">song</span> <span class="o">=</span> <span class="n">item</span> <span class="k">as?</span> <span class="kt">Song</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Song: </span><span class="se">\(</span><span class="n">song</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s">, by </span><span class="se">\(</span><span class="n">song</span><span class="o">.</span><span class="n">artist</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Movie: Casablanca, dir. Michael Curtiz</span>
+<span class="c1">// Song: Blue Suede Shoes, by Elvis Presley</span>
+<span class="c1">// Movie: Citizen Kane, dir. Orson Welles</span>
+<span class="c1">// Song: The One And Only, by Chesney Hawkes</span>
+<span class="c1">// Song: Never Gonna Give You Up, by Rick Astley</span></code></pre></figure>
+
+<ul>
+  <li>
+    <h3>Deinitializers</h3>
+    <p>A deinitializer is called immediately before a class instance is deallocated. You write deinitializers with the deinit keyword, similar to how initializers are written with the init keyword. Deinitializers are only available on class types.</p>
+  </li>
+</ul>
+
+<p><small>See below for an example</small></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">deinit</span> <span class="p">{</span>
+    <span class="c1">// perform the deinitialization</span>
+<span class="p">}</span></code></pre></figure>
+
+<ul>
+  <li>
+    <h3>Automatic Reference Counting</h3>
+    <p>Swift uses Automatic Reference Counting (ARC) to track and manage your app’s memory usage.</p>
+
+    <p>Reference counting applies only to instances of classes. Structures and enumerations are value types, not reference types, and are not stored and passed by reference.</p>
+  </li>
+</ul>
+
+<h2>Mutating (for struct only)</h2>
+
+<p>Structures and enumerations are value types. By default, the properties of a value type cannot be modified from within its instance methods.</p>
+
+<p>However, if you need to modify the properties of your structure or enumeration within a particular method, you can opt-in to mutating behavior for that method.</p>
+
+<p><small>See below for an example</small></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="kt">Car</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">width</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">increaseWeightBy</span><span class="p">(</span><span class="n">width</span> <span class="nv">deltaWidth</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">height</span> <span class="nv">deltaHeight</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//To modify width and height</span>
+        <span class="n">width</span> <span class="o">+=</span> <span class="n">deltaWidth</span>
+        <span class="n">height</span> <span class="o">+=</span> <span class="n">deltaHeight</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">getCarDimensions</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Double</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">var</span> <span class="nv">car</span> <span class="o">=</span> <span class="kt">Car</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">170</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">85</span><span class="p">)</span>
+<span class="n">car</span><span class="o">.</span><span class="nf">increaseWeightBy</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"The car dimensions is </span><span class="se">\(</span><span class="n">car</span><span class="o">.</span><span class="nf">getCarDimensions</span><span class="p">()</span><span class="se">)</span><span class="s">cm"</span><span class="p">)</span>
+
+<span class="c1">// Output: The car dimensions is 17,100 cm"</span></code></pre></figure>
+
+<h2>Overall conclusion</h2>
+
+<p>Structures and classes are the building blocks of our program’s and Unlike other languages, Swift doesn’t require you to create separate interface and implementation files for custom structures and classes. In Swift, you define a structure or class in a single file.</p>
+
+<p>When interfacing with cocoa and Objective-C, we usually use classes and to implement delegate for most of UIController like table view, we don’t have a choice, we have to use a class only. Many apple frameworks depend on subclassing.</p>
+
+<p>So, It’s not always easy to decide whether your new type should be a struct or a class. Because both behave differently, knowing that difference will help you make a decision.</p>
+
+<p>Well, Thank you for taking the time to read this article.</p>
+
+<h3>References:</h3>
+<ul>
+  <li><a href="https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html">Apple docs</a></li>
+  <li><a href="https://www.objc.io/books/advanced-swift/">Advanced swift</a></li>
+</ul>
 
     
 
