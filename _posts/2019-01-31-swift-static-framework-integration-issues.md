@@ -76,7 +76,7 @@ Let me explain how I seek possible information to overwhelm from each error.
 
 Well, after following solid solution I have to compile (using conditional swift version case statement) our swift 4.2 based static framework with swift 4.0
 
-But don't know using [command line toolchain of swift 4.0](https://swift.org/builds/swift-4.0-release/xcode/swift-4.0-RELEASE/swift-4.0-RELEASE-osx.pkg) in Xcode 10.1 did not work out, so I have to download Xcode 9.2 which by default use swift 4.0 in his command line toolchain.
+But don't know using [command line toolchain of swift 4.0](https://swift.org/builds/swift-4.0-release/xcode/swift-4.0-RELEASE/swift-4.0-RELEASE-osx.pkg) in Xcode 10.1 did not work out, so I'd to download Xcode 9.2 or Xcode 9.0.1 which by default use swift 4.0 in his command line toolchain.
 
 ---
 
