@@ -11,7 +11,7 @@
 
   <title>
     
-      Issues during swift static framework into Objective-C &middot; Tirupati Balan
+      Swift static framework integration issue &middot; Tirupati Balan
     
   </title>
 
@@ -369,7 +369,7 @@
 
     <main class="container">
       <header>
-  <h1 class="post-title">Issues during swift static framework into Objective-C</h1>
+  <h1 class="post-title">Swift static framework integration issue</h1>
 </header>
 <div class="content">
   <div class="post-meta">
@@ -499,11 +499,17 @@
 
 <hr />
 
-<h3>dyld: Library not loaded: @rpath/libswiftCore.dylib </h3>
+<h3>dyld: Library not loaded: @rpath/libswiftCore.dylib or dyld: Symbol not found: __T0XXX</h3>
 
 <blockquote>
   <p>This is one of the most critical error happened to me ever after a long time.</p>
 </blockquote>
+
+<p>NOTE : Step to reproduce bug as below:</p>
+<ul>
+  <li>Create Objective-C based project</li>
+  <li>Import swift 4.0 based closed source static framework i.e via manual or Cocoapods</li>
+</ul>
 
 <h3 id="002">#002</h3>
 
@@ -571,7 +577,14 @@ Referenced from: path_to_library_developer_core_simulator Reason: image not foun
       <li><code class="highlighter-rouge">${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}</code></li>
     </ul>
   </li>
-  <li>Used Xcode 9.2 to build project</li>
+  <li>Build status as per below Xcode version
+    <ul>
+      <li>Xcode 9.0.1 (<code class="highlighter-rouge">Working</code>)</li>
+      <li>Xcode 9.2 (<code class="highlighter-rouge">Working</code>)</li>
+      <li>Xcode 9.4.1 (<code class="highlighter-rouge">Not Working i.e dyld: Symbol not found: __T0XXX</code>)</li>
+      <li>Xcode 10.1 (<code class="highlighter-rouge">Not Working i.e dyld: Symbol not found: __T0XXX</code>)</li>
+    </ul>
+  </li>
 </ul>
 
 <hr />

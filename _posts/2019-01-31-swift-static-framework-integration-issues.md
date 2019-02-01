@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Issues during swift static framework into Objective-C project
+title: Swift static framework integration issue
 tags: 
     - Static Framework
     - Library 
@@ -80,9 +80,14 @@ But don't know using [command line toolchain of swift 4.0](https://swift.org/bui
 
 ---
 
-<h3>dyld: Library not loaded: @rpath/libswiftCore.dylib </h3>
+<h3>dyld: Library not loaded: @rpath/libswiftCore.dylib or dyld: Symbol not found: __T0XXX</h3>
 
 >  This is one of the most critical error happened to me ever after a long time.
+
+NOTE : Step to reproduce bug as below: 
+- Create Objective-C based project
+- Import swift 4.0 based closed source static framework i.e via manual or Cocoapods
+
 
 ### #002 
 
@@ -106,7 +111,12 @@ Referenced from: path_to_library_developer_core_simulator Reason: image not foun
 
 - Added below path text for **Runpath Search Paths** in **App Target->Build Settings** 
 	- `${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}`
-- Used Xcode 9.2 to build project
+
+- Build status as per below Xcode version
+    - Xcode 9.0.1 (`Working`)
+    - Xcode 9.2 (`Working`)
+    - Xcode 9.4.1 (`Not Working i.e dyld: Symbol not found: __T0XXX`)
+    - Xcode 10.1 (`Not Working i.e dyld: Symbol not found: __T0XXX`)
  	
 ---
 
