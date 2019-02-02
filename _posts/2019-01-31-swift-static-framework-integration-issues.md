@@ -118,6 +118,7 @@ Referenced from: path_to_library_developer_core_simulator Reason: image not foun
     - Xcode 9.4.1 (`Not Working i.e dyld: Symbol not found: __T0XXX`)
     - Xcode 10.1 (`Not Working i.e dyld: Symbol not found: __T0XXX`)
  	
+<h2>END RESULT : As per above solution it is Working only in Simulator not device </h2>
 ---
 
 After following solid and workaround solution of [#001](#001) and [#002](#002) respectively, we finally able to build consumer app along with our swift 4.0 static framework.
@@ -134,6 +135,6 @@ And for error code [#002](#002)
 
 `Look Good Solution:` Figure out something and give the consumer only pod installation instruction i.e pod `MyFramework`, '1.0.0' (for now we are using cocoapods only for our framework installation dependency)
 
-Well, Thank you for taking the time to read this article and I'll appreciate if someone help me out to figure out above two `look good solution`.
+Well, Thank you for taking the time to read this article and I'll appreciate if someone help me out to figure out above two `look good solution` and `END RESULT`.
 
 Thanks!!
