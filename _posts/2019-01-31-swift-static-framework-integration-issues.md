@@ -102,6 +102,7 @@ Referenced from: path_to_library_developer_core_simulator Reason: image not foun
 | `Error Type`: | Unexpected |
 | `Error References`: | Check below points |
 
+- [Official Apple](https://developer.apple.com/library/archive/qa/qa1886/_index.html)
 - [Stackoverflow](https://www.google.com/search?q=dyld:+Library+not+loaded:+@rpath/libswiftCore.dylib+site:stackoverflow.com)
 - [Github](https://www.google.com/search?q=dyld%3A+Library+not+loaded%3A+%40rpath%2FlibswiftCore.dylib+site%3Agithub.com&oq=dyld%3A+Library+not+loaded%3A+%40rpath%2FlibswiftCore.dylib+site%3Agithub.com)
 - [Well there are many but this looks good](https://stackoverflow.com/questions/26104975/dyld-library-not-loaded-rpath-libswiftcore-dylib-image-not-found)
