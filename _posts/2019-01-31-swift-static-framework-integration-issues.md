@@ -86,7 +86,8 @@ But don't know using [command line toolchain of swift 4.0](https://swift.org/bui
 
 NOTE : Step to reproduce bug as below: 
 - Create Objective-C based project
-- Import swift 4.0 based closed source static framework i.e via manual or Cocoapods
+- Import swift 4.0 based closed source static framework via manual or Cocoapods option in consumer app
+- 
 
 
 ### #002 
