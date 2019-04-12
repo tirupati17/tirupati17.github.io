@@ -87,8 +87,8 @@ GCD introduced [DispatchQueue](https://developer.apple.com/documentation/dispatc
 DispatchQueue implements two types of queues i.e `serial` and `concurrent` but remembers all queues are concurrent which is relative to each other means whatever code we run in the background we run it concurrently with another thread usually main thread.
 
 Let's talk about two types of queues as below
-1. [Serial](Serial)
-2. [Concurrent](Concurrent)
+1. Serial
+2. Concurrent
 
 #### Serial
 Also known as private dispatch queues which execute the tasks one at a time in the order that they were added to that particular queue. Here serialization works while specific tasks within a specific queue are made in serial.
@@ -118,6 +118,7 @@ In Async mode code runs on a background thread and control returns immediately t
         //async task here
     }
     ```
+
 #### Concurrent
 Also known as global dispatch queues which execute tasks simultaneously (the tasks are, however, guaranteed to initiate in the order that they were added to that specific queue).
 
@@ -215,7 +216,7 @@ Thanks for reading this article and soon will update current article based on th
 Thanks again!!
 
 Reference:
-[Concurrency Programming Guide - Apple docs](https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008091-CH1-SW1)
-[Concurrent Programming With GCD in Swift 3 - WWDC2016](https://developer.apple.com/videos/play/wwdc2016/720/)
+- [Concurrency Programming Guide - Apple docs](https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008091-CH1-SW1)
+- [Concurrent Programming With GCD in Swift 3 - WWDC2016](https://developer.apple.com/videos/play/wwdc2016/720/)
 
 [POSIXdiagram]: https://www.w3.org/People/Frystyk/thesis/MultiStackThread.gif "POSIX Thread"
