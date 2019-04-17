@@ -7,6 +7,10 @@
     <a class="page-link {% if page.url == site.sidebar_blog_link %} active{% endif %}"
 	href="{{ site.baseurl }}{{ site.sidebar_blog_link }}">Blog</a>
   {% endif %}
+  {% if site.sidebar_resume_link %}
+    <a class="page-link {% if page.url == site.sidebar_resume_link %} active{% endif %}"
+	href="{{ site.baseurl }}{{ site.sidebar_resume_link }}">Resume</a>
+  {% endif %}
 
   {% comment %}
     The code below dynamically generates a sidebar nav of pages with
