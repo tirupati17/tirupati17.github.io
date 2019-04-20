@@ -14,7 +14,7 @@ excerpt_separator:  <!--more-->
 
 Since a long time, I'm thinking about to write something on threads and queues along with the real-world example as we could find a bunch of examples on the web about running dispatch queue on a different thread but nothing specific about `when` to use them.
 
->  In this article, we'll gonna learn the usage of DispatchQueue along with `QoS` priority on `main` and `background` thread of my own upcoming open source app [`Wreely - Community Platform`](https://wreely.com/) for a perfect real-world example. 
+>  In this article, we'll gonna learn the usage of DispatchQueue on `main` thread along with `QoS` priority on `background` thread of my own upcoming open source app [`Wreely - Community Platform`](https://wreely.com/) for a perfect real-world example. 
 
 ## So, what is the Process?
 
@@ -45,6 +45,23 @@ let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
 }
 task.resume()
 ```
+
+To dispatch synchronously on main thread:
+
+```swift
+DispatchQueue.main.sync {
+    //async task here
+}
+```
+
+To dispatch asynchronously on main thread:
+
+```swift
+DispatchQueue.main.async {
+    //async task here
+}
+```
+
 ### Background Thread
 A thread which design to execute all other API and code other than AppKit and UIKit.
 See below example of task running on a background thread using DispatchQueue:
@@ -70,6 +87,22 @@ func endBackgroundTask() {
 }
 
 ``` 
+
+To dispatch synchronously on some background thread:
+
+```swift
+DispatchQueue.global().sync { // QoS default value is `DispatchQoS.QoSClass.default`
+    //async task here
+}
+```
+
+To dispatch asynchronously on some background thread:
+
+```swift
+DispatchQueue.global().async { // QoS default value is `DispatchQoS.QoSClass.default`
+    //async task here
+}
+```
 
 Well, Threads and queues are two different things and we should know what GCD does with it. Whenever we use Dispatch Queues via GCD, we are queueing not threading.
 
@@ -105,16 +138,16 @@ In sync mode code runs on a background thread but the main thread waits for it t
 
     To dispatch synchronously:
     ```swift
-    serialQueue.main.sync {
+    serialQueue.sync {
         //sync task here
     }
     ```
 - `Async`
 In Async mode code runs on a background thread and control returns immediately to the main thread. The block assume it's the only block running in this queue
 
-    To dispatch Asynchronously:
+    To dispatch asynchronously:
     ```swift
-    serialQueue.main.async {
+    serialQueue.async {
         //async task here
     }
     ```
@@ -136,24 +169,24 @@ let concurrentQueue = DispatchQueue.global(qos: .default)
 ```
 - `Sync`
 In Sync mode code runs on a background thread but the main thread waits for it to finish, blocking any updates to the UI. The block can't assume that it's the only block running on that queue.
-
+    
     To dispatch synchronously:
 
     ```swift
-    concurrentQueue.main.sync {
+    concurrentQueue.sync {
         
     }
     ```
+    
 - `Async`
 In Async mode code runs on a background thread. Control returns immediately to the main thread (and UI). The block can't assume that it's the only block running on that queue.
 
-    To dispatch Asynchronously:
+    To dispatch asynchronously:
     ```swift
-    concurrentQueue.main.async {
+    concurrentQueue.async {
         
     }
     ```
-
 ### DispatchQueue with QoS (Concurrent Queues)
 
 Background thread introduced DispatchQoS a quality of service, or the execution priority apply to the tasks which allow you to categorize work to be performed by NSOperation, NSOperationQueue, NSThread objects, dispatch queues, and pthreads (POSIX threads).
