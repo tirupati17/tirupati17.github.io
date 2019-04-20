@@ -187,6 +187,7 @@ In Async mode code runs on a background thread. Control returns immediately to t
         
     }
     ```
+
 ### DispatchQueue with QoS (Concurrent Queues)
 
 Background thread introduced DispatchQoS a quality of service, or the execution priority apply to the tasks which allow you to categorize work to be performed by NSOperation, NSOperationQueue, NSThread objects, dispatch queues, and pthreads (POSIX threads).
