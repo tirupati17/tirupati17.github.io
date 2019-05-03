@@ -5,12 +5,14 @@ sidebar_link: true
 ---
 
 
-<!-- 
+<h4>UserExperior - Lead iOS Engineer</h4>
+> 1 Nov 2018 - Present
 
-<h4>Wreely - Product Architect & Lead iOS Developer</h4>
-> Oct 2017 - Present
+- Built UserExperior private framework from scratch
+- Finished production ready framework within 4 months i.e User analytics, Video
+session recording, Heatmap and crash reporting etc
 
--->
+> Note: The term Engineer I've mentioned in my position because it is my first framework development project which is/was pure engineering task.
 
 <h4>Citysocializer - Lead iOS Developer</h4>
 > 1 Aug 2015 - Nov 2018 (3 yrs 5 mos)
@@ -27,6 +29,8 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 
 <h4>CelerStudio - Lead Software Engineer | Founder - iOS | JAVASCRIPT | PHP</h4>
 > 1 Jan 2015 - Present
+
+> NOTE: Celerstudio is my open source initiative means most of the apps under Celerstudio are open source
 
 <!-- <p>
     After spending almost 10 months at CelerApps (11 March 2014 - 31 Dec 2014) I realize that there is something which I want to transform i.e the amount of time spend on a product because without your dedicated effort it's not possible to build any perfect product.
@@ -64,6 +68,11 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 - <a href="https://angel.co/projects/375472-banklog-android-apps-on-google-play?src=more_projects" target="_blank">Banklog</a>
 - <a href="https://angel.co/projects/375473-cricket-live-android-apps-on-google-play?src=more_projects" target="_blank">Cricket Live</a>
 
+`Under CelerStudio on partnership basis`
+> Jan 2015 - Dec 2015 (Almost 1 year)
+
+- <a href="https://invis.io/YVRU3AUBHUM" target="_blank">Stylio - On demand personal stylists</a> `Objective-C` `Backend(PHP)`
+
 `Under CelerStudio I've executed few clients work as below`
 > (From 1st Jan 2015 till July 2015)
 
@@ -92,7 +101,6 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 <p>What next for product.. yep we again trying our luck with one awesome idea and will always try our luck with dedicated hard work remember <span style="font-weight:bold;">"Each mistake teaches you something new about yourself. There is no failure, remember, except in no longer trying. It is the courage to continue that counts."</span></p> -->
 
 `Under Redpanda Innovation Lab`
-- <a href="https://www.dropbox.com/sh/xwjuzii7jiiut6d/AABhNUzWzgIcucVmlZzhNRKFa?dl=0" target="_blank">ShopSweetie (Later Stylio)</a> `Objective-C`
 - <a href="https://www.dropbox.com/sh/pg3wr1zpp8ocffi/AAD5akJlrcG9Zvg80qzrFkERa?dl=0" target="_blank">WeddingPlanner</a> `Objective-C`
 - <a href="https://itunes.apple.com/in/app/mahanews/id871107735?mt=8" target="_blank">MahaNews</a> `Objective-C`
 - <a href="https://www.dropbox.com/sh/yq8rk16y39go926/AADclGXp9sdLqStYPO4dJRtAa?dl=0" target="_blank">WhatsScore</a> `Objective-C`, `Independent Product`
