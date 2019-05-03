@@ -91,7 +91,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 
 ---
 
-##### [RedPanda Innovation Lab](http://www.theredpandas.com) - Application Developer (iOS)`
+##### [RedPanda Innovation Lab](http://www.theredpandas.com) - Application Developer (iOS)
 > Dec 2013 - 31 Dec 2014 (1 Year 1 Months)
 
 <!-- <p>At CelerApps along with Redpanda Team with a lot of Karan support, I have learned a lot from him what exactly the entrepreneur means to me and I found that it's not as easy as I thought but remember <span style="font-weight:bold;">"in life nothing is simple as simpler".</span></p>
