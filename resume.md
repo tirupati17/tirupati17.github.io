@@ -5,7 +5,7 @@ sidebar_link: true
 ---
 
 
-<h4>[UserExperior](https://www.userexperior.com) - Lead iOS Engineer</h4>
+##### [UserExperior](https://www.userexperior.com) - Lead iOS Engineer
 > 1 Nov 2018 - Present
 
 - Built UserExperior private framework from scratch
@@ -16,7 +16,7 @@ session recording, Heatmap and crash reporting etc
 
 ---
 
-<h4>[Citysocializer](https://www.citysocializer.com) - Lead iOS Developer</h4>
+##### [Citysocializer](https://www.citysocializer.com) - Lead iOS Developer
 > 1 Aug 2015 - Nov 2018 (3 yrs 5 mos)
 
 <!-- 
@@ -29,7 +29,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 
 ---
 
-<h4>[CelerStudio](https://www.celerstudio.com) - Lead Software Engineer | Founder - iOS | JAVASCRIPT | PHP</h4>
+##### [CelerStudio](https://www.celerstudio.com) - Lead Software Engineer | Founder - iOS | JAVASCRIPT | PHP
 > 1 Jan 2015 - Present
 
 > NOTE: Celerstudio is my open source initiative means most of the apps under Celerstudio are open source
@@ -91,7 +91,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 
 ---
 
-<h4>[RedPanda Innovation Lab](http://www.theredpandas.com) - Application Developer (iOS)`</h4>
+##### [RedPanda Innovation Lab](http://www.theredpandas.com) - Application Developer (iOS)`
 > Dec 2013 - 31 Dec 2014 (1 Year 1 Months)
 
 <!-- <p>At CelerApps along with Redpanda Team with a lot of Karan support, I have learned a lot from him what exactly the entrepreneur means to me and I found that it's not as easy as I thought but remember <span style="font-weight:bold;">"in life nothing is simple as simpler".</span></p>
@@ -133,7 +133,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 
 ---
 
-<h4>[Indigo Consulting, A Leo Burnett Company](https://www.indigo.co.in) - Application Developer (iOS) </h4>
+##### [Indigo Consulting, A Leo Burnett Company](https://www.indigo.co.in) - Application Developer (iOS)
 > Nov 2011 - Dec 2013 (Almost 2 year)
 
 <!-- <p>Worked on iOS based application for reputed brands like ICICI Bank, Asian Paints, and HSBC Amanah.</p>
@@ -148,7 +148,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 
 ---
 
-<h4>[CloudGanga](http://cloudganga.com) - Software Engineer (iOS | PHP)</h4>
+##### [CloudGanga](http://cloudganga.com) - Software Engineer (iOS | PHP)
 > May 2010 - Nov 2011 (1 Year 7 Months)
 
 <!-- <p>Worked on so many iOS-based utility apps and also worked on PHP based site.</p>
