@@ -73,7 +73,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 `Under CelerStudio on partnership basis`
 > Jan 2015 - Dec 2015 (Almost 1 year)
 
-- <a href="https://invis.io/YVRU3AUBHUM" target="_blank">Stylio - On demand personal stylists</a> `Objective-C` `Backend(PHP)`
+- <a href="https://invis.io/YVRU3AUBHUM" target="_blank">Stylio - On demand personal stylists</a> `Objective-C` `Back-end(PHP)`
 
 `Under CelerStudio I've executed few clients work as below`
 > (From 1st Jan 2015 till July 2015)
