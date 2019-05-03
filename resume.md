@@ -12,7 +12,9 @@ sidebar_link: true
 - Finished production ready framework within 4 months i.e User analytics, Video
 session recording, Heatmap and crash reporting etc
 
-> Note: The term Engineer I've mentioned in my position because it is my first framework development project which is/was pure engineering task.
+> Note: The term Engineer I've mentioned in my position because it is my first framework development project which is/was pure software engineering task.
+
+---
 
 <h4>Citysocializer - Lead iOS Developer</h4>
 > 1 Aug 2015 - Nov 2018 (3 yrs 5 mos)
