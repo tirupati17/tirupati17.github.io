@@ -1,11 +1,14 @@
 ---
 layout: category
-title: Projects
+title: Open Source Projects
 ---
 
+<!--
 <h4>Under Citysocializer</h4>
 - <a href="https://itunes.apple.com/in/app/citysocializer/id581315807?mt=8" target="_blank">Citysocializer</a> `iPhone`
+-->
 
+<!--
 <h4>Under CelerStudio </h4>
 `iOS` (via me)
 - <a href="https://www.wreely.com" target="_blank">Wreely</a> `swift``firebase`
@@ -16,16 +19,21 @@ title: Projects
 - <a href="https://angel.co/projects/374602-emi-calculator-for-home-personal-car-loan?src=more_projects" target="_blank">EMI Calculator for Home, Personal & Car Loan</a> `swift`
 - <a href="https://angel.co/projects/374608-tip-calculator-calculate-tip-and-split-the-bill?src=more_projects" target="_blank">Tip Calculator</a> `swift`
 - <a href="https://angel.co/projects/374610-personal-media-vault?src=more_projects" target="_blank">Personal Media Vault</a> `objective-c`
+-->
 
+<!--
 `Web` (via me)
 - <a href="https://wreely.com" target="_blank">Wreely</a> `PHP CodeIgniter``Slim Framework``MySql``HTML``CSS``Javascript`
 - <a href="https://angel.co/projects/375475-raileazy-indian-railway-rail-timetable?src=more_projects" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a> `PHP CodeIgniter``Slim Framework``MySql``HTML``CSS``Javascript` 
+-->
 
+<!--
 `Android` (via my android colleagues)
 - <a href="https://wreely.com" target="_blank">Wreely</a>
 - <a href="https://angel.co/projects/375474-raileazy-indian-railway-android-apps-on-google-play?src=more_projects" target="_blank">RailEazy - Indian Railway(Rail) Timetable</a>
 - <a href="https://angel.co/projects/375472-banklog-android-apps-on-google-play?src=more_projects" target="_blank">Banklog</a>
 - <a href="https://angel.co/projects/375473-cricket-live-android-apps-on-google-play?src=more_projects" target="_blank">Cricket Live</a>
+-->
 
 <h4>Open Source </h4>
 
@@ -54,6 +62,7 @@ title: Projects
     > Based on simple apple swift language
 
 
+
 <h4>For Clients</h4>
 
 `Under CelerStudio I've executed few clients work as below`
@@ -62,7 +71,9 @@ title: Projects
 - <a href="https://itunes.apple.com/us/app/traxonapp/id433599272?mt=8" target="_blank">Traxon</a> `iOS - iPad`, `Via Agencies`
 - <a href="" target="_blank">Bachat</a> `iOS`, `UI/UX`, `Design`, `Project Management`, `Via Direct Client`
 - <a href="https://www.dropbox.com/sh/cjyquh8gavhzg1l/AAA2O7fspNVIfciMMprGgwUna?dl=0" target="_blank">Reality</a> `iOS - iPad`, `Via Agencies`, `In-House`
+-->
 
+<!--
 `Under Redpanda Innovation Lab`
 - <a href="https://www.dropbox.com/sh/xwjuzii7jiiut6d/AABhNUzWzgIcucVmlZzhNRKFa?dl=0" target="_blank">ShopSweetie (Later Stylio)</a> `Objective-c`
 - <a href="https://www.dropbox.com/sh/pg3wr1zpp8ocffi/AAD5akJlrcG9Zvg80qzrFkERa?dl=0" target="_blank">WeddingPlanner</a> `Objective-c`
@@ -76,13 +87,17 @@ title: Projects
 - <a href="https://www.dropbox.com/sh/uupj6xxec8acur4/AACJ6X3cjqxuLns5uIQSjPPXa?dl=0" target="_blank">Macro E</a> `Objective-c`
 - <a href="https://itunes.apple.com/in/app/gabbar-the-legend/id785219111?mt=8" target="_blank">Gabbar - The Legend</a> `Objective-c`, `Independent Product`
 - <a href="https://www.dropbox.com/sh/l3u5myh8pudxr8b/AACT8DOCPEXNMNVkjhVPwJiea?dl=0" target="_blank">Bond Calculator</a> `Independent Product`
+-->
 
+<!--
 `Under Indigo Consulting`
 - <a href="https://www.dropbox.com/sh/tu82va8ovad4fj6/AAC-_WYR_8PkMlvsSe84TH3va?dl=0" target="_blank">NMJ (Nirav Modi)</a> `iPad`,`In-House`,`Objective-c`
 - <a href="https://www.dropbox.com/sh/4nz5u9oc3dd47hr/AAASFLdJWHwIfe4N2v9DrRA2a?dl=0" target="_blank">Halal Traveller (HSBC Amanah)</a> `iPhone`,`Objective-c`
 - <a href="https://www.dropbox.com/sh/jqnjx9qdpedcmyq/AABBX3-3DQfc5SNnh2XxJZKga?dl=0" target="_blank">Culinary Treats (ICICI Bank)</a> `iPhone`,`Objective-c`
 - <a href="https://www.dropbox.com/sh/2a5m2q3maq7jcfj/AAAUAIDBK-Lpzs5HkT8iclDMa?dl=0" target="_blank">My Color Project (Asian Paints)</a> `iPhone`,`Objective-c`
+-->
 
+<!--
 `Under CloudGanga`
 - <a href="https://www.dropbox.com/sh/rjceequtujg70p6/AAACJYBFxFgL2Az-zePyvjPaa?dl=0" target="_blank">iLocator</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/4ujs5kvfrqlwq39/AADCGDXVrq-fD38Fwxp2Vdx4a?dl=0" target="_blank">Comvoice</a> `iPhone`
@@ -94,6 +109,7 @@ title: Projects
 - <a href="https://www.dropbox.com/sh/f4gywbwy3cuw64s/AAAt810CFcLbX3Ltcfz4fng3a?dl=0" target="_blank">Parle 20-20</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/a93l9dftxtz8xty/AACTLFMp1Qt797anXDBx3qnba?dl=0" target="_blank">Pradaxa</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/zogh35quspqseno/AAC-2-BP0od4C6L31kETITbda?dl=0" target="_blank">Device Management System</a> `PHP`
+-->
 
 <!-- `Under Magnanimous Software`
 - <a href="https://www.dropbox.com/sh/muqyokx0njmo6dy/AACgqCmWDNXL5e7i04tJSVR8a?dl=0" target="_blank">eBillity</a> `iPhone`
@@ -103,4 +119,4 @@ title: Projects
 `Under Fortune Infocomm`
 - <a href="" target="_blank">SPC (Smart Phone Connected)</a> `Nokia Devices`, `QT C++`, `C#`
  -->
-NOTE: MOST OF APP REFERENCE LINKS ARE DROPBOX LINK WITH APP SCREENSHOT BECAUSE SOMETIME ITUNES LINK WON'T WORK DUE TO APP REMOVAL.
+<!--NOTE: MOST OF APP REFERENCE LINKS ARE DROPBOX LINK WITH APP SCREENSHOT BECAUSE SOMETIME ITUNES LINK WON'T WORK DUE TO APP REMOVAL.-->
