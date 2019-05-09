@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Professional Timeline
-sidebar_link: false
+sidebar_link: true
 ---
 
 
@@ -104,6 +104,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 <p>Now at CelerApps we are doing great with consulting work we build dozens of mobile apps for differents brands & together 40+ All over apps experience and everyone here handling his entrepreneurship role under Karan guideline.</p>
 <p>What next for product.. yep we again trying our luck with one awesome idea and will always try our luck with dedicated hard work remember <span style="font-weight:bold;">"Each mistake teaches you something new about yourself. There is no failure, remember, except in no longer trying. It is the courage to continue that counts."</span></p> -->
 
+<!--
 `Under Redpanda Innovation Lab`
 - <a href="https://www.dropbox.com/sh/pg3wr1zpp8ocffi/AAD5akJlrcG9Zvg80qzrFkERa?dl=0" target="_blank">WeddingPlanner</a> `Objective-C`
 - <a href="https://itunes.apple.com/in/app/mahanews/id871107735?mt=8" target="_blank">MahaNews</a> `Objective-C`
@@ -116,6 +117,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 - <a href="https://www.dropbox.com/sh/uupj6xxec8acur4/AACJ6X3cjqxuLns5uIQSjPPXa?dl=0" target="_blank">Macro E</a> `Objective-C`
 - <a href="https://itunes.apple.com/in/app/gabbar-the-legend/id785219111?mt=8" target="_blank">Gabbar - The Legend</a> `Objective-C`,
 - <a href="https://www.dropbox.com/sh/l3u5myh8pudxr8b/AACT8DOCPEXNMNVkjhVPwJiea?dl=0" target="_blank">Bond Calculator</a> 
+-->
 
 <!-- <p>P.S: I mentioned 11 March which was the start date of CelerApps because at that day https://celerapps.com site becomes live.</p> -->
 
@@ -138,15 +140,18 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 ##### [Indigo Consulting, A Leo Burnett Company](https://www.indigo.co.in) - Application Developer (iOS)
 > Nov 2011 - Dec 2013 (Almost 2 year)
 
-<!-- <p>Worked on iOS based application for reputed brands like ICICI Bank, Asian Paints, and HSBC Amanah.</p>
+<p>Worked on iOS based application for reputed brands like ICICI Bank, Asian Paints, and HSBC Amanah.</p>
+<!-- 
 <p>The place where we actually founded CelerApps with my friends (Shivam Singh and Saya Godshala), here we started thinking on our own ideas and we did.</p>
 <p>Here we created Office In-Out, Cricket Live, Indian Railway, Media vault and BankLog like apps and remember this are all our own app and later officially labeled under CelerApps.</p> -->
 
+<!--
 `Under Indigo Consulting`
 - <a href="https://www.dropbox.com/sh/tu82va8ovad4fj6/AAC-_WYR_8PkMlvsSe84TH3va?dl=0" target="_blank">NMJ (Nirav Modi)</a> `iPad`,`In-House`,`Objective-C`
 - <a href="https://www.dropbox.com/sh/4nz5u9oc3dd47hr/AAASFLdJWHwIfe4N2v9DrRA2a?dl=0" target="_blank">Halal Traveller (HSBC Amanah)</a> `iPhone`,`Objective-C`
 - <a href="https://www.dropbox.com/sh/jqnjx9qdpedcmyq/AABBX3-3DQfc5SNnh2XxJZKga?dl=0" target="_blank">Culinary Treats (ICICI Bank)</a> `iPhone`,`Objective-C`
 - <a href="https://www.dropbox.com/sh/2a5m2q3maq7jcfj/AAAUAIDBK-Lpzs5HkT8iclDMa?dl=0" target="_blank">My Color Project (Asian Paints)</a> `iPhone`,`Objective-C`
+-->
 
 
 <!--
