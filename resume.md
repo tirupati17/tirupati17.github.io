@@ -27,12 +27,12 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 `Under Citysocializer I'm responsible for below app`
 - <a href="https://itunes.apple.com/in/app/citysocializer/id581315807?mt=8" target="_blank">Citysocializer</a> `iPhone`
 
----
-
+<!--
 ##### [CelerStudio](https://www.celerstudio.com) - Lead Software Engineer | Founder - iOS | JAVASCRIPT | PHP
 > 1 Jan 2015 - Present
 
 > NOTE: Celerstudio is my open source initiative means most of the apps under Celerstudio are open source
+-->
 
 <!-- <p>
     After spending almost 10 months at CelerApps (11 March 2014 - 31 Dec 2014) I realize that there is something which I want to transform i.e the amount of time spend on a product because without your dedicated effort it's not possible to build any perfect product.
@@ -47,6 +47,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
     From 1st of January 2015,  I started working on CelerStudio products and Yep, there is no office for CelerStudio I am working from different different co-working spaces (<a href="https://theplayce.in" target="_blank">The Playce</a>, <a href="https://workloft.in" target="_blank">Workloft</a>, <a href="https://workamp.co" target="_blank">Workamp</a>, <a href="https://of10.in" target="_blank">Of10</a>) basically a startup campuses where entrepreneurs together building something for themselves.
 </p> -->
 
+<!--
 `Under CelerStudio I've finished few below listed products for iOS, Android and Web.`
 
 `iOS` (via me)
@@ -82,7 +83,8 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 - <a href="https://itunes.apple.com/us/app/flickquick-photosharing/id1178623004?mt=8" target="_blank">Flickquick</a> `iOS - iPhone`, `Via Agencies`
 - <a href="https://itunes.apple.com/us/app/traxonapp/id433599272?mt=8" target="_blank">Traxon</a> `iOS - iPad`, `Via Agencies`
 - <a href="" target="_blank">Bachat</a> `iOS`, `UI/UX`, `Design`, `Project Management`, `Via Direct Client`
-- <a href="https://www.dropbox.com/sh/cjyquh8gavhzg1l/AAA2O7fspNVIfciMMprGgwUna?dl=0" target="_blank">Reality</a> `iOS - iPad`, `Via Agencies`, `In-House`
+- <a href="https://www.dropbox.com/sh/cjyquh8gavhzg1l/AAA2O7fspNVIfciMMprGgwUna?dl=0" target="_blank">Reality</a> `iOS - iPad`, `Via Agencies`, `In-House` 
+-->
 
 <!-- <p>
     Let’s see whether my decision will become right or wrong but whatever its all about experience and someone said
