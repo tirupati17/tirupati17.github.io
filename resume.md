@@ -198,4 +198,4 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 
 <!-- - <a href="" target="_blank">SPC (Smart Phone Connected)</a> `Nokia Devices`, `QT C++`, `C#` -->
 
-NOTE: MOST OF APP REFERENCE LINKS ARE DROPBOX LINK WITH APP SCREENSHOT BECAUSE SOMETIME ITUNES LINK WON'T WORK DUE TO APP REMOVAL.
+<!--NOTE: MOST OF APP REFERENCE LINKS ARE DROPBOX LINK WITH APP SCREENSHOT BECAUSE SOMETIME ITUNES LINK WON'T WORK DUE TO APP REMOVAL.-->
