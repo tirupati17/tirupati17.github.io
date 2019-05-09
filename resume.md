@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Professional Timeline
-sidebar_link: true
+sidebar_link: false
 ---
 
 
@@ -148,13 +148,13 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 - <a href="https://www.dropbox.com/sh/jqnjx9qdpedcmyq/AABBX3-3DQfc5SNnh2XxJZKga?dl=0" target="_blank">Culinary Treats (ICICI Bank)</a> `iPhone`,`Objective-C`
 - <a href="https://www.dropbox.com/sh/2a5m2q3maq7jcfj/AAAUAIDBK-Lpzs5HkT8iclDMa?dl=0" target="_blank">My Color Project (Asian Paints)</a> `iPhone`,`Objective-C`
 
----
 
+<!--
 ##### [CloudGanga](http://cloudganga.com) - Software Engineer (iOS | PHP)
 > May 2010 - Nov 2011 (1 Year 7 Months)
 
-<!-- <p>Worked on so many iOS-based utility apps and also worked on PHP based site.</p>
-<p>Here learned a lot about PHP and learned that PHP is a quick server side language which every mobile developer should know.</p> -->
+ <p>Worked on so many iOS-based utility apps and also worked on PHP based site.</p>
+<p>Here learned a lot about PHP and learned that PHP is a quick server side language which every mobile developer should know.</p> 
 
 `Under CloudGanga`
 - <a href="https://www.dropbox.com/sh/rjceequtujg70p6/AAACJYBFxFgL2Az-zePyvjPaa?dl=0" target="_blank">iLocator</a> `iPhone`
@@ -167,6 +167,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 - <a href="https://www.dropbox.com/sh/f4gywbwy3cuw64s/AAAt810CFcLbX3Ltcfz4fng3a?dl=0" target="_blank">Parle 20-20</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/a93l9dftxtz8xty/AACTLFMp1Qt797anXDBx3qnba?dl=0" target="_blank">Pradaxa</a> `iPhone`
 - <a href="https://www.dropbox.com/sh/zogh35quspqseno/AAC-2-BP0od4C6L31kETITbda?dl=0" target="_blank">Device Management System</a> `PHP`
+-->
 
 ---
 
