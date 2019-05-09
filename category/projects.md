@@ -62,6 +62,7 @@ title: Open Source Projects
     > Based on simple apple swift language
 
 
+<!--
 
 <h4>For Clients</h4>
 
@@ -72,6 +73,7 @@ title: Open Source Projects
 - <a href="" target="_blank">Bachat</a> `iOS`, `UI/UX`, `Design`, `Project Management`, `Via Direct Client`
 - <a href="https://www.dropbox.com/sh/cjyquh8gavhzg1l/AAA2O7fspNVIfciMMprGgwUna?dl=0" target="_blank">Reality</a> `iOS - iPad`, `Via Agencies`, `In-House`
 -->
+
 
 <!--
 `Under Redpanda Innovation Lab`
