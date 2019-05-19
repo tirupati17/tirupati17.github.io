@@ -4,8 +4,8 @@ highlighter:       rouge
 
 # Setup
 title:             Tirupati Balan
-tagline:           'Personal Blog'
-description:       'An iOS Developer and Internet Entrepreneur'
+tagline:           'Personal Site'
+description:       'An iOS Developer'
 url:               https://www.tirupatibalan.com
 baseurl:           # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
