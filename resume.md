@@ -4,6 +4,29 @@ title: Professional Timeline
 sidebar_link: true
 ---
 
+##### [Skuad](https://www.skuad.io) - Lead iOS Engineer
+> Jun 2019 - Present
+
+Working with Skuad Tech Catalyst Team to help Startups scale faster.
+
+Under Skuad worked/working on below start-ups:  
+
+###SehatQ
+
+> SehatQ is a health and wellness tech startup. We are creating a platform to help the family’s health manager make health related decisions and to enable patients to practice participatory health.
+
+• Setup SehatQ Consumer iOS app base architecture using MVVM + RX [Available on store](https://apps.apple.com/id/app/sehatq/id1473822420)  
+• Setup SehatQ Doctor iOS app base architecture using MVVM + Coordinator + RX (Introduced Coordinator Here)
+
+###Zenius
+
+> Zenius is a leading education technology company in Indonesia.
+
+• Setup Zenius Consumer iOS app base architecture using MVVM + Coordinator + RX
+
+> Note: Skuad is a talent-centric platform that gives the opportunity to work with funded start-ups across the globe in domains ranging from ed-tech, healthcare to on-demand services.
+
+---
 
 ##### [UserExperior](https://www.userexperior.com) - Lead iOS Engineer
 > 1 Nov 2018 - Present
