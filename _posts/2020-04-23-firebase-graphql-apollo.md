@@ -234,5 +234,7 @@ $ firebase deploy --only functions
 
 That's it. We are done and we successfully deployed our first Firebase Cloud Functions with GraphQL using Apollo Server.
 
+Check out working github repo here [Firebase Graphql Apollo Server](https://github.com/tirupati17/firebase-graphql-apollo-server)
+
 >  NOTE: Cloud Functions only handle one request per instance which may be not good for scaling and to handle a large number of requests, so the above approach not recommended for the production environment.
 
