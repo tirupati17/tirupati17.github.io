@@ -9,42 +9,18 @@ sidebar_link: true
 
 Working with Skuad Tech Catalyst Team to help Startups scale faster.
 
-Under Skuad worked/working on below start-ups:  
-
-###SehatQ
-
-> SehatQ is a health and wellness tech startup. We are creating a platform to help the family’s health manager make health related decisions and to enable patients to practice participatory health.
-
-• Setup SehatQ Consumer iOS app base architecture using MVVM + RX [Available on store](https://apps.apple.com/id/app/sehatq/id1473822420)  
-• Setup SehatQ Doctor iOS app base architecture using MVVM + Coordinator + RX (Introduced Coordinator Here)
-
-###Zenius
-
-> Zenius is a leading education technology company in Indonesia.
-
-• Setup Zenius Consumer iOS app base architecture using MVVM + Coordinator + RX
-
-> Note: Skuad is a talent-centric platform that gives the opportunity to work with funded start-ups across the globe in domains ranging from ed-tech, healthcare to on-demand services.
-
----
-
-##### [Skuad](https://www.skuad.io) - Lead iOS Engineer
-> Jun 2019 - Present
-
-Working with Skuad Tech Catalyst Team to help Startups scale faster.
-
 For Skuad worked/working on below start-ups:  
 
 #### [SehatQ](http://sehatq.com)
 SehatQ is a health and wellness tech startup. We are creating a platform to help the family’s health manager make health related decisions and to enable patients to practice participatory health.
 
 • Setup SehatQ Consumer iOS app base architecture using MVVM + RX [Available on store](https://apps.apple.com/id/app/sehatq/id1473822420)  
-• Setup SehatQ Doctor iOS app base architecture using MVVM + Coordinator + RX (Introduced Coordinator Here)
+• Setup SehatQ Doctor iOS app base architecture using MVVM + Coordinator + RX (Introduced Coordinator Here) [Available on store](https://apps.apple.com/id/app/sehatq-doctor/id1487072997)
 
 #### [Zenius](https://www.zeniusnet.com)
 Zenius is a leading education technology company in Indonesia.
 
-• Setup Zenius Consumer iOS app base architecture using MVVM + Coordinator + RX
+• Setup Zenius Consumer iOS app base architecture using MVVM + Coordinator + RX [Available On Store - Under Top 10](https://apps.apple.com/id/app/zenius-belajar-online/id1502056247)
 
 > Note: Skuad is a talent-centric platform that gives the opportunity to work with funded start-ups across the globe in domains ranging from ed-tech, healthcare to on-demand services.
 
