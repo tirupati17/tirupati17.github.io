@@ -4,7 +4,7 @@ title: Professional Timeline
 sidebar_link: true
 ---
 
-##### [Skuad](https://www.skuad.io) - Lead iOS Engineer
+#### [Skuad](https://www.skuad.io) - Lead iOS Engineer
 > Jun 2019 - Present
 
 Working with Skuad Tech Catalyst Team to help Startups scale faster.
@@ -25,7 +25,7 @@ For Skuad worked/working on below start-ups:
 
 ---
 
-##### [UserExperior](https://www.userexperior.com) - Lead iOS Engineer
+#### [UserExperior](https://www.userexperior.com) - Lead iOS Engineer
 > 1 Nov 2018 - Present
 
 - Built UserExperior private framework from scratch
@@ -36,7 +36,7 @@ session recording, Heatmap and crash reporting etc
 
 ---
 
-##### [Citysocializer](https://www.citysocializer.com) - Lead iOS Developer
+#### [Citysocializer](https://www.citysocializer.com) - Lead iOS Developer
 > 1 Aug 2015 - Nov 2018 (3 yrs 5 mos)
 
 <!-- 
@@ -113,7 +113,7 @@ For Citysocializer I was responsible for below app only
 
 ---
 
-##### [RedPanda Innovation Lab](http://www.theredpandas.com) - Application Developer (iOS)
+#### [RedPanda Innovation Lab](http://www.theredpandas.com) - Application Developer (iOS)
 > Dec 2013 - 31 Dec 2014 (1 Year 1 Months)
 
 <p>Worked on iOS based application for various startups and government organizations.</p>
@@ -159,7 +159,7 @@ For Citysocializer I was responsible for below app only
 
 ---
 
-##### [Indigo Consulting, A Leo Burnett Company](https://www.indigo.co.in) - Application Developer (iOS)
+#### [Indigo Consulting, A Leo Burnett Company](https://www.indigo.co.in) - Application Developer (iOS)
 > Nov 2011 - Dec 2013 (Almost 2 year)
 
 <p>Worked on iOS based application for reputed brands like ICICI Bank, Asian Paints, and HSBC Amanah.</p>
