@@ -5,7 +5,7 @@ sidebar_link: true
 ---
 
 #### [Skuad](https://www.skuad.io) - Lead iOS Engineer
-> Jun 2019 - Present
+> Jun 2019 - July 2020 (1 year 1 month)
 
 - Setup SehatQ Consumer iOS app base architecture using MVVM + RX [Available on store](https://apps.apple.com/id/app/sehatq/id1473822420)
 - Setup SehatQ Doctor iOS app base architecture using MVVM + Coordinator + RX (Introduced Coordinator Here)[Available on store](https://apps.apple.com/id/app/sehatq-doctor/id1487072997)
@@ -17,7 +17,7 @@ sidebar_link: true
 ---
 
 #### [UserExperior](https://www.userexperior.com) - Lead iOS Engineer
-> 1 Nov 2018 - Present
+> 1 Nov 2018 - Jun 2019 (8 mos)
 
 - Built UserExperior private framework from scratch
 - Finished production ready framework within 4 months i.e User analytics, Video
