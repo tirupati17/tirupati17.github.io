@@ -4,12 +4,28 @@ title: Professional Timeline
 sidebar_link: true
 ---
 
+#### [Heady](https://www.heady.io) - Senior iOS Engineer
+> July 2020 - Present
+
+Working with a talented dedicated team of iOS Developers for high-end US-based clients.
+
+**Contribution to iOS Initiative (Other Than Client Work) Under Heady**
+- [HYLog](https://bitbucket.org/headyio/hylog.git) 
+    is an OS level network enabled logging framework for iOS. As I said `network enabled` means there are an admin panel and API implementation for this library which I implemented using PostgREST & Metabase, so it is a complete end-to-end Initiative. 
+
+- [HYNavigationBar](https://bitbucket.org/headyio/hynavigationbar/src/codebase/) 
+    is a custom navigation bar that replicates iOS UINavigationBar. Used Autolayout for the size and position of all the views inside it. This initiative is in use for one of the client projects where we are using this fully customized navigation bar.    
+
+> Note: Heady is one of the processes and people-oriented company, everyone here so kind and grateful. As I said process because even under huge pressure they (Management) maintained work-life balances (Means no overnight and weekends work).
+
+---
+
 #### [Skuad](https://www.skuad.io) - Lead iOS Engineer
 > Jun 2019 - July 2020 (1 year 1 month)
 
-- Setup SehatQ Consumer iOS app base architecture using MVVM + RX [Available on store](https://apps.apple.com/id/app/sehatq/id1473822420)
-- Setup SehatQ Doctor iOS app base architecture using MVVM + Coordinator + RX (Introduced Coordinator Here)[Available on store](https://apps.apple.com/id/app/sehatq-doctor/id1487072997)
-- Setup Zenius Consumer iOS app base architecture using MVVM + Coordinator + RX [Available On Store - Under Top 10 In Indonesia](https://apps.apple.com/id/app/zenius-belajar-online/id1502056247)
+- Built it from scratch & Setup SehatQ Consumer iOS app base architecture using MVVM + RX [Available on store](https://apps.apple.com/id/app/sehatq/id1473822420)
+- Built it from scratch & Setup SehatQ Doctor iOS app base architecture using MVVM + Coordinator + RX (Introduced Coordinator Here)[Available on store](https://apps.apple.com/id/app/sehatq-doctor/id1487072997)
+- Built it from scratch & Setup Zenius Consumer iOS app base architecture using MVVM + Coordinator + RX [Available On Store - Under Top 10 In Indonesia](https://apps.apple.com/id/app/zenius-belajar-online/id1502056247)
 - Automate iOS code signing and build process using fastlane, slack and firebase distribution.
 
 > Note: Skuad is a talent-centric platform that gives the opportunity to work with funded start-ups across the globe in domains ranging from ed-tech, healthcare to on-demand services.
@@ -38,6 +54,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 For Citysocializer I was responsible for below app only
 - <a href="https://itunes.apple.com/in/app/citysocializer/id581315807?mt=8" target="_blank">Citysocializer</a> `iPhone`
 
+> Note: Citysocializer is one of the firm because of whom I took [**Celerstudio**](https://www.celerstudio.com) initiative on a different level. During this client tenure, I used to work from different co-working spaces like The Playce, Workloft, Of10, Workamp and WeWork. Based on such co-working space experiences I built [**Wreely**](https://www.wreely.com) via Celerstudio, worked on other seed-funded projects like [Cardlife](https://www.crunchbase.com/organization/cardlife) (Co-Founded by Citysocializer COO), Stylio (Co-Founded by Citysocializer COO).
 <!--
 ##### [CelerStudio](https://www.celerstudio.com) - Lead Software Engineer | Founder - iOS | JAVASCRIPT | PHP
 > 1 Jan 2015 - Present
