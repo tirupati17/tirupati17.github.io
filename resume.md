@@ -58,7 +58,6 @@ For Citysocializer I was responsible for below app only
 <!--
 ##### [CelerStudio](https://www.celerstudio.com) - Lead Software Engineer | Founder - iOS | JAVASCRIPT | PHP
 > 1 Jan 2015 - Present
-
 > NOTE: Celerstudio is my open source initiative means most of the apps under Celerstudio are open source
 -->
 
