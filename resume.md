@@ -54,7 +54,7 @@ Well, Working independently at Celerstudio has made me realize that ideas, produ
 For Citysocializer I was responsible for below app only
 - <a href="https://itunes.apple.com/in/app/citysocializer/id581315807?mt=8" target="_blank">Citysocializer</a> `iPhone`
 
-> Note: Citysocializer is one of the firm because of whom I took [**Celerstudio**](https://www.celerstudio.com) initiative on a different level. During this client tenure, I used to work from different co-working spaces like The Playce, Workloft, Of10, Workamp and WeWork. Based on such co-working space experiences I built [**Wreely**](https://www.wreely.com) via Celerstudio, worked on other seed-funded projects like [Cardlife](https://www.crunchbase.com/organization/cardlife) (Co-Founded by Citysocializer COO), Stylio (Co-Founded by Citysocializer COO).
+> Note: Citysocializer is one of the firm because of whom I took [**Celerstudio**](https://www.celerstudio.com) initiative on a different level. During this client tenure, I used to work from different co-working spaces like The Playce, Workloft, Of10, Workamp and WeWork. Based on such co-working space experiences I built [**Wreely**](https://www.wreely.com) via Celerstudio, worked on other seed-funded projects like [Cardlife](https://www.crunchbase.com/organization/cardlife) (Co-Founded by Citysocializer COO), [Stylio](https://www.youtube.com/watch?v=xOKHLHI8OIk) (Co-Founded by Citysocializer COO).
 
 <!--
 ##### [CelerStudio](https://www.celerstudio.com) - Lead Software Engineer | Founder - iOS | JAVASCRIPT | PHP
