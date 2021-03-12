@@ -16,7 +16,7 @@ Working with a talented dedicated team of iOS Developers for high-end US-based c
 - [HYNavigationBar](https://bitbucket.org/headyio/hynavigationbar/src/codebase/) 
     is a custom navigation bar that replicates iOS UINavigationBar. Used Autolayout for the size and position of all the views inside it. This initiative is in use for one of the client projects where we are using this fully customized navigation bar.    
 
-> Note: Heady is one of the processes and people-oriented company, everyone here so kind and grateful. As I said process because even under huge pressure they (Management) maintained work-life balances (Means no overnight and weekends work).
+> Note: Heady is one of the processes and people-oriented company, everyone here so kind and grateful.
 
 ---
 
