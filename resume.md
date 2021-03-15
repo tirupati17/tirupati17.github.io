@@ -21,7 +21,7 @@ Working with a talented dedicated team of iOS Developers for high-end US-based c
 ---
 
 #### [Skuad](https://www.skuad.io) - Lead iOS Engineer
-> Jun 2019 - July 2020 (1 year 1 month)
+> Aug 2018 - July 2020 (2 years)
 
 - Built it from scratch & Setup SehatQ Consumer iOS app base architecture using MVVM + RX [Available on store](https://apps.apple.com/id/app/sehatq/id1473822420)
 - Built it from scratch & Setup SehatQ Doctor iOS app base architecture using MVVM + Coordinator + RX (Introduced Coordinator Here)[Available on store](https://apps.apple.com/id/app/sehatq-doctor/id1487072997)
@@ -31,17 +31,15 @@ Working with a talented dedicated team of iOS Developers for high-end US-based c
 > Note: Skuad is a talent-centric platform that gives the opportunity to work with funded start-ups across the globe in domains ranging from ed-tech, healthcare to on-demand services.
 
 ---
-
+<!-- 
 #### [UserExperior](https://www.userexperior.com) - Lead iOS Engineer
 > 1 Nov 2018 - Jun 2019 (8 mos)
-
 - Built UserExperior private framework from scratch
 - Finished production ready framework within 4 months i.e User analytics, Video
 session recording, Heatmap and crash reporting etc
-
 > Note: The term Engineer I've mentioned in my position because it is my first framework development project which is/was pure software engineering task.
-
 ---
+-->
 
 #### [Citysocializer](https://www.citysocializer.com) - Lead iOS Developer
 > 1 Aug 2015 - Nov 2018 (3 yrs 5 mos)
