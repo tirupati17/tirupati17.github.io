@@ -61,6 +61,35 @@ title: Open Source Projects
     <p class="message"> SIP calculator calculates the future value of SIP (Systematic Investment Plan) payments.</p>
     > Based on simple apple swift language
 
+- [Firebase Cloud Functions with GraphQL Query](https://github.com/tirupati17/firebase-graphql-apollo-server)
+    <iframe style="display:inline-block;" src="https://ghbtns.com/github-btn.html?user=tirupati17&repo=firebase-graphql-apollo-server&type=fork&count=true" frameborder="0" scrolling="0" width="auto" height="20"></iframe>
+    <iframe style="display:inline-block;" src="https://ghbtns.com/github-btn.html?user=tirupati17&repo=firebase-graphql-apollo-server&type=star&count=true" frameborder="0" scrolling="0" width="auto" height="20"></iframe>
+    <p class="message"> This example app demonstrate how to use firebase cloud functions with GraphQL query using apollo server express to perform CRUD operation.</p>
+    > Based on simple HTML and Javascript language
+
+- [Contacts GraphQL](hhttps://github.com/tirupati17/contacts-ios-app-apollo-graphql)
+    <iframe style="display:inline-block;" src="https://ghbtns.com/github-btn.html?user=tirupati17&repo=firebase-graphql-apollo-server&type=fork&count=true" frameborder="0" scrolling="0" width="auto" height="20"></iframe>
+    <iframe style="display:inline-block;" src="https://ghbtns.com/github-btn.html?user=tirupati17&repo=firebase-graphql-apollo-server&type=star&count=true" frameborder="0" scrolling="0" width="auto" height="20"></iframe>
+    <p class="message"> Example app showing uses of iOS Apollo GraphQL Client.</p>
+    > Based on apple swift language using MVP architectural pattern.
+
+- [List](https://github.com/tirupati17/malist-viper-snapkit-realm)
+    <iframe style="display:inline-block;" src="https://ghbtns.com/github-btn.html?user=tirupati17&repo=malist-viper-snapkit-realm&type=fork&count=true" frameborder="0" scrolling="0" width="auto" height="20"></iframe>
+    <iframe style="display:inline-block;" src="https://ghbtns.com/github-btn.html?user=tirupati17&repo=malist-viper-snapkit-realm&type=star&count=true" frameborder="0" scrolling="0" width="auto" height="20"></iframe>
+    <p class="message"> List controller based on VIPER architecture + SnapKit + Realm.</p>
+    > Based on apple swift language and VIPER architectural pattern.
+
+- [Contacts](https://github.com/tirupati17/contacts-mvp-swift)
+    <iframe style="display:inline-block;" src="https://ghbtns.com/github-btn.html?user=tirupati17&repo=contacts-mvp-swift&type=fork&count=true" frameborder="0" scrolling="0" width="auto" height="20"></iframe>
+    <iframe style="display:inline-block;" src="https://ghbtns.com/github-btn.html?user=tirupati17&repo=contacts-mvp-swift&type=star&count=true" frameborder="0" scrolling="0" width="auto" height="20"></iframe>
+    <p class="message"> Contacts is an iOS app based on MVP (Model View Presenter) software architectural pattern.</p>
+    > Based on MVP (Model View Presenter) software architectural pattern.
+
+- [Giphy](https://github.com/tirupati17/giphy-mvvm-swift)
+    <iframe style="display:inline-block;" src="https://ghbtns.com/github-btn.html?user=tirupati17&repo=giphy-mvvm-swift&type=fork&count=true" frameborder="0" scrolling="0" width="auto" height="20"></iframe>
+    <iframe style="display:inline-block;" src="https://ghbtns.com/github-btn.html?user=tirupati17&repo=giphy-mvvm-swift&type=star&count=true" frameborder="0" scrolling="0" width="auto" height="20"></iframe>
+    <p class="message"> Giphy is an iOS app based on __MVVM (Model–view–viewmodel)__ software architectural pattern.</p>
+    > Based on simple apple swift language and MVVM software architectural pattern.
 
 <!--
 
