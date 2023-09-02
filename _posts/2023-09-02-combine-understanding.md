@@ -7,7 +7,6 @@ tags:
   - swiftui
   - swift
   - ios
-excerpt_separator: "<!--more-->"
 
 ---
 
