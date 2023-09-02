@@ -1,8 +1,6 @@
 # Dependencies
 markdown:          kramdown
 highlighter:       rouge
-
-theme: jekyll-whiteglass
  
 # Setup
 title:             Tirupati Balan
