@@ -3,10 +3,11 @@ layout: post
 comments: true
 title: Understanding Combine in Swift: A Comprehensive Guide
 tags:
-  - combine
-  - swiftui
-  - swift
-  - ios
+- combine
+- swiftui
+- swift
+- ios
+excerpt_separator: "<!--more-->"
 
 ---
 
