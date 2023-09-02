@@ -44,8 +44,8 @@ appstore_icon:
 playstore_icon:      
 website_icon:        https://png.icons8.com/website/dusk/40/000000
 version:             3.4.1
-sidebar_home_link:   true
-sidebar_photography_link: true
+sidebar_home_link:   false
+sidebar_photography_link: false
 
 # sidebar_blog_link: '/blog'   # By default, your home page is your blog
                                 # page. If you change your paginate_path,
