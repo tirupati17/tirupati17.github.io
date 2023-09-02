@@ -39,9 +39,9 @@ disqus:
 #   - jekyll-watch
 
 # Custom vars
-sidebar_resume_link: https://www.tirupatibalan.com/resume/tirupati_balan_resume.pdf
-appstore_icon:       https://png.icons8.com/apple-app-store/dusk/50/000000
-playstore_icon:      https://png.icons8.com/google-play/dusk/40/000000
+sidebar_resume_link: 
+appstore_icon:       
+playstore_icon:      
 website_icon:        https://png.icons8.com/website/dusk/40/000000
 version:             3.4.1
 sidebar_home_link:   true
