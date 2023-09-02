@@ -8,11 +8,10 @@ tags:
   - swift
   - ios
 excerpt_separator: "<!--more-->"
+
 ---
 
 Combine is one of those frameworks in Swift that might sound a little intimidating at first but holds incredible power once you get the hang of it. It provides a declarative Swift API for processing values over time. In simpler terms, it helps you manage complex data flows in your apps in a more readable and maintainable way.
-
-<!--more-->
 
 ## Basic of Combine
 
