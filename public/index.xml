@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ahoy There! on Tirupati Balan</title>
+    <link>http://www.tirupatibalan.com/</link>
+    <description>Recent content in Ahoy There! on Tirupati Balan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2022 - {year}</copyright>
+    <lastBuildDate>Mon, 04 Sep 2023 18:14:13 +0530</lastBuildDate><atom:link href="http://www.tirupatibalan.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understading Combine</title>
+      <link>http://www.tirupatibalan.com/posts/my-first-post/</link>
+      <pubDate>Mon, 04 Sep 2023 18:14:13 +0530</pubDate>
+      
+      <guid>http://www.tirupatibalan.com/posts/my-first-post/</guid>
+      <description>Combine is one of those frameworks in Swift that might sound a little intimidating at first but holds incredible power once you get the hang of it.</description>
+    </item>
+    
+    <item>
+      <title>Markdown Cheat Sheet</title>
+      <link>http://www.tirupatibalan.com/posts/markdown-cheat-sheet/</link>
+      <pubDate>Sat, 27 Aug 2022 09:16:45 +0000</pubDate>
+      
+      <guid>http://www.tirupatibalan.com/posts/markdown-cheat-sheet/</guid>
+      <description>This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for basic syntax and extended syntax.</description>
+    </item>
+    
+  </channel>
+</rss>
