@@ -15,7 +15,7 @@ enableEmoji = true
 
  # giscus is a comment system based on GitHub Discussions. see https://giscus.app
 [giscus]       
-    enable = true
+    enable = false
     repo = "https://github.com/tirupati17/tirupati17.github.io"
     repoId = "tirupati17.github.io"
     category = "Announcements"
