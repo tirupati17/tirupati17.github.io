@@ -2,7 +2,7 @@
 title: "The Order of Modifiers in SwiftUI"
 date: 2023-09-02T18:13:13+05:30
 draft: false # Set 'false' to publish
-description: "Demystifies the concept of SwiftUI modifiers, explaining their importance, how to use them, and how to create custom modifiers, complete with practical examples."
+description: "Demystifies the concept of SwiftUI modifiers, explaining their importance, how to use them, and how to create custom modifiers, complete with practical examples"
 categories:
 - Swift
 tags:
