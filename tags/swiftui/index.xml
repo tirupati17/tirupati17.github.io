@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>swiftui on Tirupati Balan</title>
-    <link>http://www.tirupatibalan.com/tags/swiftui/</link>
+    <link>https://www.tirupatibalan.com/tags/swiftui/</link>
     <description>Recent content in swiftui on Tirupati Balan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2022 - {year}</copyright>
-    <lastBuildDate>Mon, 04 Sep 2023 18:14:13 +0530</lastBuildDate><atom:link href="http://www.tirupatibalan.com/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 18:14:13 +0530</lastBuildDate><atom:link href="https://www.tirupatibalan.com/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understading Combine</title>
-      <link>http://www.tirupatibalan.com/posts/my-first-post/</link>
+      <link>https://www.tirupatibalan.com/posts/my-first-post/</link>
       <pubDate>Mon, 04 Sep 2023 18:14:13 +0530</pubDate>
       
-      <guid>http://www.tirupatibalan.com/posts/my-first-post/</guid>
+      <guid>https://www.tirupatibalan.com/posts/my-first-post/</guid>
       <description>Combine is one of those frameworks in Swift that might sound a little intimidating at first but holds incredible power once you get the hang of it.</description>
     </item>
     
