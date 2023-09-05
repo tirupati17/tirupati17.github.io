@@ -2,7 +2,7 @@
 title: "Understanding SwiftUI View"
 date: 2023-09-01T19:23:13+05:30
 draft: true # Set 'false' to publish
-description: "Demystifies the concept of SwiftUI modifiers, explaining their importance, how to use them, and how to create custom modifiers, complete with practical examples."
+description: ""
 categories:
 - Swift
 tags:

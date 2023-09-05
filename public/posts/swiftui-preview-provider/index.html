@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SwiftUI PreviewProvider</title>
+<meta name="description" content="The PreviewProvider protocol in SwiftUI serves as a cornerstone for developers who want to view their work without running a simulator or deploying to a real device.">
+<link rel="canonical" href="https://www.tirupatibalan.com/posts/swiftui-preview-provider/">
+<link rel="robots" href="/robots.txt" />
+
+
+<link rel="stylesheet" href="https://www.tirupatibalan.com/css/main.min.345967ef3e5800f63e8c96e37eb376d0e8e4507db4972914a19ec4d4026b05d0.css" integrity="sha256-NFln7z5YAPY+jJbjfrN20OjkUH20lykUoZ7E1AJrBdA=">
+</head>
+    <body class="max-w-screen-md px-10 mx-auto"><header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+
+<figure class="flex-none w-20 h-20 rounded-full overflow-hidden" ><a href="https://www.tirupatibalan.com/"><img srcset="/img/profile-picture_hucbf2afd9e62dc6021c155b0731b41164_625734_80x80_fill_q90_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="1080" height="1080" alt="Tirupati Balan"></a></figure>
+
+    <div class="flex flex-col gap-5">
+    <a href="https://www.tirupatibalan.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Tirupati Balan</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-center uppercase text-xs font-semibold gap-7 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">Home</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">Posts</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header><div id="content">
+<article class="flex flex-col gap-10">
+    <header class="flex flex-col gap-2">
+        <h2 class="text-4xl leading-snug font-bold text-gray-900">SwiftUI PreviewProvider</h2>
+
+        <div class="text-sm font-semibold text-gray-500 flex gap-3">
+        
+<time datetime="2023-09-03 19:21:13 &#43;0530 IST" title="2023-09-03 19:21:13 &#43;0530 IST">
+    3 September 2023
+</time>
+        
+        —
+        
+            <a class="hover:text-gray-500" href="/categories/swift/" alt="Swift" >
+                Swift
+                </a>
+        
+
+        </div>
+    </header>
+    <section class="content text-lg text-gray-800">
+    <p>The <code>PreviewProvider</code> protocol in SwiftUI serves as a cornerstone for developers who want to view their work without running a simulator or deploying to a real device. While it&rsquo;s mainly used for generating previews in Xcode, it can do a bit more than just that. In this article, we&rsquo;ll explore its capabilities, beyond the basics, and delve into some advanced features.</p>
+<h2 id="the-basics-what-is-previewprovider">The Basics: What is PreviewProvider?</h2>
+<p>The <code>PreviewProvider</code> is a protocol that, when implemented, enables you to create quick, real-time previews of SwiftUI views. The most common type conforming to <code>PreviewProvider</code> is <code>Preview</code>.</p>
+<h3 id="basic-example">Basic Example</h3>
+<pre><code class="language-swift">struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+</code></pre>
+<h2 id="more-features-of-previewprovider">More Features of PreviewProvider</h2>
+<h3 id="multiple-previews">Multiple Previews</h3>
+<p>You can provide multiple previews within the same <code>PreviewProvider</code> by using the <code>Group</code> view. This is especially useful for checking your design across multiple device types or configurations.</p>
+<pre><code class="language-swift">struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            ContentView()
+                .previewDevice(&quot;iPhone 12&quot;)
+            ContentView()
+                .previewDevice(&quot;iPhone SE (2nd generation)&quot;)
+        }
+    }
+}
+</code></pre>
+<h3 id="conditional-compilation">Conditional Compilation</h3>
+<p>Sometimes, you may want to preview a view only under certain conditions. For this, you can use conditional compilation.</p>
+<pre><code class="language-swift">struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        #if DEBUG
+        ContentView()
+        #endif
+    }
+}
+</code></pre>
+<h3 id="dynamic-previews-with-previewlayout">Dynamic Previews with PreviewLayout</h3>
+<p>Using <code>.previewLayout()</code>, you can dynamically set the layout size for your preview. This is extremely useful for seeing how your views adapt to different dimensions.</p>
+<pre><code class="language-swift">struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .previewLayout(.sizeThatFits)
+    }
+}
+</code></pre>
+<h3 id="preview-contexts">Preview Contexts</h3>
+<p>Sometimes you want to preview your view in different contexts, like light and dark modes. The <code>.previewContext</code> modifier allows you to do just that.</p>
+<pre><code class="language-swift">struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .previewLayout(.sizeThatFits)
+            .environment(\.colorScheme, .dark)
+    }
+}
+</code></pre>
+<h3 id="custom-parameters">Custom Parameters</h3>
+<p>You can create previews with custom parameters to visualize how your view would look with different data models. For instance, if you have a <code>CardView</code>, you can preview it with different kinds of data.</p>
+<pre><code class="language-swift">struct CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            CardView(card: sampleCard1)
+            CardView(card: sampleCard2)
+        }
+    }
+}
+</code></pre>
+<h3 id="previews-for-different-localizations">Previews for Different Localizations</h3>
+<p>If your app supports multiple languages, you can use <code>.environment(\.locale, .init(identifier: &quot;fr&quot;))</code> to preview your UI in different languages.</p>
+<pre><code class="language-swift">struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .environment(\.locale, .init(identifier: &quot;fr&quot;))
+    }
+}
+</code></pre>
+<p>While <code>PreviewProvider</code> is primarily used for generating quick previews of SwiftUI views, its utility extends much beyond that. From providing multiple previews and setting dynamic layouts to offering various contexts and localization support, it&rsquo;s a powerful tool in a SwiftUI developer&rsquo;s toolkit. Once you master these advanced features, you&rsquo;ll find your SwiftUI development process becoming more efficient and robust.</p>
+
+    </section>
+    
+    
+    
+
+    
+    
+
+    <footer>
+        
+        <div class="pb-14 taxonomy-list tags-list text-gray-600 text-sm font-medium">
+            
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/swiftui/" alt="swiftui" >
+                        swiftui
+                    </a>
+            
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/previewprovider/" alt="previewprovider" >
+                        previewprovider
+                    </a>
+            
+        </div>
+
+
+    </footer>
+</article>
+
+        </div><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2010 - 2023 — <a class="hover:text-gray-500" href="https://www.tirupatibalan.com/">Tirupati Balan</a> <span class=" font-normal ">with</span> <a class="hover:text-gray-500" href="https://github.com/nixentric/Lowkey-Hugo-Theme" target="_blank" rel="noopener noreferrer">Lowkey</a>
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    <li><a class="hover:text-gray-500" href="x.com/tirupati17" target="_blank" rel="noopener noreferrer">Twitter</a></li><li><a class="hover:text-gray-500" href="https://github.com/tirupati17" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+</div>
+</footer></body>
+</html>

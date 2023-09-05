@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>previewprovider on Tirupati Balan</title>
+    <link>https://www.tirupatibalan.com/tags/previewprovider/</link>
+    <description>Recent content in previewprovider on Tirupati Balan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2010 - {year}</copyright>
+    <lastBuildDate>Sun, 03 Sep 2023 19:21:13 +0530</lastBuildDate><atom:link href="https://www.tirupatibalan.com/tags/previewprovider/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SwiftUI PreviewProvider</title>
+      <link>https://www.tirupatibalan.com/posts/swiftui-preview-provider/</link>
+      <pubDate>Sun, 03 Sep 2023 19:21:13 +0530</pubDate>
+      
+      <guid>https://www.tirupatibalan.com/posts/swiftui-preview-provider/</guid>
+      <description>The PreviewProvider protocol in SwiftUI serves as a cornerstone for developers who want to view their work without running a simulator or deploying to a real device.</description>
+    </item>
+    
+  </channel>
+</rss>

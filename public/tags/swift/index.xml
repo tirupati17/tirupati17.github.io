@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>swift on Tirupati Balan</title>
+    <link>https://www.tirupatibalan.com/tags/swift/</link>
+    <description>Recent content in swift on Tirupati Balan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2010 - {year}</copyright>
+    <lastBuildDate>Sat, 15 Jul 2023 19:23:13 +0530</lastBuildDate><atom:link href="https://www.tirupatibalan.com/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upload Closed-Source Framework to CocoaPods</title>
+      <link>https://www.tirupatibalan.com/posts/cocoapod-closed-sourced-upload/</link>
+      <pubDate>Sat, 15 Jul 2023 19:23:13 +0530</pubDate>
+      
+      <guid>https://www.tirupatibalan.com/posts/cocoapod-closed-sourced-upload/</guid>
+      <description>Publishing a closed-source framework to CocoaPods can be challenging. This guide aims to alleviate your pain points by sharing how I successfully uploaded a precompiled .</description>
+    </item>
+    
+  </channel>
+</rss>

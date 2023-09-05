@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GraphQL with Firebase Cloud Functions and Apollo Server</title>
+<meta name="description" content="This tutorial will guide you through setting up a GraphQL server using Firebase Cloud Functions and Apollo Server.">
+<link rel="canonical" href="https://www.tirupatibalan.com/posts/graphql-firebase-apollo/">
+<link rel="robots" href="/robots.txt" />
+
+
+<link rel="stylesheet" href="https://www.tirupatibalan.com/css/main.min.345967ef3e5800f63e8c96e37eb376d0e8e4507db4972914a19ec4d4026b05d0.css" integrity="sha256-NFln7z5YAPY+jJbjfrN20OjkUH20lykUoZ7E1AJrBdA=">
+</head>
+    <body class="max-w-screen-md px-10 mx-auto"><header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+
+<figure class="flex-none w-20 h-20 rounded-full overflow-hidden" ><a href="https://www.tirupatibalan.com/"><img srcset="/img/profile-picture_hucbf2afd9e62dc6021c155b0731b41164_625734_80x80_fill_q90_box_smart1.jpg 80w" src="/img/profile-picture.jpg" width="1080" height="1080" alt="Tirupati Balan"></a></figure>
+
+    <div class="flex flex-col gap-5">
+    <a href="https://www.tirupatibalan.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Tirupati Balan</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-center uppercase text-xs font-semibold gap-7 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">Home</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/posts">Posts</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header><div id="content">
+<article class="flex flex-col gap-10">
+    <header class="flex flex-col gap-2">
+        <h2 class="text-4xl leading-snug font-bold text-gray-900">GraphQL with Firebase Cloud Functions and Apollo Server</h2>
+
+        <div class="text-sm font-semibold text-gray-500 flex gap-3">
+        
+<time datetime="2023-08-01 19:23:13 &#43;0530 IST" title="2023-08-01 19:23:13 &#43;0530 IST">
+    1 August 2023
+</time>
+        
+        —
+        
+            <a class="hover:text-gray-500" href="/categories/swift/" alt="Swift" >
+                Swift
+                </a>
+        
+
+        </div>
+    </header>
+    <section class="content text-lg text-gray-800">
+    <p>This tutorial will guide you through setting up a GraphQL server using Firebase Cloud Functions and Apollo Server. This will let you fetch data through a single endpoint, simplifying your iOS app’s backend.</p>
+<h2 id="setup-and-installation">Setup and Installation</h2>
+<h3 id="initialize-firebase">Initialize Firebase</h3>
+<pre><code class="language-bash">$ firebase init
+</code></pre>
+<p>Choose &ldquo;Functions&rdquo; when prompted:</p>
+<pre><code class="language-bash">❯ ◯ Functions: Configure and deploy Cloud Functions
+</code></pre>
+<h3 id="language-selection">Language Selection</h3>
+<p>Select JavaScript for this tutorial:</p>
+<pre><code class="language-bash">❯ JavaScript
+</code></pre>
+<h3 id="installing-dependencies">Installing Dependencies</h3>
+<p>Navigate to the <code>functions</code> directory:</p>
+<pre><code class="language-bash">$ cd functions
+</code></pre>
+<p>Install required packages:</p>
+<pre><code class="language-bash">$ npm install &amp;&amp; npm install apollo-server-express express graphql
+</code></pre>
+<h2 id="building-the-graphql-api">Building the GraphQL API</h2>
+<h3 id="setting-up-express">Setting Up Express</h3>
+<p>In <code>index.js</code>, setup an Express app:</p>
+<pre><code class="language-javascript">const functions = require(&quot;firebase-functions&quot;);
+const express = require(&quot;express&quot;);
+const app = express();
+
+exports.graphql = functions.https.onRequest(app);
+</code></pre>
+<h3 id="defining-schema">Defining Schema</h3>
+<p>Create a new file <code>schema/schema.js</code>:</p>
+<pre><code class="language-javascript">const { gql } = require('apollo-server-express');
+
+const typeDefs = gql`
+  type Contact {
+    id: ID!
+    name: String!
+    email: String!
+  }
+
+  type Query {
+    contacts: [Contact]
+  }
+`;
+
+module.exports = typeDefs;
+</code></pre>
+<h3 id="connecting-to-firebase">Connecting to Firebase</h3>
+<p>Create a new file <code>database/database.js</code>:</p>
+<pre><code class="language-javascript">const admin = require(&quot;firebase-admin&quot;);
+
+var serviceAccount = require(&quot;../path/to/serviceAccountKey.json&quot;);
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: &quot;https://&lt;YOUR-DATABASE-NAME&gt;.firebaseio.com&quot;
+});
+
+const db = admin.firestore();
+
+module.exports = db;
+</code></pre>
+<h3 id="setup-resolvers">Setup Resolvers</h3>
+<p>Create a new file <code>resolvers/resolvers.js</code>:</p>
+<pre><code class="language-javascript">const db = require('../database/database');
+
+const resolvers = {
+  Query: {
+    contacts: async () =&gt; {
+      const contacts = [];
+      const snapshot = await db.collection('contacts').get();
+      snapshot.forEach((doc) =&gt; {
+        contacts.push(doc.data());
+      });
+      return contacts;
+    },
+  },
+};
+
+module.exports = resolvers;
+</code></pre>
+<h3 id="integrating-apollo-server">Integrating Apollo Server</h3>
+<p>In <code>index.js</code>, tie it all together:</p>
+<pre><code class="language-javascript">const functions = require(&quot;firebase-functions&quot;);
+const express = require(&quot;express&quot;);
+const { ApolloServer } = require(&quot;apollo-server-express&quot;);
+const typeDefs = require(&quot;./schema/schema&quot;);
+const resolvers = require(&quot;./resolvers/resolvers&quot;);
+
+const app = express();
+
+const server = new ApolloServer({ typeDefs, resolvers });
+server.applyMiddleware({ app, path: '/', cors: true });
+
+exports.graphql = functions.https.onRequest(app);
+</code></pre>
+<h2 id="testing-and-deployment">Testing and Deployment</h2>
+<h3 id="local-testing">Local Testing</h3>
+<pre><code class="language-bash">$ firebase emulators:start --only functions
+</code></pre>
+<h3 id="deploy-to-firebase">Deploy to Firebase</h3>
+<pre><code class="language-bash">$ firebase deploy --only functions
+</code></pre>
+<p>You&rsquo;ve now successfully built and deployed a GraphQL server using Firebase Cloud Functions and Apollo Server!</p>
+<blockquote>
+<p><strong>Note</strong>: This approach is generally not recommended for high-scale, production applications as each function instance handles one request at a time.</p>
+</blockquote>
+
+    </section>
+    
+    
+    
+
+    
+    
+
+    <footer>
+        
+        <div class="pb-14 taxonomy-list tags-list text-gray-600 text-sm font-medium">
+            
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="/tags/graphql/" alt="graphql" >
+                        graphql
+                    </a>
+            
+        </div>
+
+
+    </footer>
+</article>
+
+        </div><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2010 - 2023 — <a class="hover:text-gray-500" href="https://www.tirupatibalan.com/">Tirupati Balan</a> <span class=" font-normal ">with</span> <a class="hover:text-gray-500" href="https://github.com/nixentric/Lowkey-Hugo-Theme" target="_blank" rel="noopener noreferrer">Lowkey</a>
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    <li><a class="hover:text-gray-500" href="x.com/tirupati17" target="_blank" rel="noopener noreferrer">Twitter</a></li><li><a class="hover:text-gray-500" href="https://github.com/tirupati17" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+</div>
+</footer></body>
+</html>
