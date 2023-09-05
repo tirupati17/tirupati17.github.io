@@ -3,6 +3,6 @@ title: "Ahoy There!"
 draft: false
 ---
 
-Hey there! I'm an iOS Developer currently involved in creating a Gratitude app in collaboration with [Gratefulness.me](https://gratefulness.me). Our mission is to use the power of technology to cultivate a sense of gratitude and positive thinking. We believe that a simple 'thank you' can go a long way, and our app is designed to make that process seamless and engaging.
+Hey there! I’m an iOS Developer currently working on a Gratitude app here at [Gratefulness.me](https://gratefulness.me). Our mission is to positively impact millions of lives by cultivating a sense of gratitude and positive thinking through technology.
 
-But that's not all. I'm also a co-founder of [Mysticadii](https://mysticadii.com), an innovative podcasting platform. Our goal is to elevate the podcasting experience by adding a mystical touch, whether that's through unique storytelling formats or cutting-edge audio features.
+In addition to that, I'm also a co-founder of [Mysticadii](https://mysticadii.com). Our mission at Mysticadii is to educate people about the mystic realms of the world, expanding their understanding and appreciation for topics often considered not easily understood.
