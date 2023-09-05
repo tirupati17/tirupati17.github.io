@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ahoy There! on Tirupati Balan</title>
-    <link>https://www.tirupatibalan.com/</link>
-    <description>Recent content in Ahoy There! on Tirupati Balan</description>
+    <title>modifiers on Tirupati Balan</title>
+    <link>https://www.tirupatibalan.com/tags/modifiers/</link>
+    <description>Recent content in modifiers on Tirupati Balan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2010 - {year}</copyright>
-    <lastBuildDate>Tue, 05 Sep 2023 18:13:13 +0530</lastBuildDate><atom:link href="https://www.tirupatibalan.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Sep 2023 18:13:13 +0530</lastBuildDate><atom:link href="https://www.tirupatibalan.com/tags/modifiers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SwiftUI Modifiers</title>
       <link>https://www.tirupatibalan.com/posts/swiftui-modifier/</link>
@@ -15,15 +15,6 @@
       
       <guid>https://www.tirupatibalan.com/posts/swiftui-modifier/</guid>
       <description>What is a Modifier? In the simplest terms, a modifier in SwiftUI is a method that helps you change or modify a view.</description>
-    </item>
-    
-    <item>
-      <title>Understanding Combine</title>
-      <link>https://www.tirupatibalan.com/posts/understanding-combine/</link>
-      <pubDate>Mon, 04 Sep 2023 18:14:13 +0530</pubDate>
-      
-      <guid>https://www.tirupatibalan.com/posts/understanding-combine/</guid>
-      <description>Combine is one of those frameworks in Swift that might sound a little intimidating at first but holds incredible power once you get the hang of it.</description>
     </item>
     
     <item>

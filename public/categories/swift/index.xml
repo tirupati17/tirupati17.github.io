@@ -7,14 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2010 - {year}</copyright>
-    <lastBuildDate>Mon, 04 Sep 2023 18:14:13 +0530</lastBuildDate><atom:link href="https://www.tirupatibalan.com/categories/swift/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Sep 2023 18:13:13 +0530</lastBuildDate><atom:link href="https://www.tirupatibalan.com/categories/swift/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Understading Combine</title>
-      <link>https://www.tirupatibalan.com/posts/my-first-post/</link>
+      <title>SwiftUI Modifiers</title>
+      <link>https://www.tirupatibalan.com/posts/swiftui-modifier/</link>
+      <pubDate>Tue, 05 Sep 2023 18:13:13 +0530</pubDate>
+      
+      <guid>https://www.tirupatibalan.com/posts/swiftui-modifier/</guid>
+      <description>What is a Modifier? In the simplest terms, a modifier in SwiftUI is a method that helps you change or modify a view.</description>
+    </item>
+    
+    <item>
+      <title>Understanding Combine</title>
+      <link>https://www.tirupatibalan.com/posts/understanding-combine/</link>
       <pubDate>Mon, 04 Sep 2023 18:14:13 +0530</pubDate>
       
-      <guid>https://www.tirupatibalan.com/posts/my-first-post/</guid>
+      <guid>https://www.tirupatibalan.com/posts/understanding-combine/</guid>
       <description>Combine is one of those frameworks in Swift that might sound a little intimidating at first but holds incredible power once you get the hang of it.</description>
+    </item>
+    
+    <item>
+      <title>The Order of Modifiers in SwiftUI</title>
+      <link>https://www.tirupatibalan.com/posts/swiftui-modifiers-order/</link>
+      <pubDate>Sat, 02 Sep 2023 18:13:13 +0530</pubDate>
+      
+      <guid>https://www.tirupatibalan.com/posts/swiftui-modifiers-order/</guid>
+      <description>In SwiftUI, one of the most flexible and powerful features is the use of &amp;ldquo;modifiers&amp;rdquo; to alter the appearance and behavior of views.</description>
     </item>
     
   </channel>
