@@ -1,5 +1,5 @@
 ---
-title: "Understading Combine"
+title: "Understanding Combine"
 date: 2023-09-04T18:14:13+05:30
 draft: false # Set 'false' to publish
 description: ""
@@ -102,11 +102,6 @@ class MyClass {
 - **Operation**: Various ways to filter or manipulate the incoming data.
 - **Cancellable**: The agreement that lets you stop receiving updates when you no longer need them.
 
-## Conclusion
-
 Combine is an incredibly powerful tool for managing data flow in Swift applications. From basic publishers and subscribers to advanced custom publishers and data manipulations, Combine provides a range of functionalities to make your coding life easier. So, the next time you find yourself drowning in a sea of asynchronous data, remember Combine could be your lifesaver!
 
-## Acknowledgment
-
-I'd like to mention that the initial draft of this article was generated with the assistance of ChatGPT, OpenAI's conversational agent. I had multiple prompts with the model to come up with an explanation that would be easy for newcomers to understand. If you found this article helpful, a part of the credit goes to this advanced language model as well!
 
