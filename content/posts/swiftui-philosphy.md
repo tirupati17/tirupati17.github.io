@@ -17,6 +17,9 @@ Just as Adi Shankaracharya and Ramanuja provided frameworks to understand our in
 
 By drawing on these age-old wisdom traditions, we can gain novel insights into modern technology and, perhaps, vice versa. Here, I present to you SwiftUI property wrappers in the light of life philosophy, complete with code examples and metaphorical interpretations.
 
+## So, What is property wrappers?
+> In the declarative and reactive programming approach of SwiftUI, the idea is that your view is a function of some state.When the state changes, the function (your view) is re-evaluated, and the UI is redrawn to reflect those changes. Property wrappers in SwiftUI assist in this paradigm by managing state and its changes in a predictable manner
+
 Let's classify the property wrappers based on where they are most commonly used: in the **View** or in the **ViewModel**. This should help you understand their roles a bit more clearly.
 
 ### View: The Physical Realm - The World as We Perceive It
