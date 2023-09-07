@@ -11,7 +11,7 @@ summaryLength= 15
 paginate = 5
 
 [markup.highlight]
-      codeFences = true
+      codeFences = false
       guessSyntax = false
       hl_Lines = ""
       lineNoStart = 1

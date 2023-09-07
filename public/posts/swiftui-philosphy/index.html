@@ -4,12 +4,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Interplay of Life and Code: SwiftUI Property Wrappers</title>
-<meta name="description" content="While SwiftUI property wrappers have technical applications, they also serve as insightful metaphors for various aspects of life.">
+<meta name="description" content="As a technology enthusiast deeply influenced by spirituality and philosophy, I find that the two fields often intersect in fascinating ways.">
 <link rel="canonical" href="https://www.tirupatibalan.com/posts/swiftui-philosphy/">
 <link rel="robots" href="/robots.txt" />
 
 
-<link rel="stylesheet" href="https://www.tirupatibalan.com/css/main.min.59173e3adf027dc4429d9b2e30b99a1e596ca8f4e293ac3f1997a50278ca3708.css" integrity="sha256-WRc+Ot8CfcRCnZsuMLmaHllsqPTik6w/GZelAnjKNwg=">
+<link rel="stylesheet" href="https://www.tirupatibalan.com/css/main.min.3136dbd2988de18ed2b8fbe6d09c763c0fd51a22819ff3564bf071034455e2dc.css" integrity="sha256-MTbb0piN4Y7SuPvm0Jx2PA/VGiKBn/NWS/BxA0RV4tw=">
 </head>
     <body class="max-w-screen-md px-10 mx-auto"><header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
     
@@ -54,16 +54,41 @@
         </div>
     </header>
     <section class="content text-lg text-gray-800">
-    <p>While SwiftUI property wrappers have technical applications, they also serve as insightful metaphors for various aspects of life. Below, we delve into these nuanced parallels, providing code examples along with metaphorical interpretations.</p>
+    <p>As a technology enthusiast deeply influenced by spirituality and philosophy, I find that the two fields often intersect in fascinating ways. While penning articles on the towering figures of Indian philosophy <a href="https://www.mysticadii.com/post/adi-shankaracharya-the-timeless-philosopher">Adi Shankaracharya</a> and <a href="https://www.mysticadii.com/post/ramanuja-illuminating-the-path-of-bhakti-and-visishtadvaita-philosophy">Ramanuja</a> at <a href="https://www.mysticadii.com/">Mysticadii</a>, a revelation occurred. I began to discern parallels between the monistic teachings of Adi Shankaracharya, which advocate the oneness of the self and the universe, and the Visishtadvaita philosophy of Ramanuja, which emphasizes the intimate relationship between the individual soul, God, and the world. I found a similar duality and interplay of elements at work in SwiftUI&rsquo;s property wrappers.</p>
+<p>Just as Adi Shankaracharya and Ramanuja provided frameworks to understand our inner and outer worlds, SwiftUI property wrappers offer tools to manage state and behavior in software applications. This realization inspired me to craft this unique article, where I attempt to bridge the metaphysical with the technical. The following sections explore SwiftUI property wrappers, not just as tools for state management in software development, but also as metaphors for understanding various aspects of life.</p>
+<p>By drawing on these age-old wisdom traditions, we can gain novel insights into modern technology and, perhaps, vice versa. Here, I present to you SwiftUI property wrappers in the light of life philosophy, complete with code examples and metaphorical interpretations.</p>
+<h2 id="so-what-is-property-wrappers">So, What is property wrappers?</h2>
+<blockquote>
+<p>In the declarative and reactive programming approach of SwiftUI, the idea is that your view is a function of some state.When the state changes, the function (your view) is re-evaluated, and the UI is redrawn to reflect those changes. Property wrappers in SwiftUI assist in this paradigm by managing state and its changes in a predictable manner</p>
+</blockquote>
+<p>Let&rsquo;s classify the property wrappers based on where they are most commonly used: in the <strong>View</strong> or in the <strong>ViewModel</strong>. This should help you understand their roles a bit more clearly.</p>
+<h3 id="view-the-physical-realm---the-world-as-we-perceive-it">View: The Physical Realm - The World as We Perceive It</h3>
 <ol>
-<li><strong>@Published</strong>: The Broadcaster - We, The People</li>
 <li><strong>@Binding</strong>: The Messenger - Gods on Earth</li>
 <li><strong>@Environment</strong>: The Cosmic Oracle - Our Surroundings</li>
-<li><strong>@AppStorage</strong>: The Memory Keeper - Human Memory</li>
 <li><strong>@FocusState</strong>: The Attention Director - Our Thoughts</li>
 <li><strong>@SceneStorage</strong>: The Continuity Master - The Supreme One</li>
+<li><strong>@State</strong>: The Core Being - The Self</li>
+<li><strong>@GestureState</strong>: The Motion Tracker - Our Actions</li>
+<li><strong>@ScaledMetric</strong>: The Relative Gauge - Personal Perspective</li>
+<li><strong>@FetchRequest</strong>: The Quest for Knowledge - Intellectual Pursuit</li>
+<li><strong>@ThreadLocal</strong>: The Individual Experience - Personal Realities</li>
+<li><strong>@Lazy</strong>: The Potential Energy - Untapped Capabilities</li>
 </ol>
-<hr>
+<h3 id="viewmodel-the-mental-realm---the-world-of-ideas-and-intentions">ViewModel: The Mental Realm - The World of Ideas and Intentions</h3>
+<ol>
+<li><strong>@Published</strong>: The Broadcaster - We, The People</li>
+<li><strong>@AppStorage</strong>: The Memory Keeper - Human Memory</li>
+<li><strong>@StateObject</strong>: The Persistent Self - The Soul</li>
+<li><strong>@ObservedObject</strong>: The Change Watcher - Destiny and Fate</li>
+<li><strong>@EnvironmentObject</strong>: The Invisible Hand - Shared Experiences</li>
+<li><strong>@Derived</strong>: The Inference Maker - Logical Conclusions</li>
+<li><strong>@Atomic</strong>: The Uninterrupted Force - Flow of Life</li>
+</ol>
+<h3 id="can-be-used-in-both">Can Be Used in Both</h3>
+<ol>
+<li><strong>Creating Your Own Property Wrapper</strong>: The Guardrails - Life&rsquo;s Boundaries</li>
+</ol>
 <h2 id="1-published-the-broadcaster---we-the-people">1. @Published: The Broadcaster - We, The People</h2>
 <h3 id="swift-meaning-with-example">Swift Meaning with Example</h3>
 <p>In SwiftUI, <code>@Published</code> is used to notify views about state changes. It&rsquo;s the go-to property wrapper for simple state management in a SwiftUI application.</p>
@@ -176,8 +201,214 @@ struct ParentView: View {
 <p>In life&rsquo;s grand drama, a Supreme Being or Universal Force ensures that our essence persists through life&rsquo;s myriad scenes and acts.</p>
 <h3 id="the-life-parallel-5"><strong>The Life Parallel</strong></h3>
 <p>Like <code>@SceneStorage</code> maintains state across scene transitions, many believe that a higher force keeps our essence intact across lifetimes, creating a continuity of existence.</p>
+<h2 id="7-state-the-core-being---the-self">7. @State: The Core Being - The Self</h2>
+<h4 id="swift-meaning-with-example-6">Swift Meaning with Example</h4>
+<p><code>@State</code> is used for local state management in a SwiftUI view.</p>
+<pre><code class="language-swift">struct ContentView: View {
+    @State private var counter = 0
+
+    var body: some View {
+        Button(&quot;Increment&quot;) {
+            counter += 1
+        }
+    }
+}
+
+</code></pre>
+<h4 id="the-metaphor-6">The Metaphor</h4>
+<p>At its core, <code>@State</code> represents the inner self, mutable yet owned by the individual.</p>
+<h4 id="the-life-parallel-6">The Life Parallel</h4>
+<p>In life, our core values and traits serve as our internal <code>@State</code>, driving our actions and responses to the world around us.</p>
+<hr>
+<h2 id="8-stateobject-the-persistent-self---the-soul">8. @StateObject: The Persistent Self - The Soul</h2>
+<h4 id="swift-meaning-with-example-7">Swift Meaning with Example</h4>
+<p><code>@StateObject</code> is used to manage the lifecycle of an observed object.</p>
+<pre><code class="language-swift">struct ContentView: View {
+    @StateObject var model = MyModel()
+
+    var body: some View {
+        Text(model.text)
+    }
+}
+</code></pre>
+<h4 id="the-metaphor-7">The Metaphor</h4>
+<p><code>@StateObject</code> symbolizes the soul or the persistent self that remains constant throughout our life&rsquo;s phases.</p>
+<h4 id="the-life-parallel-7">The Life Parallel</h4>
+<p>Just like our soul, <code>@StateObject</code> persists, holding on to the essentials as we navigate through the turbulence of life.</p>
+<hr>
+<h2 id="9-observedobject-the-change-watcher---destiny-and-fate">9. @ObservedObject: The Change Watcher - Destiny and Fate</h2>
+<h4 id="swift-meaning-with-example-8">Swift Meaning with Example</h4>
+<p><code>@ObservedObject</code> is used to observe changes in an external data model.</p>
+<pre><code class="language-swift">struct ContentView: View {
+    @ObservedObject var model = MyModel()
+
+    var body: some View {
+        Text(model.text)
+    }
+}
+</code></pre>
+<h4 id="the-metaphor-8">The Metaphor</h4>
+<p><code>@ObservedObject</code> is like destiny and fate combined. It watches over the unfolding events, making adjustments as necessary.</p>
+<h4 id="the-life-parallel-8">The Life Parallel</h4>
+<p>In our lives, fate watches over us as we make decisions and take actions, guiding us toward our ultimate destiny.</p>
+<h2 id="10-environmentobject-the-invisible-hand---shared-experiences">10. @EnvironmentObject: The Invisible Hand - Shared Experiences</h2>
+<h4 id="swift-meaning-with-example-9">Swift Meaning with Example</h4>
+<p><code>@EnvironmentObject</code> is used to share data across multiple SwiftUI views.</p>
+<pre><code class="language-swift">struct ContentView: View {
+    @EnvironmentObject var settings: UserSettings
+    
+    var body: some View {
+        Text(&quot;User is logged in: \(settings.isLoggedIn)&quot;)
+    }
+}
+</code></pre>
+<h4 id="the-metaphor-9">The Metaphor</h4>
+<p><code>@EnvironmentObject</code> is the invisible hand that shapes collective behavior, the shared experiences and knowledge that subtly guide our actions.</p>
+<h4 id="the-life-parallel-9">The Life Parallel</h4>
+<p>In life, shared experiences and societal norms function as our collective <code>@EnvironmentObject</code>, steering us as a community.</p>
+<hr>
+<h2 id="11-gesturestate-the-motion-tracker---our-actions">11. @GestureState: The Motion Tracker - Our Actions</h2>
+<h4 id="swift-meaning-with-example-10">Swift Meaning with Example</h4>
+<p><code>@GestureState</code> is used to transiently track the state of a gesture.</p>
+<pre><code class="language-swift">struct ContentView: View {
+    @GestureState private var dragState = CGSize.zero
+    
+    var body: some View {
+        Rectangle()
+            .offset(dragState)
+            .gesture(
+                DragGesture()
+                    .updating($dragState) { (value, state, _) in
+                        state = value.translation
+                    }
+            )
+    }
+}
+</code></pre>
+<h4 id="the-metaphor-10">The Metaphor</h4>
+<p><code>@GestureState</code> symbolizes the transient nature of our actions, the fleeting moments that nevertheless make up the fabric of our existence.</p>
+<h4 id="the-life-parallel-10">The Life Parallel</h4>
+<p>Our actions, transient yet impactful, define the course of our lives, much like how <code>@GestureState</code> dictates the ongoing gesture operations within an application.</p>
+<hr>
+<h2 id="12-scaledmetric-the-relative-gauge---personal-perspective">12. @ScaledMetric: The Relative Gauge - Personal Perspective</h2>
+<h4 id="swift-meaning-with-example-11">Swift Meaning with Example</h4>
+<p><code>@ScaledMetric</code> adjusts a numerical value relative to the dynamic type setting of the device.</p>
+<pre><code class="language-swift">struct ContentView: View {
+    @ScaledMetric var size: CGFloat = 100
+    
+    var body: some View {
+        Circle()
+            .frame(width: size, height: size)
+    }
+}
+</code></pre>
+<h4 id="the-metaphor-11">The Metaphor</h4>
+<p><code>@ScaledMetric</code> serves as the relative gauge that adapts to individual perspectives.</p>
+<h4 id="the-life-parallel-11">The Life Parallel</h4>
+<p>Much like <code>@ScaledMetric</code>, our perspectives scale according to our experiences, shaping our understanding of the world.</p>
+<h2 id="13-fetchrequest-the-quest-for-knowledge---intellectual-pursuit">13. @FetchRequest: The Quest for Knowledge - Intellectual Pursuit</h2>
+<h4 id="swift-meaning-with-example-12">Swift Meaning with Example</h4>
+<p><code>@FetchRequest</code> is used for querying data models, most commonly with Core Data in SwiftUI.</p>
+<pre><code class="language-swift">struct ContentView: View {
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        animation: .default)
+    private var items: FetchedResults&lt;Item&gt;
+
+    var body: some View {
+        List(items) { item in
+            Text(&quot;Item at \(item.timestamp!, formatter: itemFormatter)&quot;)
+        }
+    }
+}
+</code></pre>
+<h4 id="the-metaphor-12">The Metaphor</h4>
+<p><code>@FetchRequest</code> represents the continual quest for knowledge and understanding, an intellectual pursuit that never ceases.</p>
+<h4 id="the-life-parallel-12">The Life Parallel</h4>
+<p>In life, we are always seeking, always querying the world for new information and insights, much like a <code>@FetchRequest</code> queries a data model.</p>
+<hr>
+<h2 id="14-derived-the-inference-maker---logical-conclusions">14. @Derived: The Inference Maker - Logical Conclusions</h2>
+<h4 id="swift-meaning-with-example-13">Swift Meaning with Example</h4>
+<p>As of my last update in September 2021, SwiftUI doesn&rsquo;t provide a native <code>@Derived</code> property wrapper. However, one can create custom property wrappers to derive state based on other states.</p>
+<h4 id="the-metaphor-13">The Metaphor</h4>
+<p><code>@Derived</code> would symbolize our ability to draw logical conclusions based on the information available to us.</p>
+<h4 id="the-life-parallel-13">The Life Parallel</h4>
+<p>In life, we often derive understanding or insights from our experiences and observations, akin to how a <code>@Derived</code> property might work.</p>
+<hr>
+<h2 id="15-atomic-the-uninterrupted-force---flow-of-life">15. @Atomic: The Uninterrupted Force - Flow of Life</h2>
+<h4 id="swift-meaning-with-example-14">Swift Meaning with Example</h4>
+<p><code>@Atomic</code> isn&rsquo;t a SwiftUI property wrapper, but it&rsquo;s often used in Swift to ensure that a property is only accessed by one thread at a time.</p>
+<pre><code class="language-swift">@Atomic var counter = 0
+</code></pre>
+<h4 id="the-metaphor-14">The Metaphor</h4>
+<p><code>@Atomic</code> represents the uninterrupted flow of life, where each moment is accessed one at a time but contributes to a seamless experience.</p>
+<h4 id="the-life-parallel-14">The Life Parallel</h4>
+<p>Just as <code>@Atomic</code> ensures that data is accessed one piece at a time, life flows in a series of atomic moments that create a coherent whole.</p>
+<hr>
+<h2 id="16-threadlocal-the-individual-experience---personal-realities">16. @ThreadLocal: The Individual Experience - Personal Realities</h2>
+<h4 id="swift-meaning-with-example-15">Swift Meaning with Example</h4>
+<p><code>@ThreadLocal</code> stores data that is specific to individual threads.</p>
+<pre><code class="language-swift">@ThreadLocal var threadSpecificValue: Int
+</code></pre>
+<h4 id="the-metaphor-15">The Metaphor</h4>
+<p><code>@ThreadLocal</code> represents our individual experiences that contribute to our personal realities.</p>
+<h4 id="the-life-parallel-15">The Life Parallel</h4>
+<p>Each of us has a unique path, a series of experiences that are ours alone, similar to how <code>@ThreadLocal</code> gives each thread its own unique data.</p>
+<hr>
+<h2 id="17-lazy-the-potential-energy---untapped-capabilities">17. @Lazy: The Potential Energy - Untapped Capabilities</h2>
+<h4 id="swift-meaning-with-example-16">Swift Meaning with Example</h4>
+<p><code>@Lazy</code> is used in Swift to delay computation until a property is accessed for the first time.</p>
+<pre><code class="language-swift">class SomeClass {
+    @Lazy var someExpensiveComputation = computeSomethingExpensive()
+}
+</code></pre>
+<h4 id="the-metaphor-16">The Metaphor</h4>
+<p><code>@Lazy</code> symbolizes the untapped potential within us, waiting for the right moment to be unleashed.</p>
+<h4 id="the-life-parallel-16">The Life Parallel</h4>
+<p>In life, many of us have dormant talents or capabilities that await the right circumstance to manifest, much like a <code>@Lazy</code> property.</p>
+<hr>
+<h2 id="18-creating-your-own-property-wrapper-the-guardrails---lifes-boundaries">18. Creating Your Own Property Wrapper: The Guardrails - Life&rsquo;s Boundaries</h2>
+<h4 id="swift-meaning-with-example-17">Swift Meaning with Example</h4>
+<p>Creating a property wrapper in Swift allows you to add additional behavior to variables. Let&rsquo;s look at a real-world example involving a clamping property wrapper. This property wrapper restricts a variable&rsquo;s value to be within a specified range.</p>
+<p>Let&rsquo;s say you are building an app that simulates a bank account. For some reason, the bank has a policy that accounts can have at most $5,000 and at least $0 (no overdraft allowed). You can create a <code>@Clamping</code> property wrapper to enforce these rules:</p>
+<pre><code class="language-swift">@propertyWrapper
+struct Clamping&lt;Value: Comparable&gt; {
+    var value: Value
+    let range: ClosedRange&lt;Value&gt;
+    
+    var wrappedValue: Value {
+        get { value }
+        set { value = min(max(range.lowerBound, newValue), range.upperBound) }
+    }
+    
+    init(wrappedValue: Value, _ range: ClosedRange&lt;Value&gt;) {
+        self.value = wrappedValue
+        self.range = range
+    }
+}
+
+struct BankAccount {
+    @Clamping(0...5000) var balance: Int
+    
+    init(initialBalance: Int) {
+        _balance = Clamping(wrappedValue: initialBalance, 0...5000)
+    }
+}
+
+var account = BankAccount(initialBalance: 100)
+account.balance = 6000  // Will be clamped to 5000
+account.balance = -50   // Will be clamped to 0
+print(account.balance)  // Output will be 0
+</code></pre>
+<h4 id="the-metaphor-17">The Metaphor</h4>
+<p>The <code>@Clamping</code> property wrapper serves as the guardrails on the highway of life. It ensures you don&rsquo;t go off the track, setting boundaries for where you can go.</p>
+<h4 id="the-life-parallel-17">The Life Parallel</h4>
+<p>In life, boundaries—whether set by society, laws, or personal morals—act as our guardrails. They keep us on the right path and help us to make decisions within acceptable limits, much like the <code>@Clamping</code> property wrapper keeps our bank balance within an acceptable range.</p>
 <hr>
 <p>This blending of technical examples with metaphorical insights provides a fuller understanding of both the SwiftUI property wrappers and the life themes they can represent. The marriage of code and metaphor opens new vistas for exploring the intricate weave of existence.</p>
+<hr>
+<h2 id="a-note-of-gratitude-and-disclaimer">A Note of Gratitude and Disclaimer</h2>
+<p>I hope this exploration has given you some food for thought, and perhaps even made complex coding concepts a tad easier to grasp. As we wrap up, it&rsquo;s important to mention that I&rsquo;ve had a little help from ChatGPT in organizing and articulating my ideas. I&rsquo;m truly grateful for this AI tool, which serves almost like a co-writer, helping me transform a whirlpool of thoughts into coherent sentences.</p>
 
     </section>
     
