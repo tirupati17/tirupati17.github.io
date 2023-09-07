@@ -2,13 +2,14 @@
 isSinglePage = true
 
 # Meta Config
-description = "Hello"
+description = "Hello, Welcome to Tirupati Balan world"
 
 # Header Configuration
 avatar = "img/profile-picture.jpg"
 
 # disqus is a comment system. see https://disqus.com
 disqusShortname = ""
+font_size = "M"
 
 [emoji]
 enableEmoji = true

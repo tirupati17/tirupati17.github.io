@@ -11,6 +11,10 @@ summaryLength= 15
 paginate = 5
 
 [markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
   [markup.highlight]
     anchorLineNos = false
     codeFences = true
