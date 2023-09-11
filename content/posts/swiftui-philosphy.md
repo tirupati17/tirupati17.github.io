@@ -24,32 +24,33 @@ Let's classify the property wrappers based on where they are most commonly used:
 
 ### View: The Physical Realm - The World as We Perceive It
 
-1. **@Binding**: The Messenger - Gods on Earth
-2. **@Environment**: The Cosmic Oracle - Our Surroundings
-3. **@FocusState**: The Attention Director - Our Thoughts
-4. **@SceneStorage**: The Continuity Master - The Supreme One
-5. **@State**: The Core Being - The Self
-6. **@GestureState**: The Motion Tracker - Our Actions
-7. **@ScaledMetric**: The Relative Gauge - Personal Perspective
-8. **@FetchRequest**: The Quest for Knowledge - Intellectual Pursuit
-9. **@ThreadLocal**: The Individual Experience - Personal Realities
-10. **@Lazy**: The Potential Energy - Untapped Capabilities
+- [**@Binding**: The Messenger - Gods on Earth](#@Binding)
+- [**@Environment**: The Cosmic Oracle - Our Surroundings](#@Environment)
+- [**@FocusState**: The Attention Director - Our Thoughts](#@FocusState)
+- [**@SceneStorage**: The Continuity Master - The Supreme One](#@SceneStorage)
+- [**@State**: The Core Being - The Self](#@State)
+- [**@GestureState**: The Motion Tracker - Our Actions](#@GestureState)
+- [**@ScaledMetric**: The Relative Gauge - Personal Perspective](#@ScaledMetric)
+- [**@FetchRequest**: The Quest for Knowledge - Intellectual Pursuit](#@FetchRequest)
+- [**@ThreadLocal**: The Individual Experience - Personal Realities](#@ThreadLocal)
+- [**@Lazy**: The Potential Energy - Untapped Capabilities](#@Lazy)
 
 ### ViewModel: The Mental Realm - The World of Ideas and Intentions
 
-1. **@Published**: The Broadcaster - We, The People
-2. **@AppStorage**: The Memory Keeper - Human Memory
-3. **@StateObject**: The Persistent Self - The Soul
-4. **@ObservedObject**: The Change Watcher - Destiny and Fate
-5. **@EnvironmentObject**: The Invisible Hand - Shared Experiences
-6. **@Derived**: The Inference Maker - Logical Conclusions
-7. **@Atomic**: The Uninterrupted Force - Flow of Life
+- [**@Published**: The Broadcaster - We, The People](#@Published)
+- [**@AppStorage**: The Memory Keeper - Human Memory](#@AppStorage)
+- [**@StateObject**: The Persistent Self - The Soul](#@StateObject)
+- [**@ObservedObject**: The Change Watcher - Destiny and Fate](#@ObservedObject)
+- [**@EnvironmentObject**: The Invisible Hand - Shared Experiences](#@EnvironmentObject)
+- [**@Atomic**: The Uninterrupted Force - Flow of Life](#@Atomic)
 
 ### Can Be Used in Both
 
-1. **Creating Your Own Property Wrapper**: The Guardrails - Life's Boundaries
+- [**Creating Your Own Property Wrapper**: The Guardrails - Life's Boundaries](#@Creating)
 
-## 1. @Published: The Broadcaster - We, The People
+---
+## @Published
+`The Broadcaster - We, The People`
 
 ### Swift Meaning with Example
 
@@ -79,7 +80,8 @@ Like the `@Published` property wrapper, each person serves as a dynamic entity, 
 
 ---
 
-## 2. @Binding: The Messenger - Gods on Earth
+## @Binding
+`The Messenger - Gods on Earth``
 
 ### Swift Meaning with Example
 
@@ -113,7 +115,8 @@ Like `@Binding`, these special entities or events create a two-way channel of in
 
 ---
 
-## 3. @Environment: The Cosmic Oracle - Our Surroundings
+## @Environment
+`The Cosmic Oracle - Our Surroundings`
 
 ### Swift Meaning with Example
 
@@ -140,7 +143,8 @@ Much like SwiftUI views adapt to the system settings, humans adapt to their envi
 
 ---
 
-## 4. @AppStorage: The Memory Keeper - Human Memory
+## @AppStorage
+`The Memory Keeper - Human Memory`
 
 ### Swift Meaning with Example
 
@@ -166,7 +170,8 @@ Much like `@AppStorage` persists data across app launches, our memories persist 
 
 ---
 
-## 5. @FocusState: The Attention Director - Our Thoughts
+## @FocusState
+`The Attention Director - Our Thoughts`
 
 ### Swift Meaning with Example
 
@@ -193,7 +198,8 @@ Just like `@FocusState` in SwiftUI helps manage focus across UI elements, our th
 
 ---
 
-## 6. @SceneStorage: The Continuity Master - The Supreme One
+## @SceneStorage
+`The Continuity Master - The Supreme One`
 
 ### Swift Meaning with Example
 
@@ -221,7 +227,8 @@ In life's grand drama, a Supreme Being or Universal Force ensures that our essen
 Like `@SceneStorage` maintains state across scene transitions, many believe that a higher force keeps our essence intact across lifetimes, creating a continuity of existence.
 
 
-## 7. @State: The Core Being - The Self
+## @State
+`The Core Being - The Self`
 
 #### Swift Meaning with Example
 
@@ -250,7 +257,8 @@ In life, our core values and traits serve as our internal `@State`, driving our 
 
 ---
 
-## 8. @StateObject: The Persistent Self - The Soul
+## @StateObject
+`The Persistent Self - The Soul`
 
 #### Swift Meaning with Example
 
@@ -276,7 +284,8 @@ Just like our soul, `@StateObject` persists, holding on to the essentials as we 
 
 ---
 
-## 9. @ObservedObject: The Change Watcher - Destiny and Fate
+## @ObservedObject
+`The Change Watcher - Destiny and Fate`
 
 #### Swift Meaning with Example
 
@@ -301,7 +310,8 @@ struct ContentView: View {
 In our lives, fate watches over us as we make decisions and take actions, guiding us toward our ultimate destiny.
 
 
-## 10. @EnvironmentObject: The Invisible Hand - Shared Experiences
+## @EnvironmentObject
+`The Invisible Hand - Shared Experiences`
 
 #### Swift Meaning with Example
 
@@ -327,7 +337,8 @@ In life, shared experiences and societal norms function as our collective `@Envi
 
 ---
 
-## 11. @GestureState: The Motion Tracker - Our Actions
+## @GestureState
+`The Motion Tracker - Our Actions`
 
 #### Swift Meaning with Example
 
@@ -360,7 +371,8 @@ Our actions, transient yet impactful, define the course of our lives, much like 
 
 ---
 
-## 12. @ScaledMetric: The Relative Gauge - Personal Perspective
+## @ScaledMetric
+`The Relative Gauge - Personal Perspective`
 
 #### Swift Meaning with Example
 
@@ -386,7 +398,8 @@ struct ContentView: View {
 Much like `@ScaledMetric`, our perspectives scale according to our experiences, shaping our understanding of the world.
 
 
-## 13. @FetchRequest: The Quest for Knowledge - Intellectual Pursuit
+## @FetchRequest
+`The Quest for Knowledge - Intellectual Pursuit`
 
 #### Swift Meaning with Example
 
@@ -417,23 +430,8 @@ In life, we are always seeking, always querying the world for new information an
 
 ---
 
-## 14. @Derived: The Inference Maker - Logical Conclusions
-
-#### Swift Meaning with Example
-
-As of my last update in September 2021, SwiftUI doesn't provide a native `@Derived` property wrapper. However, one can create custom property wrappers to derive state based on other states.
-
-#### The Metaphor
-
-`@Derived` would symbolize our ability to draw logical conclusions based on the information available to us.
-
-#### The Life Parallel
-
-In life, we often derive understanding or insights from our experiences and observations, akin to how a `@Derived` property might work.
-
----
-
-## 15. @Atomic: The Uninterrupted Force - Flow of Life
+## @Atomic
+`The Uninterrupted Force - Flow of Life`
 
 #### Swift Meaning with Example
 
@@ -453,7 +451,8 @@ Just as `@Atomic` ensures that data is accessed one piece at a time, life flows 
 
 ---
 
-## 16. @ThreadLocal: The Individual Experience - Personal Realities
+## @ThreadLocal
+`The Individual Experience - Personal Realities`
 
 #### Swift Meaning with Example
 
@@ -473,7 +472,8 @@ Each of us has a unique path, a series of experiences that are ours alone, simil
 
 ---
 
-## 17. @Lazy: The Potential Energy - Untapped Capabilities
+## @Lazy
+`The Potential Energy - Untapped Capabilities`
 
 #### Swift Meaning with Example
 
@@ -495,7 +495,8 @@ In life, many of us have dormant talents or capabilities that await the right ci
 
 ---
 
-## 18. Creating Your Own Property Wrapper: The Guardrails - Life's Boundaries
+## Creating Your Own Property Wrapper
+`The Guardrails - Life's Boundaries`
 
 #### Swift Meaning with Example
 
