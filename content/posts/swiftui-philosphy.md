@@ -81,7 +81,7 @@ Like the `@Published` property wrapper, each person serves as a dynamic entity, 
 ---
 
 ## @Binding
-`The Messenger - Gods on Earth``
+`The Messenger - Gods on Earth`
 
 ### Swift Meaning with Example
 

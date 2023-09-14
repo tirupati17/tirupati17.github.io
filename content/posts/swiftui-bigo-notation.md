@@ -163,6 +163,6 @@ And there you have it, folks! We just took Big O notation—something usually re
 
 So the next time you're debugging your code or even just figuring out how to manage your time better, remember: life and code are not that different. They both have their own set of rules and complexities. But with a little wisdom (and maybe a few lines of Swift), we can navigate both like a pro.
 
-If you liked this ride, don't forget to share it and drop your thoughts in the comments (Not yet enabled :P). Got more ideas about linking life and tech? Hit me up; let's make sense of this crazy, beautiful intersection of bytes and beliefs.
+If you liked this ride, don't forget to share it and drop your thoughts in the comments. Got more ideas about linking life and tech? Hit me up; let's make sense of this crazy, beautiful intersection of bytes and beliefs.
 
 Until next time, keep coding and keep living. Peace out!
