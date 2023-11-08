@@ -11,7 +11,7 @@ I'm Tirupati Balan, an enthusiastic Engineering Manager and advocate for open-so
 
 ## Greatest Achievements
 
-- **[Wreely](https://wreely.app)**: As the founder of Wreely, I've created an open-source platform that innovates in the realm of workspace management, offering scalable solutions for modern businesses.
+- **[Wreely](https://wreely.com)**: As the founder of Wreely, I've created an open-source platform that innovates in the realm of workspace management, offering scalable solutions for modern businesses.
   
 - **[Mysticadii](https://mysticadii.com)**: Co-founding Mysticadii allowed me to delve into the spiritual side of technology, establishing a podcast platform for those seeking wisdom and deeper understanding.
 
