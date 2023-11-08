@@ -13,6 +13,12 @@
 # Social Media Configuration
 
 [[social]]
+    identifier = "linkedin"
+    name = "Linkedin"
+    url = "https://in.linkedin.com/in/tirupatibalan"
+    weight = 1
+    
+[[social]]
     identifier = "twitter"
     name = "Twitter"
     url = "x.com/tirupati17"
