@@ -4,7 +4,7 @@ date: 2023-10-02T19:23:13+05:30
 draft: false # Set 'false' to publish
 description: ""
 categories:
-- homeassistant
+- Home Assistant
 tags:
 - homeassistant
 ---

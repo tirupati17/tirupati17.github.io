@@ -4,9 +4,10 @@ date: 2023-10-03T19:23:13+05:30
 draft: false # Set 'false' to publish
 description: ""
 categories:
-- homeassistant
+- dsa
 tags:
-- homeassistant
+- dsa
+- datatypes
 ---
 
 Hi there! 😊
