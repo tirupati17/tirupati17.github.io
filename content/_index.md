@@ -24,8 +24,15 @@ Each step in my journey has been an opportunity to impact the tech landscape pro
 
 ## Greatest Achievements
 
-- **[Wreely](https://wreely.com)**: As the founder of Wreely, I've created an open-source platform that innovates in the realm of workspace management, offering scalable solutions for modern businesses.
-  
-- **[Mysticadii](https://mysticadii.com)**: Co-founding Mysticadii allowed me to delve into the spiritual side of technology, establishing a podcast platform for those seeking wisdom and deeper understanding.
+### [Wreely](https://www.wreely.com)
+As the founder of Wreely, I have recently `open-sourced` this platform, which innovates in the realm of workspace management. It offers scalable solutions for modern businesses and aims to create a connected community within co-working spaces. By making Wreely open-source, I am inviting collaboration and shared progress in the field of technology.
 
-- **[CelerStudio](https://celerstudio.com)**: Through CelerStudio, I have launched a suite of open-source mobile applications that serve various sectors including healthcare, finance, and sports, emphasizing my commitment to diverse technological contributions.
+- [Wreely Backend Repository](https://github.com/tirupati17/wreely-backend)
+- [Wreely Android App Repository](https://github.com/tirupati17/wreely-android)
+- [Wreely iOS App Repository](https://github.com/tirupati17/wreely-ios)
+
+### [Mysticadii](https://www.mysticadii.com/)
+Co-founding Mysticadii has allowed me to explore the spiritual side of technology. Mysticadii serves as a podcast platform for those seeking wisdom and a deeper understanding, demonstrating my commitment to creating spaces for meaningful conversations and growth.
+
+### [CelerStudio](https://www.celerstudio.com)
+Through CelerStudio, I've launched a suite of open-source mobile applications that serve various sectors including healthcare, finance, and sports. This initiative underscores my dedication to making diverse technological contributions that have a positive impact on society.
