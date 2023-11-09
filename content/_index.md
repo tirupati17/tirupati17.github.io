@@ -22,7 +22,7 @@ Beginning my career as a software engineer, I've rapidly evolved within the real
 
 Each step in my journey has been an opportunity to impact the tech landscape profoundly, pushing the boundaries of mobile technology to enhance user experiences worldwide.
 
-## Greatest Achievements
+## Few Achievements
 
 ### [Wreely](https://www.wreely.com)
 As the founder of Wreely, I have recently `open-sourced` this platform, which innovates in the realm of workspace management. It offers scalable solutions for modern businesses and aims to create a connected community within co-working spaces. By making Wreely open-source, I am inviting collaboration and shared progress in the field of technology.
