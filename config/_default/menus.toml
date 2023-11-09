@@ -5,10 +5,17 @@
     weight = 1
 
 [[main]]
+    identifier = "resume"
+    name = "Resume"
+    url = "https://drive.google.com/file/d/1aUj1tniAgCsDaJoPNgfhkdCR_Ek5pdgc/view?usp=drive_link"
+    weight = 2
+
+[[main]]
     identifier = "posts"
     name = "Posts"
     url = "/posts"
     weight = 2
+
 
 # Social Media Configuration
 
