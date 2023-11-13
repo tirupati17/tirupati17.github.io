@@ -7,11 +7,14 @@ Hey there! I’m an iOS Developer currently working on a Gratitude app here at [
 
 In addition to that, I'm also a co-founder of [Mysticadii](https://mysticadii.com). Our mission at Mysticadii is to educate people about the mystic realms of the world, expanding their understanding and appreciation for topics often considered not easily understood. -->
 
-I'm Tirupati Balan, an enthusiastic Engineering Manager and advocate for open-source software, with a keen interest in the intersection of technology and everyday life.
+I'm Tirupati Balan, an enthusiastic iOS Developer and advocate for open-source software, with a keen interest in the intersection of technology and everyday life.
 
 ## Professional Product Journey
 
-Beginning my career as a software engineer, I've rapidly evolved within the realm of mobile technology. My role has transitioned from a Senior Software Engineer to a Lead iOS Engineer, and currently, I thrive as an Engineering Manager. Along this path, I've contributed to the development of significant applications like:
+Beginning my career as a software engineer, I've rapidly evolved within the realm of mobile technology. My role has transitioned from a Senior Software Engineer to a Lead iOS Engineer to Engineering Manager, and currently, I thrive as an Lead iOS Engineer. Along this path, I've contributed to the development of significant applications like:
+
+- **[Gratitude](https://gratefulness.me)**: Gratitude is a tool to help you focus on the positive,
+become more mindful, and live with intention.
 
 - **[Noice](https://noice.id)**: An innovative platform that offers a unique audio entertainment experience with original and diverse content.
 
