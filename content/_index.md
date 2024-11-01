@@ -7,7 +7,7 @@ Hey there! I’m Amigo (Tirupati recent work where he is trying to understand tr
 
 Here he is trying to focus on MSMEs, and his thought on this as we all begin at some level—starting small, growing from micro to small, and eventually medium enterprises. This journey not only fuels individual growth but also strengthens India’s economic development through innovation, job creation, and regional prosperity.
 
-In addition to that, He is also a co-founder of [Mysticadii](https://mysticadii.com). Their mission at Mysticadii is to educate people about the mystic realms of the world, expanding their understanding and appreciation for topics often considered not easily understood. 
+In addition to that, He is also a co-founder of [Mysticadii](https://mysticadii.com) along with [Aditi Das](https://www.mysticadii.com/about). Their mission at Mysticadii is to educate people about the mystic realms of the world, expanding their understanding and appreciation for topics often considered not easily understood. 
 
 ## Professional Product Journey
 
