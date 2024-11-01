@@ -3,9 +3,9 @@ title: "Ahoy There!"
 draft: false
 ---
 
-Hey there! I’m Amigo (Tirupati recent work where he is trying to understand transactions which lies within every espect of life and it works like acknowledgement to each other (say 0 or 1) to give the reason for the existence, bit philosophical right? Ignore), Let me share more, he is a Technology Leader (Mobile) currently working on a BharatNXT app here at [BharatNXT](https://bharatnxt.in). 
+Hey there! I’m Amigo (Tirupati recent work where he is trying to understand transactions which lies within every aspect of life and it works like acknowledgement to each other (say 0 or 1) to give the reason for the existence, bit philosophical right? Ignore, well not sure what he is trying to understand? is it infinite?), 
 
-Here he is trying to focus on MSMEs, and his thought on this as we all begin at some level—starting small, growing from micro to small, and eventually medium enterprises. This journey not only fuels individual growth but also strengthens India’s economic development through innovation, job creation, and regional prosperity.
+Let me share more, he is a Technology Leader (Mobile) currently working on a BharatNXT app here at [BharatNXT](https://bharatnxt.in). Here he is trying to focus on MSMEs, and his thought on this as we all begin at some level—starting small, growing from micro to small, and eventually medium enterprises. This journey not only fuels individual growth but also strengthens India’s economic development through innovation, job creation, and regional prosperity.
 
 In addition to that, He is also a co-founder of [Mysticadii](https://mysticadii.com) along with [Aditi Das](https://www.mysticadii.com/about). Their mission at Mysticadii is to educate people about the mystic realms of the world, expanding their understanding and appreciation for topics often considered not easily understood. 
 
