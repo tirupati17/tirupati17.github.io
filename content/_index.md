@@ -3,7 +3,7 @@ title: "Ahoy There!"
 draft: false
 ---
 
-Hey there! I’m Amigo (Tirupati recent work where he is trying to understand transactions which lies within every aspect of life and it works like acknowledgement to each other (say 0 or 1) to give the reason for the existence, bit philosophical right? Ignore, well not sure what he is trying to understand? is it infinite?), 
+Hey there! I’m Amigo, Tirupati recent work where he is trying to understand transactions which lies within every aspect of life and it works like acknowledgement to each other (say 0 or 1) to give the reason for the existence, bit philosophical right? Ignore, well not sure what he is trying to understand? is it infinite?. 
 
 Let me share more, he is a Technology Leader (Mobile) currently working on a BharatNXT app here at [BharatNXT](https://bharatnxt.in). Here he is trying to focus on MSMEs, and his thought on this as we all begin at some level—starting small, growing from micro to small, and eventually medium enterprises. This journey not only fuels individual growth but also strengthens India’s economic development through innovation, job creation, and regional prosperity.
 
