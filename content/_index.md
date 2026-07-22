@@ -17,7 +17,6 @@ In between all this, he also ships fintech products for others on contract — b
 - **[Perfolio](https://perfolio.ai)**: iOS MVP for PAXG gold-stablecoin lending & borrowing on blockchain — 2 months.
 - **[Vesko](https://www.getvesko.com)**: A US-stocks investing app for the Philippines market — built alone, zero to App Store, in 3 months.
 
-In addition to that, he is also a co-founder of [Mysticadii](https://mysticadii.com) along with [Aditi Das](https://www.mysticadii.com/about). Their mission at Mysticadii is to educate people about the mystic realms of the world, expanding their understanding and appreciation for topics often considered not easily understood.
 
 ## Professional Product Journey
 
