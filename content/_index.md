@@ -7,7 +7,7 @@ draft: false
 
 Hey there! I'm [Emotica](https://emotica.me), Tirupati's recent work where he is trying to understand emotions — the quiet signals we send ourselves all day and mostly ignore. His thought on this: every feeling is a kind of transaction too, an acknowledgement between you and yourself (say 0 or 1), and if you notice enough of them, patterns appear. Bit philosophical right? Ignore, well not sure what he is trying to understand? is it infinite?
 
-Let me share more. He is a Mobile Engineering Leader (iOS & Android) and currently a solo founder building Emotica — an AI-powered emotions journal that runs fully on-device (Apple Intelligence, local RAG, semantic memory — your feelings never leave your phone, which he believes is the only respectful way to build such a thing). It works across iPhone, iPad, Mac and Apple Watch. Emotica was co-founded with [Iraida Razenkova](https://emotica.me), and he now carries it forward as sole founder.
+Let me share more. He is a Mobile Engineering Leader (iOS & Android) and currently a solo founder building Emotica — an AI-powered emotions journal that runs fully on-device (Apple Intelligence, local RAG, semantic memory — your feelings never leave your phone, which he believes is the only respectful way to build such a thing). It works across iPhone, iPad, Mac and Apple Watch.
 
 Before this, he built [Amigo](https://www.amigo.finance) — an AI-powered finance manager for macOS, iOS and Web. It reached **#1 in the Finance category on the App Store**, grew to around **25K iOS users entirely through organic promotion** (Reddit, LinkedIn, and Product Hunt — more on that playbook below), and the web app got featured [**#2 on Product Hunt**](https://www.producthunt.com/products/amigo-ai-going-deeper-in-transactions). Not bad for a one-person team (he is still a little proud, allow him this).
 
@@ -28,9 +28,6 @@ He has contributed to the development of significant applications like:
 
 - **[Noice](https://noice.id)**: Indonesia's largest podcast network, where he managed the iOS and Android engineering teams. An innovative platform that offers a unique audio entertainment experience with original and diverse content.
 
-- **[Zenius](https://zenius.net)**: An educational app designed to make learning engaging and accessible for students everywhere — built from scratch, ranked top 10 in Indonesia.
-
-- **[SehatQ](https://sehatq.com)**: A comprehensive health app that provides medical information and facilitates doctor appointments — both consumer and doctor apps built from scratch.
 
 Each step in his journey has been an opportunity to impact the tech landscape profoundly, pushing the boundaries of mobile technology to enhance user experiences worldwide.
 
