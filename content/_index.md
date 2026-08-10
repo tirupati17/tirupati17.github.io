@@ -5,7 +5,7 @@ draft: false
 
 Hey there! I'm [Emotica](https://emotica.me), Tirupati's recent work where he is trying to understand emotions: the quiet signals we send ourselves all day and mostly ignore. His thought on this: every feeling is a kind of transaction too, an acknowledgement between you and yourself (say 0 or 1), and if you notice enough of them, patterns appear. Bit philosophical right? Ignore, well not sure what he is trying to understand? is it infinite?
 
-Let me share more. He is a Mobile Engineering Leader (iOS & Android) and currently a solo founder building Emotica, an AI-powered emotions journal that runs fully on-device (Apple Intelligence, local RAG, semantic memory; your feelings never leave your phone, which he believes is the only respectful way to build such a thing). It works across iPhone, iPad, Mac and Apple Watch.
+Let me share more. He is a Mobile Engineering Leader (iOS & Android) and is currently working on Emotica, an AI-powered emotions journal that runs fully on-device (Apple Intelligence, local RAG, semantic memory; your feelings never leave your phone, which he believes is the only respectful way to build such a thing). It works across iPhone, iPad, Mac and Apple Watch.
 
 Before this, he built [Amigo](https://www.amigo.finance), an AI-powered finance manager for macOS, iOS and Web. It reached **#1 in the Finance category on the App Store**, grew to around **25K iOS users entirely through organic promotion** (Reddit, LinkedIn, and Product Hunt; more on that playbook below), and the web app got featured [**#2 on Product Hunt**](https://www.producthunt.com/products/amigo-ai-going-deeper-in-transactions). Not bad for a one-person team (he is still a little proud, allow him this).
 
