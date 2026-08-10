@@ -11,8 +11,8 @@ Before this, he built [Amigo](https://www.amigo.finance), an AI-powered finance 
 
 In between all this, he also ships fintech products for others on contract, because building fast is a habit he can't seem to drop:
 
-- **[Aspora](https://www.aspora.com/ae/gold)** (YC-funded): Built the entire Digital Gold buy/sell module from scratch on **both iOS and Android**, inside their live production app, in 2 months.
-- **[Perfolio](https://perfolio.ai)**: iOS MVP for PAXG gold-stablecoin lending & borrowing on blockchain, delivered in 2 months.
+- **[Aspora](https://www.aspora.com/ae/gold)** (YC-funded): Built the entire Digital Gold buy/sell module from scratch on **both iOS and Android**, inside their live production app.
+- **[Perfolio](https://perfolio.ai)**: iOS MVP for PAXG gold-stablecoin lending & borrowing on blockchain.
 - **[Vesko](https://www.getvesko.com)**: A US-stocks investing app for the Philippines market, built alone, zero to App Store, in 3 months.
 
 ## Professional Product Journey
