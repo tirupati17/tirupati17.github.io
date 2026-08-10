@@ -9,8 +9,9 @@ Let me share more. He is a Mobile Engineering Leader (iOS & Android) and is curr
 
 Before this, he built [Amigo](https://www.amigo.finance), an AI-powered finance manager for macOS, iOS and Web. It reached **#1 in the Finance category on the App Store**, grew to around **25K iOS users entirely through organic promotion** (Reddit, LinkedIn, and Product Hunt; more on that playbook below), and the web app got featured [**#2 on Product Hunt**](https://www.producthunt.com/products/amigo-ai-going-deeper-in-transactions). Not bad for a one-person team (he is still a little proud, allow him this).
 
-In between all this, he also ships fintech products for others on contract, because building fast is a habit he can't seem to drop:
+Emotica and Amigo are side projects, self-funded and built in his own time. Professionally, he ships products for others on contract, because building fast is a habit he can't seem to drop:
 
+- **[AastroAstra](https://www.aastroastra.com)** (current): An AI Vedic astrologer for Android that reads your actual kundali instead of generic sun-sign horoscopes, with matchmaking, numerology and daily cosmic alerts in English and Hindi.
 - **[Aspora](https://www.aspora.com/ae/gold)** (YC-funded): Built the entire Digital Gold buy/sell module from scratch on **both iOS and Android**, inside their live production app.
 - **[Perfolio](https://perfolio.ai)**: iOS MVP for PAXG gold-stablecoin lending & borrowing on blockchain.
 - **[Vesko](https://www.getvesko.com)**: A US-stocks investing app for the Philippines market, built alone, zero to App Store, in 3 months.
