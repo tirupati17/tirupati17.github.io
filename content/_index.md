@@ -11,7 +11,7 @@ Before this, he built [Amigo](https://www.amigo.finance), an AI-powered finance 
 
 Emotica and Amigo are side projects, self-funded and built in his own time. Professionally, he ships products for others on contract, because building fast is a habit he can't seem to drop:
 
-- **[AastroAstra](https://www.aastroastra.com)** (current): An AI Vedic astrologer for Android that reads your actual kundali instead of generic sun-sign horoscopes, with matchmaking, numerology and daily cosmic alerts in English and Hindi.
+- **[AastroAstra](https://www.aastroastra.com)** (current): *One who believes.* An AI Vedic astrologer that reads your actual kundali, not a generic sun-sign horoscope. His thought here: everything moves in a circle, and a circle can be calculated; the only part that cannot is its expansion, and that expansion is what we call change. So the maths gives you the predictable half, and the one who believes carries the rest.
 - **[Aspora](https://www.aspora.com/ae/gold)** (YC-funded): Built the entire Digital Gold buy/sell module from scratch on **both iOS and Android**, inside their live production app.
 - **[Perfolio](https://perfolio.ai)**: iOS MVP for PAXG gold-stablecoin lending & borrowing on blockchain.
 - **[Vesko](https://www.getvesko.com)**: A US-stocks investing app for the Philippines market, built alone, zero to App Store, in 3 months.
