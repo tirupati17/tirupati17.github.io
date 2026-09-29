@@ -9,9 +9,10 @@ Let me share more. He is a Mobile Engineering Leader (iOS & Android) and is curr
 
 Before this, he built [Amigo](https://www.amigo.finance), an AI-powered finance manager for macOS, iOS and Web. It reached **#1 in the Finance category on the App Store**, grew to around **25K iOS users entirely through organic promotion** (Reddit, LinkedIn, and Product Hunt; more on that playbook below), and the web app got featured [**#2 on Product Hunt**](https://www.producthunt.com/products/amigo-ai-going-deeper-in-transactions). Not bad for a one-person team (he is still a little proud, allow him this).
 
-Emotica and Amigo are side projects, self-funded and built in his own time. Professionally, he ships products for others on contract, because building fast is a habit he can't seem to drop:
+Right now, he is a **founding engineer at [AastroAstra](https://www.aastroastra.com)**: *One who believes.* An AI Vedic astrologer that reads your actual kundali, not a generic sun-sign horoscope. His thought here: everything moves in a circle, and a circle can be calculated; the only part that cannot is its expansion, and that expansion is what we call change. So the maths gives you the predictable half, and the one who believes carries the rest.
 
-- **[AastroAstra](https://www.aastroastra.com)** (current): *One who believes.* An AI Vedic astrologer that reads your actual kundali, not a generic sun-sign horoscope. His thought here: everything moves in a circle, and a circle can be calculated; the only part that cannot is its expansion, and that expansion is what we call change. So the maths gives you the predictable half, and the one who believes carries the rest.
+Emotica and Amigo are side projects, self-funded and built in his own time. Before AastroAstra, he shipped products for others on contract, because building fast is a habit he can't seem to drop:
+
 - **[Aspora](https://www.aspora.com/ae/gold)** (YC-funded): Built the entire Digital Gold buy/sell module from scratch on **both iOS and Android**, inside their live production app.
 - **[Perfolio](https://perfolio.ai)**: iOS MVP for PAXG gold-stablecoin lending & borrowing on blockchain.
 - **[Vesko](https://www.getvesko.com)**: A US-stocks investing app for the Philippines market, built alone, zero to App Store, in 3 months.
